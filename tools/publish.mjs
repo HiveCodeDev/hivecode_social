@@ -30,6 +30,21 @@ if (post.media_id) {
 }
 if (post.status !== "approved") fail(`Status is "${post.status}", not "approved"`);
 
+// The plan's date and time are Lisbon local time. Before that moment (minus a
+// 5-minute margin) the script only checks, so a run started early never posts.
+function lisbonInstant(date, time) {
+  const guess = new Date(`${date}T${time}:00Z`);
+  const parts = Object.fromEntries(
+    new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Lisbon", hourCycle: "h23", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit" })
+      .formatToParts(guess)
+      .map((p) => [p.type, p.value]),
+  );
+  const shown = new Date(`${parts.year}-${parts.month}-${parts.day}T${parts.hour}:${parts.minute}:00Z`);
+  return new Date(guess.getTime() - (shown.getTime() - guess.getTime()));
+}
+const scheduled = lisbonInstant(post.date, post.time);
+const early = Date.now() < scheduled.getTime() - 5 * 60 * 1000;
+
 async function call(method, path, params = {}) {
   const query = new URLSearchParams(params);
   const headers = { Authorization: `Bearer ${token}` };
@@ -45,8 +60,8 @@ for (const url of [post.video_url, post.image_url, post.cover_url, ...(post.imag
   const res = await fetch(url, { method: "HEAD" });
   if (!res.ok) fail(`Media not reachable (${res.status}): ${url}`);
 }
-if (dryRun) {
-  console.log(JSON.stringify({ ok: true, post: postId, dryRun: true, type: post.type }));
+if (dryRun || early) {
+  console.log(JSON.stringify({ ok: true, post: postId, dryRun: true, reason: dryRun ? "--dry-run" : "before scheduled time", scheduled: scheduled.toISOString(), type: post.type }));
   process.exit(0);
 }
 
