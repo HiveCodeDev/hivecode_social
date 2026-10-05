@@ -74,8 +74,13 @@ HEX = hex_svg()
 
 
 def page(body, extra_css=""):
+    # @import is only valid at the top of a stylesheet, so hoist any from extra_css.
+    lines = extra_css.splitlines()
+    imports = "\n".join(line for line in lines if line.strip().startswith("@import"))
+    extra_css = "\n".join(line for line in lines if not line.strip().startswith("@import"))
     return f"""<!doctype html><html lang="pt"><head><meta charset="utf-8">
-<style>{BASE_CSS}{extra_css}</style></head><body>
+<style>{imports}
+{BASE_CSS}{extra_css}</style></head><body>
 {HEX}
 <span class="glow" style="width:620px;height:620px;left:-180px;top:-160px;background:#4877FE"></span>
 <span class="glow" style="width:560px;height:560px;right:-200px;bottom:-120px;background:#D752FE"></span>

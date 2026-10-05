@@ -1,0 +1,19 @@
+[
+  {
+    "id": "2026-10-08-4sons",
+    "date": "2026-10-08",
+    "time": "12:30",
+    "theme": "Caso de cliente: 4Sons",
+    "type": "carousel",
+    "image_urls": [
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-08-4sons/slides/01/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-08-4sons/slides/02/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-08-4sons/slides/03/post.jpg"
+    ],
+    "destination": "https://hivecode.pt/?utm_source=instagram&utm_medium=social&utm_campaign=caso-4sons#projetos",
+    "caption": "Projeto recente: o novo site da 4Sons, empresa audiovisual especializada em som, luz e produção técnica para eventos.\n\nUma presença escura e de grande impacto, com tipografia forte, portfólio em destaque e o pedido de orçamento sempre à mão, no computador e no telemóvel.\n\nDesenhado e desenvolvido pela HiveCode.\n\nhivecode.pt (link na bio)\n\n#webdesign #desenvolvimentoweb #eventos #producaoaudiovisual #hivecode",
+    "status": "approved",
+    "approved_at": "2026-10-05",
+    "media_id": null
+  }
+]
