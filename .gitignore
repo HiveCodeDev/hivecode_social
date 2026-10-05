@@ -1,0 +1,14 @@
+# Generated or local-only
+reels/
+weeks/
+posts/2026-10-05/
+**/post.html
+**/s4.jpg
+**/carousel.jpg
+**/contact-sheet.jpg
+__pycache__/
+node_modules/
+.env*
+# Client captures stay local until the client agrees to be featured
+assets/acp-desktop.png
+assets/4sons-desktop.png

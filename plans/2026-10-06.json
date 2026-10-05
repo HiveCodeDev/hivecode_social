@@ -1,0 +1,21 @@
+[
+  {
+    "id": "2026-10-06-lancamento",
+    "date": "2026-10-06",
+    "time": "12:30",
+    "theme": "Lançamento do novo site",
+    "type": "carousel",
+    "image_urls": [
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-06-lancamento/slides/01/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-06-lancamento/slides/02/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-06-lancamento/slides/03/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-06-lancamento/slides/04/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-06-lancamento/slides/05/post.jpg"
+    ],
+    "destination": "https://hivecode.pt/?utm_source=instagram&utm_medium=social&utm_campaign=lancamento-site",
+    "caption": "O novo hivecode.pt está no ar.\n\nRedesenhámos o site de raiz, em português e inglês, com duas formas de trabalharmos juntos:\n\nWebsites: sites institucionais e landing pages rápidos, pensados para telemóvel.\nHiveCode Business: CRMs, ERPs, portais e integrações à medida da forma como a sua empresa trabalha.\n\nCada animação e cada página foram desenhadas e programadas por nós. O site é o nosso portfólio.\n\nVisite hivecode.pt (link na bio).\n\n#webdesign #desenvolvimentoweb #softwareamedida #pme #hivecode",
+    "status": "approved",
+    "approved_at": "2026-10-05",
+    "media_id": null
+  }
+]
