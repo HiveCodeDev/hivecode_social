@@ -1,0 +1,20 @@
+[
+  {
+    "id": "2026-10-07-business",
+    "date": "2026-10-07",
+    "time": "12:30",
+    "theme": "HiveCode Business: informação espalhada",
+    "type": "carousel",
+    "image_urls": [
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-07-business/slides/01/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-07-business/slides/02/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-07-business/slides/03/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-07-business/slides/04/post.jpg"
+    ],
+    "destination": "https://hivecode.pt/business?utm_source=instagram&utm_medium=social&utm_campaign=business-informacao-espalhada",
+    "caption": "A informação da sua empresa está espalhada por folhas de cálculo, emails e papéis?\n\nNa HiveCode Business desenvolvemos sistemas à medida que reúnem clientes, encomendas, stock e faturação num só lugar, adaptados à forma como a sua empresa trabalha.\n\nMenos tempo a copiar dados. Mais tempo para o negócio.\n\nSaiba mais em hivecode.pt/business (link na bio).\n\n#softwareamedida #gestaoempresarial #pme #digitalizacao #hivecode",
+    "status": "approved",
+    "approved_at": "2026-10-05",
+    "media_id": null
+  }
+]

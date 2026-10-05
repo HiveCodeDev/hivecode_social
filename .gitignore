@@ -12,3 +12,5 @@ node_modules/
 # Client captures stay local until the client agrees to be featured
 assets/acp-desktop.png
 assets/4sons-desktop.png
+research/
+assets/site-projects.png

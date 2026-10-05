@@ -1,0 +1,23 @@
+[
+  {
+    "id": "2026-10-09-5-perguntas",
+    "date": "2026-10-09",
+    "time": "12:30",
+    "theme": "5 perguntas a que o site deve responder",
+    "type": "carousel",
+    "image_urls": [
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-09-5-perguntas/slides/01/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-09-5-perguntas/slides/02/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-09-5-perguntas/slides/03/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-09-5-perguntas/slides/04/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-09-5-perguntas/slides/05/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-09-5-perguntas/slides/06/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-09-5-perguntas/slides/07/post.jpg"
+    ],
+    "destination": "https://hivecode.pt/?utm_source=instagram&utm_medium=social&utm_campaign=5-perguntas",
+    "caption": "Um visitante decide em poucos segundos se fica ou se volta ao Google.\n\nNesse tempo, o seu site tem de responder a cinco perguntas: o que faz, para quem, porque confiar, como falar consigo e se funciona no telemóvel.\n\nUsámos o nosso próprio site como exemplo. Deslize para ver.\n\nQuantas destas o seu site responde? Diga-nos nos comentários.\n\nhivecode.pt (link na bio)\n\n#webdesign #sitesprofissionais #ux #pme #desenvolvimentoweb #hivecode",
+    "status": "approved",
+    "approved_at": "2026-10-05",
+    "media_id": null
+  }
+]
