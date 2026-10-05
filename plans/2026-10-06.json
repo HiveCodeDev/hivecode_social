@@ -1,8 +1,8 @@
 [
   {
     "id": "2026-10-06-lancamento",
-    "date": "2026-10-06",
-    "time": "12:30",
+    "date": "2026-10-05",
+    "time": "14:00",
     "theme": "Lançamento do novo site",
     "type": "carousel",
     "image_urls": [
@@ -14,8 +14,11 @@
     ],
     "destination": "https://hivecode.pt/?utm_source=instagram&utm_medium=social&utm_campaign=lancamento-site",
     "caption": "O novo hivecode.pt está no ar.\n\nRedesenhámos o site de raiz, em português e inglês, com duas formas de trabalharmos juntos:\n\nWebsites: sites institucionais e landing pages rápidos, pensados para telemóvel.\nHiveCode Business: CRMs, ERPs, portais e integrações à medida da forma como a sua empresa trabalha.\n\nCada animação e cada página foram desenhadas e programadas por nós. O site é o nosso portfólio.\n\nVisite hivecode.pt (link na bio).\n\n#webdesign #desenvolvimentoweb #softwareamedida #pme #hivecode",
-    "status": "approved",
+    "status": "published",
     "approved_at": "2026-10-05",
-    "media_id": null
+    "media_id": "18047036081813650",
+    "note": "Antecipado para segunda 5 out a pedido do dono (era terça 6, 12:30).",
+    "permalink": "https://www.instagram.com/p/DeHRV-Blmlz/",
+    "published_at": "2026-10-05T13:03:40.305Z"
   }
 ]
