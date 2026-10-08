@@ -128,12 +128,13 @@ SLIDES = [
 <span class="cta">hivecode.pt</span>"""),
 ]
 
-shutil.rmtree(HERE / "slides", ignore_errors=True)
-for n, (cls, body) in enumerate(SLIDES, 1):
-    d = HERE / "slides" / f"{n:02d}"
-    d.mkdir(parents=True)
-    html = page(f'<span class="count">{n}/{len(SLIDES)}</span>' + body, CSS)
-    if cls:
-        html = html.replace("<body>", f'<body class="{cls}">', 1)
-    (d / "post.html").write_text(html, encoding="utf-8")
-print("ok")
+if __name__ == "__main__":  # the reel imports the art without rewriting the slides
+    shutil.rmtree(HERE / "slides", ignore_errors=True)
+    for n, (cls, body) in enumerate(SLIDES, 1):
+        d = HERE / "slides" / f"{n:02d}"
+        d.mkdir(parents=True)
+        html = page(f'<span class="count">{n}/{len(SLIDES)}</span>' + body, CSS)
+        if cls:
+            html = html.replace("<body>", f'<body class="{cls}">', 1)
+        (d / "post.html").write_text(html, encoding="utf-8")
+    print("ok")

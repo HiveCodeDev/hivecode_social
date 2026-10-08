@@ -1,0 +1,168 @@
+<!doctype html><html lang="pt"><head><meta charset="utf-8">
+<style>@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&display=block');
+
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&display=block');
+:root{--night:#121125;--deep:#16132f;--ink:#f3f1fb;--soft:#c9c3e6;--muted:#9a93c0;
+--pink:#EF5AFE;--violet:#D752FE;--blue:#4877FE;}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--night);color:var(--ink);font-family:'Geologica',sans-serif;position:relative}
+.hex{position:absolute;inset:0;opacity:.5}
+.glow{position:absolute;border-radius:50%;filter:blur(120px);opacity:.45}
+.frame{position:absolute;inset:0;padding:96px 88px;display:flex;flex-direction:column}
+.eyebrow{display:inline-flex;align-items:center;gap:14px;font-size:24px;font-weight:500;letter-spacing:.14em;
+text-transform:uppercase;color:var(--soft)}
+.eyebrow i{width:14px;height:14px;transform:rotate(30deg);background:linear-gradient(135deg,var(--pink),var(--blue));
+clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+h1{font-weight:600;font-size:84px;line-height:1.04;letter-spacing:-.025em;margin-top:40px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--violet)}
+p.lead{font-size:34px;line-height:1.4;color:var(--soft);font-weight:300;margin-top:32px;max-width:860px}
+.content{flex:1;display:flex;flex-direction:column;justify-content:center;padding-bottom:40px}
+.content>.eyebrow{align-self:flex-start}
+.foot{display:flex;align-items:center;justify-content:space-between;font-size:26px;color:var(--muted)}
+.brand{display:flex;align-items:center;gap:16px;font-weight:600;font-size:30px;color:var(--ink)}
+.brand img{width:52px;height:52px}
+.shot{border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.14);
+box-shadow:0 40px 90px -30px rgba(72,119,254,.55);background:#000}
+.shot .bar{height:44px;background:#1d1a3a;display:flex;align-items:center;gap:10px;padding:0 18px;font-size:19px;color:var(--muted)}
+.shot .bar b{width:12px;height:12px;border-radius:50%;background:#3a3566}
+.shot .bar span{margin-left:14px}
+.shot img{display:block;width:100%}
+
+html,body{width:1080px;height:1920px}
+.top{position:absolute;left:88px;right:88px;top:150px;display:flex;justify-content:space-between;align-items:center;font-size:28px;color:var(--muted);z-index:5}
+.txt{position:absolute;left:88px;width:904px;top:300px;font-weight:600;line-height:1.08;letter-spacing:-.025em;z-index:4}
+.txt .w{display:inline-block;opacity:0;margin-right:.24em}
+.txt .w.em{color:var(--violet)}
+#art{position:absolute;inset:0;transform-origin:540px 1140px}
+#art>*{position:absolute}
+.card{border-radius:26px;background:#1b1638;border:1px solid rgba(255,255,255,.16);box-shadow:0 40px 80px -30px rgba(0,0,0,.8);overflow:hidden;opacity:0}
+.card .hd{height:56px;display:flex;align-items:center;gap:12px;padding:0 22px;font-size:24px;font-weight:500;color:var(--soft);border-bottom:1px solid rgba(255,255,255,.1)}
+.bar{display:block;height:16px;border-radius:8px;background:rgba(255,255,255,.14)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:20px 22px}
+.grid i{height:26px;border-radius:6px;background:rgba(255,255,255,.08)}
+.grid i.h{background:rgba(47,191,113,.45)}
+.row{display:flex;align-items:center;gap:14px;padding:16px 22px;border-bottom:1px solid rgba(255,255,255,.06)}
+.row b{width:16px;height:16px;border-radius:50%;background:var(--blue);flex:none}
+.badge{position:absolute;top:-18px;right:-18px;width:58px;height:58px;border-radius:50%;background:#ff4d6d;color:#fff;font-size:28px;font-weight:700;display:grid;place-items:center;box-shadow:0 0 0 6px rgba(255,77,109,.2)}
+.nb{background:repeating-linear-gradient(#f3efe2 0 46px,#c9d6f0 46px 48px);border-radius:14px;color:#2a2550;padding:70px 34px 0;font-size:40px;font-weight:500;font-style:italic;box-shadow:0 40px 80px -30px rgba(0,0,0,.8);opacity:0}
+.nb:before{content:"";position:absolute;left:24px;right:24px;top:18px;height:18px;background:radial-gradient(circle,#4a4478 6px,transparent 7px) 0 0/40px 18px repeat-x}
+.postit{width:230px;height:210px;background:#ffd84d;color:#2a2550;font-size:34px;font-weight:600;padding:30px 24px;line-height:1.15;box-shadow:0 30px 60px -20px rgba(0,0,0,.7);opacity:0}
+.clock{width:170px;height:170px;border-radius:50%;border:8px solid #f3f1fb;background:#1b1638;opacity:0}
+.clock i{position:absolute;left:50%;bottom:50%;width:8px;margin-left:-4px;border-radius:4px;background:#f3f1fb;transform-origin:50% 100%}
+#db{left:88px;top:850px;width:904px;height:590px;border-radius:30px;background:#18132f;border:1px solid rgba(215,82,254,.5);display:flex;overflow:hidden;opacity:0}
+#db .side{width:150px;background:#120f26;display:flex;flex-direction:column;align-items:center;gap:26px;padding-top:32px}
+#db .side img{width:62px;height:62px}
+#db .side .bar{width:70px}
+#db .main{flex:1;padding:30px 32px;display:flex;flex-direction:column;gap:24px}
+#db .ttl{font-size:32px;font-weight:600}
+#db .tiles{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.tile{border-radius:22px;background:#1f1940;border:2px solid rgba(255,255,255,.08);padding:24px 26px;display:flex;flex-direction:column;justify-content:space-between;opacity:.35}
+.tile .lb{display:flex;align-items:center;gap:14px;font-size:28px;color:var(--soft)}
+.tile .val{font-size:58px;font-weight:700;letter-spacing:-.02em}
+#logo{left:440px;top:930px;width:200px;height:200px;opacity:0}
+#cta{left:88px;right:88px;top:1220px;display:flex;justify-content:center;opacity:0}
+#cta span{padding:32px 54px;border-radius:999px;background:#265ADF;font-size:44px;font-weight:600;box-shadow:0 30px 70px -20px rgba(72,119,254,.8)}
+</style></head><body>
+<span class="glow" style="width:720px;height:720px;left:-220px;top:-160px;background:#4877FE"></span>
+<span class="glow" style="width:680px;height:680px;right:-260px;bottom:260px;background:#D752FE"></span>
+<div class="top"><span class="brand"><img src="file:///C:/Users/saloc/Documents/hivecode_social/assets/logo_side.png" alt="">HiveCode</span><span>Business</span></div>
+<div class="txt" style="font-size:92px"><span class="w" data-s="0.096">Clientes</span><span class="w" data-s="0.536">no</span><span class="w em" data-s="0.617">Excel,</span><span class="w" data-s="1.231">encomendas</span><span class="w" data-s="1.728">no</span><span class="w em" data-s="1.821">email,</span><span class="w" data-s="2.365">stock</span><span class="w" data-s="2.643">num</span><span class="w em" data-s="2.781">caderno.</span></div><div class="txt" style="font-size:96px"><span class="w" data-s="4.074">Parece</span><span class="w" data-s="4.340">familiar?</span><span class="w" data-s="5.683">Perde-se</span><span class="w" data-s="6.042">tempo</span><span class="w" data-s="6.343">e</span><span class="w" data-s="6.470">perdem-se</span><span class="w em" data-s="6.794">vendas.</span></div><div class="txt" style="font-size:80px"><span class="w" data-s="8.079">A</span><span class="w" data-s="8.194">HiveCode</span><span class="w" data-s="8.623">junta</span><span class="w" data-s="8.924">tudo</span><span class="w" data-s="9.086">num</span><span class="w em" data-s="9.213">só</span><span class="w em" data-s="9.375">sistema,</span><span class="w" data-s="9.977">feito</span><span class="w" data-s="10.220">à</span><span class="w" data-s="10.301">medida</span><span class="w" data-s="10.602">da</span><span class="w" data-s="10.741">sua</span><span class="w" data-s="10.868">empresa.</span></div><div class="txt" style="font-size:88px"><span class="w" data-s="12.141">Clientes,</span><span class="w" data-s="12.905">encomendas,</span><span class="w" data-s="13.715">stock</span><span class="w" data-s="14.028">e</span><span class="w" data-s="14.086">faturação,</span><span class="w" data-s="14.873">num</span><span class="w" data-s="15.023">só</span><span class="w em" data-s="15.197">lugar.</span></div><div class="txt" style="font-size:76px"><span class="w" data-s="16.389">Saiba</span><span class="w" data-s="16.713">mais</span><span class="w" data-s="16.968">em</span><span class="w em" data-s="17.060">hivecode.pt/business.</span></div><div id="art">
+<div class="card" id="xl" style="left:100px;top:860px;width:430px;height:300px"><div class="hd"><i style="width:18px;height:18px;border-radius:4px;background:#2fbf71"></i>clientes.xlsx</div>
+<div class="grid"><i class="h"></i><i class="h"></i><i class="h"></i><i class="h"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></div></div>
+<div class="card" id="em" style="left:560px;top:930px;width:420px;height:290px"><div class="hd">Caixa de entrada</div>
+<div class="row"><b></b><span style="font-size:26px;font-weight:600">Encomenda nº 214</span></div>
+<div class="row"><b style="background:var(--muted)"></b><span class="bar" style="width:70%"></span></div>
+<div class="row"><b style="background:var(--muted)"></b><span class="bar" style="width:55%"></span></div></div>
+<div class="nb" id="nb" style="left:300px;top:1150px;width:370px;height:320px">Stock:<br>12? 15?</div>
+<div class="postit" id="pi" style="left:740px;top:1250px">Ligar ao cliente!</div>
+<div class="clock" id="ck" style="left:110px;top:1240px"><i id="hh" style="height:44px"></i><i id="mh" style="height:62px;width:6px;margin-left:-3px"></i></div>
+<span class="badge" id="b1" style="left:490px;top:842px">1</span>
+<span class="badge" id="b2" style="left:940px;top:912px">1</span>
+<div id="db"><div class="side"><img src="file:///C:/Users/saloc/Documents/hivecode_social/assets/logo_side.png" alt=""><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+<div class="main"><div class="ttl">A sua empresa</div><div class="tiles">
+<div class="tile"><span class="lb"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.3-5.5 6.5-5.5s5.7 1.9 6.5 5.5M16 4.8a3.5 3.5 0 0 1 0 6.4M18.5 14.8c1.6.8 2.6 2.5 3 5.2"/></svg>Clientes</span><span class="val" data-v="248">0</span></div><div class="tile"><span class="lb"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5 12 12l9-4.5M12 12v9"/></svg>Encomendas</span><span class="val" data-v="36">0</span></div><div class="tile"><span class="lb"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg>Stock</span><span class="val" data-v="1204">0</span></div><div class="tile"><span class="lb"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 6.5A7 7 0 1 0 17 17.5M4 10h9M4 14h9"/></svg>Faturação</span><span class="val" data-v="12480">0</span></div>
+</div></div></div>
+<img id="logo" src="file:///C:/Users/saloc/Documents/hivecode_social/assets/logo_side.png" alt="">
+<div id="cta"><span>hivecode.pt/business</span></div>
+</div>
+<script>
+const T = {"ev": {"excel": 0.617125, "email": 1.820833, "caderno": 2.7815, "s2": 3.924, "perde": 5.682875, "tempo": 6.041666, "junta": 8.622666, "lugar": 15.19675, "mod": [12.141208, 12.905083, 13.715291, 14.085666], "s5": 16.239, "site": 17.060166}, "scenes": [{"start": 0, "end": 3.924}, {"start": 3.924, "end": 7.929}, {"start": 7.929, "end": 11.991}, {"start": 11.991, "end": 16.239}, {"start": 16.239, "end": 21.032}]}, E = T.ev;
+const cl = x => Math.min(Math.max(x, 0), 1);
+const ease = x => 1 - Math.pow(1 - cl(x), 3);
+const back = x => { x = cl(x); const c = 1.9; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const $ = s => document.querySelector(s);
+const blocks = [...document.querySelectorAll('.txt')];
+const fmt = n => String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+const glows = [...document.querySelectorAll('.glow')];
+// Scattered tools: [id, appears at, base rotation, wobble phase]
+const MESS = [['#xl', E.excel, -6, 0], ['#em', E.email, 5, 1.7], ['#nb', E.caderno, -3, 3.1], ['#pi', E.perde, 8, .6], ['#ck', E.tempo, 0, 2.3]];
+const CX = 540, CY = 1140;
+
+window.seek = t => {
+  glows[0].style.transform = `translate(${40 * Math.sin(t * .5)}px,${30 * Math.cos(t * .4)}px)`;
+  glows[1].style.transform = `translate(${-50 * Math.sin(t * .35)}px,${40 * Math.cos(t * .45)}px)`;
+
+  // Text: each word pops as it is said; the block lifts away when its scene ends.
+  T.scenes.forEach((s, i) => {
+    const b = blocks[i], out = ease((t - s.end) / .25);
+    b.style.display = t >= s.start && (t < s.end + .25 || i === T.scenes.length - 1) ? 'block' : 'none';
+    b.style.opacity = i === T.scenes.length - 1 ? 1 : 1 - out;
+    b.style.transform = `translateY(${-70 * out}px)`;
+    b.querySelectorAll('.w').forEach(w => {
+      const k = back((t - +w.dataset.s + .08) / .32);
+      w.style.opacity = cl((t - +w.dataset.s + .08) / .1);
+      w.style.transform = `translateY(${34 * (1 - k)}px) scale(${.88 + .12 * k})`;
+    });
+  });
+
+  // Camera: slow breathing zoom, and a nervous shake while the problem is named.
+  const shake = cl((t - E.s2) / .4) * (1 - cl((t - E.junta) / .3));
+  $('#art').style.transform = `translate(${6 * shake * Math.sin(t * 41)}px,${5 * shake * Math.cos(t * 37)}px) scale(${1.02 + .02 * Math.sin(t * .6)})`;
+
+  // The mess: pops in on its noun, wobbles harder in scene 2, then is pulled into the centre.
+  const pull = ease((t - E.junta) / .5);
+  const amp = 2 + 4 * cl((t - E.s2) / .5);
+  MESS.forEach(([sel, at, rot, ph]) => {
+    const el = $(sel), k = back((t - at) / .45);
+    const x0 = parseFloat(el.style.left) + el.offsetWidth / 2, y0 = parseFloat(el.style.top) + el.offsetHeight / 2;
+    const dx = (CX - x0) * pull, dy = (CY - y0) * pull + 10 * Math.sin(t * 1.4 + ph) * (1 - pull);
+    el.style.opacity = cl((t - at) / .1) * (1 - pull);
+    el.style.transform = `translate(${dx}px,${dy}px) rotate(${(rot + amp * Math.sin(t * 2.2 + ph)) * (1 - pull)}deg) scale(${k * (1 - .8 * pull)})`;
+  });
+  $('#hh').style.transform = `rotate(${t * 240}deg)`;
+  $('#mh').style.transform = `rotate(${t * 1400}deg)`;
+  [['#b1', E.excel], ['#b2', E.email]].forEach(([sel, at], j) => {
+    const el = $(sel), k = back((t - at - .35) / .35);
+    el.style.opacity = cl((t - at - .35) / .1) * (1 - pull);
+    el.style.transform = `translate(${(CX - parseFloat(el.style.left)) * pull}px,${(CY - parseFloat(el.style.top)) * pull}px) scale(${k * (1 - pull)})`;
+    el.textContent = Math.max(1, Math.min(9, 1 + Math.floor(Math.max(0, t - at - .35) * (j ? 2.6 : 2))));
+  });
+
+  // The dashboard lands, each module lights up as it is said, then everything glows on "lugar".
+  const land = back((t - E.junta - .3) / .55), gone = ease((t - E.s5) / .45);
+  const db = $('#db'), glow = Math.max(0, 1 - Math.abs(t - E.lugar - .25) / .6);
+  db.style.opacity = cl((t - E.junta - .3) / .15) * (1 - gone);
+  db.style.transform = `translateY(${-140 * gone}px) scale(${(.7 + .3 * land) * (1 - .12 * gone)})`;
+  db.style.boxShadow = `0 0 ${40 + 80 * glow}px rgba(215,82,254,${.25 + .45 * glow})`;
+  document.querySelectorAll('.tile').forEach((tile, j) => {
+    const at = E.mod[j], on = ease((t - at) / .3);
+    tile.style.opacity = .35 + .65 * on;
+    tile.style.borderColor = `rgba(215,82,254,${.08 + .7 * on})`;
+    tile.style.background = `rgba(${31 + 20 * on},${25 + 8 * on},${64 + 40 * on},1)`;
+    tile.style.transform = `scale(${1 + .06 * Math.max(0, 1 - Math.abs(t - at - .12) / .2)})`;
+    const v = tile.querySelector('.val');
+    v.textContent = fmt(+v.dataset.v * ease((t - at) / .7)) + (j === 3 ? ' €' : '');
+  });
+
+  // Close: logo pops, the address follows the voice and keeps a gentle pulse.
+  const lg = back((t - E.s5 - .1) / .5);
+  $('#logo').style.opacity = cl((t - E.s5 - .1) / .1);
+  $('#logo').style.transform = `rotate(${-120 * (1 - lg)}deg) scale(${lg})`;
+  const ct = back((t - E.site) / .45);
+  $('#cta').style.opacity = cl((t - E.site) / .1);
+  $('#cta').style.transform = `scale(${ct * (1 + .03 * Math.sin((t - E.site) * 5) * cl(t - E.site - .5))})`;
+};
+seek(0);
+</script>
+</body></html>
