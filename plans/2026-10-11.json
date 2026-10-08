@@ -1,0 +1,21 @@
+[
+  {
+    "id": "2026-10-11-negocio-local",
+    "date": "2026-10-11",
+    "time": "11:00",
+    "theme": "Site para negócio local: trabalha enquanto a loja está fechada",
+    "type": "carousel",
+    "image_urls": [
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-11-negocio-local/slides/01/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-11-negocio-local/slides/02/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-11-negocio-local/slides/03/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-11-negocio-local/slides/04/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-11-negocio-local/slides/05/post.jpg"
+    ],
+    "destination": "https://hivecode.pt/?utm_source=instagram&utm_medium=social&utm_campaign=site-negocio-local",
+    "caption": "Um bom site não serve só para estar online. Trabalha por si, mesmo com a loja fechada.\n\n📍 Ajuda os clientes a encontrá-lo.\n✅ Convence em poucos segundos.\n📞 Torna o contacto fácil, com um toque.\n\nFazemos sites rápidos, pensados para telemóvel, para negócios locais que querem vender mais.\n\nhivecode.pt (link na bio)\n\n#webdesign #negocioslocais #pme #sitesprofissionais #hivecode",
+    "status": "approved",
+    "approved_at": "2026-10-08",
+    "media_id": null
+  }
+]
