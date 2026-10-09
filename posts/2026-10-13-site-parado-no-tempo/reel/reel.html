@@ -1,0 +1,215 @@
+<!doctype html><html lang="pt"><head><meta charset="utf-8">
+<style>@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&display=block');
+
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&display=block');
+:root{--night:#121125;--deep:#16132f;--ink:#f3f1fb;--soft:#c9c3e6;--muted:#9a93c0;
+--pink:#EF5AFE;--violet:#D752FE;--blue:#4877FE;}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--night);color:var(--ink);font-family:'Geologica',sans-serif;position:relative}
+.hex{position:absolute;inset:0;opacity:.5}
+.glow{position:absolute;border-radius:50%;filter:blur(120px);opacity:.45}
+.frame{position:absolute;inset:0;padding:96px 88px;display:flex;flex-direction:column}
+.eyebrow{display:inline-flex;align-items:center;gap:14px;font-size:24px;font-weight:500;letter-spacing:.14em;
+text-transform:uppercase;color:var(--soft)}
+.eyebrow i{width:14px;height:14px;transform:rotate(30deg);background:linear-gradient(135deg,var(--pink),var(--blue));
+clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+h1{font-weight:600;font-size:84px;line-height:1.04;letter-spacing:-.025em;margin-top:40px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--violet)}
+p.lead{font-size:34px;line-height:1.4;color:var(--soft);font-weight:300;margin-top:32px;max-width:860px}
+.content{flex:1;display:flex;flex-direction:column;justify-content:center;padding-bottom:40px}
+.content>.eyebrow{align-self:flex-start}
+.foot{display:flex;align-items:center;justify-content:space-between;font-size:26px;color:var(--muted)}
+.brand{display:flex;align-items:center;gap:16px;font-weight:600;font-size:30px;color:var(--ink)}
+.brand img{width:52px;height:52px}
+.shot{border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.14);
+box-shadow:0 40px 90px -30px rgba(72,119,254,.55);background:#000}
+.shot .bar{height:44px;background:#1d1a3a;display:flex;align-items:center;gap:10px;padding:0 18px;font-size:19px;color:var(--muted)}
+.shot .bar b{width:12px;height:12px;border-radius:50%;background:#3a3566}
+.shot .bar span{margin-left:14px}
+.shot img{display:block;width:100%}
+
+html,body{width:1080px;height:1920px}
+.top{position:absolute;left:88px;right:88px;top:150px;display:flex;justify-content:space-between;align-items:center;font-size:28px;color:var(--muted);z-index:5}
+.txt{position:absolute;left:88px;width:904px;top:300px;font-weight:600;line-height:1.08;letter-spacing:-.025em;z-index:4}
+.txt .w{display:inline-block;opacity:0;margin-right:.24em}
+.txt .w.em{color:var(--violet)}
+#art{position:absolute;inset:0;transform-origin:540px 1140px}
+#art>*{position:absolute}
+
+.old{left:88px;top:830px;width:904px;height:600px;background:#fff;border:3px solid #c0c0c0;box-shadow:0 40px 90px -30px rgba(0,0,0,.9);
+font-family:'Times New Roman',serif;color:#000;overflow:hidden;opacity:0}
+.old .tb{height:48px;background:linear-gradient(90deg,#000080,#1084d0);color:#fff;font:bold 22px Tahoma,sans-serif;display:flex;align-items:center;justify-content:space-between;padding:0 14px}
+.old .tb i{display:inline-block;width:30px;height:28px;margin-left:6px;background:#c0c0c0;border:2px outset #fff}
+.old .mq{background:#000080;color:#ffff00;font-size:28px;padding:8px 0;white-space:nowrap;overflow:hidden}
+.old .mq span{display:inline-block}
+.old h2{font-size:56px;text-align:center;margin:26px 0 8px;color:#800000}
+.old .nav{text-align:center;font-size:28px;color:#0000ee;text-decoration:underline}
+.old .uc{margin:26px auto 0;width:420px;padding:14px;text-align:center;font:bold 28px Arial,sans-serif;
+background:repeating-linear-gradient(45deg,#ffd400 0 22px,#111 22px 44px);color:#fff;text-shadow:0 0 6px #000}
+.old .cnt{margin:26px auto 0;text-align:center;font-size:26px}
+.old .cnt b{font-family:'Courier New',monospace;background:#000;color:#0f0;padding:2px 8px;letter-spacing:3px}
+.old .ft{position:absolute;left:0;right:0;bottom:16px;text-align:center;font-size:18px;color:#555}
+.old .ft u{color:#0000ee}
+.old .load{position:absolute;left:0;right:0;top:48px;bottom:0;background:rgba(255,255,255,.88);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;font:28px Tahoma,sans-serif;color:#333;opacity:0}
+.old .load .pb{width:520px;height:30px;border:2px inset #c0c0c0;background:#fff}
+.old .load .pb i{display:block;height:100%;background:repeating-linear-gradient(90deg,#000080 0 22px,#fff 22px 26px)}
+.x{width:84px;height:84px;border-radius:50%;background:#ff4d6d;display:grid;place-items:center;box-shadow:0 0 0 10px rgba(255,77,109,.2);opacity:0;z-index:3}
+.oph{left:660px;top:960px;width:250px;height:470px;border-radius:44px;background:#0d0b1c;border:2px solid rgba(255,255,255,.25);padding:12px;opacity:0;z-index:2;
+box-shadow:0 40px 80px -30px rgba(0,0,0,.9)}
+.oph .scr{height:100%;border-radius:32px;background:#fff;overflow:hidden;position:relative}
+.oph .mini{position:absolute;left:0;top:0;width:904px;transform-origin:0 0;transform:scale(.36)}
+.oph .hs{position:absolute;left:14px;right:60px;bottom:16px;height:10px;border-radius:5px;background:#aaa}
+.mag{width:170px;height:170px;border-radius:50%;border:12px solid #f3f1fb;background:rgba(255,255,255,.12);opacity:0;z-index:2}
+.mag:after{content:"";position:absolute;right:-56px;bottom:-30px;width:80px;height:20px;border-radius:10px;background:#f3f1fb;transform:rotate(40deg)}
+.ppl{left:88px;right:88px;top:930px;display:flex;justify-content:center;gap:34px;opacity:0}
+.ppl svg{width:110px;height:110px}
+.stat{left:88px;right:88px;top:1120px;text-align:center;font-size:44px;font-weight:600;opacity:0}
+.stat b{color:#ff4d6d}
+.nph{left:110px;top:850px;width:330px;height:600px;border-radius:52px;background:#0d0b1c;border:2px solid rgba(255,255,255,.2);padding:14px;opacity:0;
+box-shadow:0 40px 90px -30px rgba(215,82,254,.65)}
+.nph .scr{height:100%;border-radius:40px;background:#1b1638;padding:28px 22px;display:flex;flex-direction:column;gap:16px}
+.bar{display:block;height:18px;border-radius:9px;background:rgba(255,255,255,.14)}
+.hl{background:linear-gradient(90deg,var(--pink),var(--blue))}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;background:#265ADF;font-weight:600;color:#fff}
+.ok{left:490px;display:flex;align-items:center;gap:18px;padding:24px 32px;border-radius:999px;background:#1b1638;border:1px solid rgba(255,255,255,.16);font-size:36px;font-weight:600;opacity:0}
+.ok i{width:46px;height:46px;border-radius:50%;background:#2fbf71;display:grid;place-items:center}
+.flash{inset:0;background:#fff;opacity:0;z-index:9}
+#logo{left:440px;top:930px;width:200px;height:200px;opacity:0}
+#cta{left:88px;right:88px;top:1220px;display:flex;justify-content:center;opacity:0}
+#cta span{padding:32px 54px;border-radius:999px;background:#265ADF;font-size:44px;font-weight:600;box-shadow:0 30px 70px -20px rgba(72,119,254,.8)}
+</style></head><body>
+<span class="glow" style="width:720px;height:720px;left:-220px;top:-160px;background:#4877FE"></span>
+<span class="glow" style="width:680px;height:680px;right:-260px;bottom:260px;background:#D752FE"></span>
+<div class="top"><span class="brand"><img src="file:///C:/Users/saloc/Documents/hivecode_social/assets/logo_side.png" alt="">HiveCode</span><span>hivecode.pt</span></div>
+<div class="txt" style="font-size:96px"><span class="w" data-s="0.096">O</span><span class="w" data-s="0.212">site</span><span class="w" data-s="0.409">da</span><span class="w" data-s="0.536">sua</span><span class="w" data-s="0.652">empresa</span><span class="w em" data-s="1.022">parou</span><span class="w em" data-s="1.173">no</span><span class="w em" data-s="1.288">tempo?</span></div><div class="txt" style="font-size:80px"><span class="w" data-s="2.454">Demora</span><span class="w" data-s="2.743">a</span><span class="w" data-s="2.812">abrir,</span><span class="w" data-s="3.299">não</span><span class="w" data-s="3.461">se</span><span class="w" data-s="3.565">adapta</span><span class="w" data-s="3.843">ao</span><span class="w" data-s="3.947">telemóvel</span><span class="w" data-s="4.468">e</span><span class="w" data-s="4.537">o</span><span class="w" data-s="4.595">contacto</span><span class="w" data-s="4.977">é</span><span class="w" data-s="5.058">difícil</span><span class="w" data-s="5.463">de</span><span class="w" data-s="5.532">encontrar.</span></div><div class="txt" style="font-size:92px"><span class="w" data-s="6.829">Cada</span><span class="w" data-s="7.037">visita</span><span class="w" data-s="7.384">perdida</span><span class="w" data-s="7.812">é</span><span class="w" data-s="7.917">um</span><span class="w em" data-s="8.009">cliente</span><span class="w" data-s="8.368">que</span><span class="w" data-s="8.414">não</span><span class="w" data-s="8.542">chega.</span></div><div class="txt" style="font-size:80px"><span class="w" data-s="9.734">A</span><span class="w" data-s="9.850">HiveCode</span><span class="w" data-s="10.312">cria</span><span class="w" data-s="10.521">sites</span><span class="w em" data-s="10.799">rápidos,</span><span class="w" data-s="11.493">pensados</span><span class="w" data-s="11.910">para</span><span class="w em" data-s="12.025">telemóvel</span><span class="w" data-s="12.523">e</span><span class="w" data-s="12.593">fáceis</span><span class="w" data-s="12.963">de</span><span class="w em" data-s="13.032">contactar.</span></div><div class="txt" style="font-size:88px"><span class="w" data-s="14.375">Fale</span><span class="w" data-s="14.676">connosco</span><span class="w" data-s="15.116">em</span><span class="w em" data-s="15.243">hivecode.pt.</span></div><div id="art">
+<div class="old" id="old"><div class="tb"><span>A Sua Empresa, Lda. - Página Inicial</span><span><i></i><i></i><i></i></span></div>
+<div class="mq"><span>&#9733; Bem-vindo ao nosso site! &#9733; Melhor visualizado em 800x600 &#9733; Bem-vindo ao nosso site! &#9733;</span></div>
+<h2>A Sua Empresa, Lda.</h2>
+<div class="nav">Início | Quem Somos | Serviços | Galeria | Livro de Visitas</div>
+<div class="uc">PÁGINA EM CONSTRUÇÃO</div>
+<div class="cnt">Visitante nº <b>000127</b></div>
+<div class="ft">Última atualização: 12/03/2015 · <u>contactos</u></div>
+<div class="load" id="load"><span>A carregar…</span><div class="pb"><i id="pbi"></i></div></div></div>
+<div class="oph" id="oph"><div class="scr"><div class="mini old" style="opacity:1;position:absolute;left:0;top:0;height:600px;border:0;box-shadow:none"><div class="mq"><span>&#9733; Bem-vindo ao nosso site! &#9733; Melhor visualizado em 800x600 &#9733; Bem-vindo ao nosso site! &#9733;</span></div>
+<h2>A Sua Empresa, Lda.</h2>
+<div class="nav">Início | Quem Somos | Serviços | Galeria | Livro de Visitas</div>
+<div class="uc">PÁGINA EM CONSTRUÇÃO</div>
+<div class="cnt">Visitante nº <b>000127</b></div>
+<div class="ft">Última atualização: 12/03/2015 · <u>contactos</u></div></div><span class="hs"></span></div></div>
+<div class="mag" id="mag" style="left:560px;top:1300px"></div>
+<span class="x" id="x1" style="left:820px;top:1105px"><svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></span>
+<span class="x" id="x2" style="left:870px;top:925px"><svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></span>
+<span class="x" id="x3" style="left:700px;top:1330px"><svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></span>
+<div class="ppl" id="ppl"><svg viewBox="0 0 24 24" fill="none" stroke="#c9c3e6" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4.5 4.5-6.5 8-6.5s6.5 2 8 6.5"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="#c9c3e6" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4.5 4.5-6.5 8-6.5s6.5 2 8 6.5"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="#c9c3e6" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4.5 4.5-6.5 8-6.5s6.5 2 8 6.5"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="#c9c3e6" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4.5 4.5-6.5 8-6.5s6.5 2 8 6.5"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="#c9c3e6" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4.5 4.5-6.5 8-6.5s6.5 2 8 6.5"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="#c9c3e6" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4.5 4.5-6.5 8-6.5s6.5 2 8 6.5"/></svg></div>
+<div class="stat" id="stat">127 visitas · <b>0 contactos</b></div>
+<div class="nph" id="nph"><div class="scr">
+<span style="height:190px;border-radius:22px;background:linear-gradient(150deg,rgba(239,90,254,.6),rgba(72,119,254,.6))"></span>
+<span class="bar" style="height:28px;width:85%;background:rgba(255,255,255,.32)"></span><span class="bar" style="width:65%"></span><span class="bar" style="width:75%"></span>
+<span class="btn" style="margin-top:auto;padding:18px;font-size:26px">Contactar</span></div></div>
+<div class="ok" id="ok1" style="top:900px"><i><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Rápido</div>
+<div class="ok" id="ok2" style="top:1040px"><i><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Pensado para telemóvel</div>
+<div class="ok" id="ok3" style="top:1180px"><i><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Contacto a um toque</div>
+<div class="flash" id="flash"></div>
+<img id="logo" src="file:///C:/Users/saloc/Documents/hivecode_social/assets/logo_side.png" alt="">
+<div id="cta"><span>hivecode.pt</span></div>
+</div>
+<script>
+const T = {"ev": {"demora": 2.453708, "tel": 3.94675, "contacto": 4.594916, "s3": 6.679, "cliente": 8.00925, "s4": 9.584, "rap": 10.798625, "tel2": 12.025458, "cont": 13.032416, "s5": 14.225, "site": 15.243041}, "scenes": [{"start": 0, "end": 2.304}, {"start": 2.304, "end": 6.679}, {"start": 6.679, "end": 9.584}, {"start": 9.584, "end": 14.225}, {"start": 14.225, "end": 18.584}]}, E = T.ev;
+const cl = x => Math.min(Math.max(x, 0), 1);
+const ease = x => 1 - Math.pow(1 - cl(x), 3);
+const back = x => { x = cl(x); const c = 1.9; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const blocks = $$('.txt'), glows = $$('.glow');
+// Shows an element from `a` (pops in) until `b` (slides out left); returns visibility 0..1.
+function stage(el, t, a, b, dist = 60) {
+  const k = back((t - a) / .5), o = ease((t - b) / .3);
+  el.style.opacity = cl((t - a) / .12) * (1 - o);
+  el.style.transform = `translate(${-160 * o}px,${dist * (1 - k)}px) scale(${.92 + .08 * k})`;
+  return cl((t - a) / .12) * (1 - o);
+}
+function pop(el, t, a, base = '') {
+  const k = back((t - a) / .45);
+  el.style.opacity = cl((t - a) / .1);
+  el.style.transform = `${base} scale(${k})`;
+}
+
+function art(t, E) {
+  // The old site: in from the start, dimmed while visitors leave, glitches away on "A HiveCode".
+  const old = $('#old'), g = cl((t - E.s4) / .45);
+  const k = back((t - .15) / .5);
+  old.style.opacity = cl((t - .15) / .12) * (1 - cl((t - E.s3) / .3)) * (1 - g);
+  const jit = g > 0 && g < 1 ? 26 * Math.sin(t * 90) : 0;
+  old.style.transform = `translate(${jit}px,${50 * (1 - k)}px) scale(${(.92 + .08 * k) * (1 - .15 * g)})`;
+  old.style.filter = g > 0 ? `hue-rotate(${300 * g}deg) contrast(${1 + 2 * g})` : 'none';
+  $('.old .mq span').style.transform = `translateX(${900 - (t * 140) % 1900}px)`;
+  // Slow: a loading screen that crawls.
+  const ld = cl((t - E.demora) / .2) * (1 - cl((t - E.tel + .1) / .2));
+  $('#load').style.opacity = ld;
+  $('#pbi').style.width = `${Math.min(38, Math.max(0, (t - E.demora) * 14))}%`;
+  // Problems get a red cross as they are named.
+  [['#x1', E.demora + .35], ['#x2', E.tel + .25], ['#x3', E.contacto + .3]].forEach(([s, a]) => {
+    pop($(s), t, a);
+    $(s).style.opacity = cl((t - a) / .1) * (1 - cl((t - E.s3) / .25));
+  });
+  // Not mobile: the desktop page crammed into a phone.
+  const ph = $('#oph'), pk = back((t - E.tel) / .45);
+  ph.style.opacity = cl((t - E.tel) / .1) * (1 - cl((t - E.s3) / .25));
+  ph.style.transform = `translateY(${60 * (1 - pk)}px) rotate(${4 * pk}deg) scale(${.9 + .1 * pk})`;
+  $('#oph .mini').style.transform = `translateX(${-120 * (.5 + .5 * Math.sin((t - E.tel) * 1.8))}px) scale(.36)`;
+  // Contact hidden: a magnifier searching the footer.
+  const mg = $('#mag');
+  mg.style.opacity = cl((t - E.contacto) / .12) * (1 - cl((t - E.s3) / .25));
+  mg.style.transform = `translate(${-120 + 60 * Math.sin((t - E.contacto) * 2.4)}px,${10 * Math.cos((t - E.contacto) * 3)}px)`;
+  // Visitors leave one by one.
+  const ppl = $('#ppl'), pv = cl((t - E.s3) / .3) * (1 - cl((t - E.s4) / .25));
+  ppl.style.opacity = pv;
+  [...ppl.children].forEach((p, j) => {
+    const lv = ease((t - E.s3 - .5 - .22 * j) / .4);
+    p.style.opacity = 1 - .85 * lv;
+    p.style.transform = `translateY(${70 * lv}px)`;
+  });
+  const st = $('#stat');
+  st.style.opacity = cl((t - E.cliente) / .15) * (1 - cl((t - E.s4) / .25));
+  st.style.transform = `translateY(${30 * (1 - ease((t - E.cliente) / .4))}px)`;
+  // Glitch flash, then the modern phone and its three strengths on their words.
+  $('#flash').style.opacity = .55 * Math.max(0, 1 - Math.abs(t - E.s4 - .38) / .12);
+  const nk = back((t - E.s4 - .4) / .55), gone = ease((t - E.s5) / .4);
+  const nph = $('#nph');
+  nph.style.opacity = cl((t - E.s4 - .4) / .12) * (1 - gone);
+  nph.style.transform = `translateY(${80 * (1 - nk) + 12 * Math.sin(t * 1.6) - 120 * gone}px) rotate(${-4 * nk}deg) scale(${.85 + .15 * nk})`;
+  [['#ok1', E.rap], ['#ok2', E.tel2], ['#ok3', E.cont]].forEach(([s, a]) => {
+    const el = $(s), kk = back((t - a) / .45);
+    el.style.opacity = cl((t - a) / .1) * (1 - gone);
+    el.style.transform = `translateX(${120 * (1 - kk)}px) scale(${.9 + .1 * kk})`;
+  });
+  // Close.
+  const lg = back((t - E.s5 - .1) / .5);
+  $('#logo').style.opacity = cl((t - E.s5 - .1) / .1);
+  $('#logo').style.transform = `rotate(${-120 * (1 - lg)}deg) scale(${lg})`;
+  const ct = back((t - E.site) / .45);
+  $('#cta').style.opacity = cl((t - E.site) / .1);
+  $('#cta').style.transform = `scale(${ct * (1 + .03 * Math.sin((t - E.site) * 5) * cl(t - E.site - .5))})`;
+}
+
+window.seek = t => {
+  glows[0].style.transform = `translate(${40 * Math.sin(t * .5)}px,${30 * Math.cos(t * .4)}px)`;
+  glows[1].style.transform = `translate(${-50 * Math.sin(t * .35)}px,${40 * Math.cos(t * .45)}px)`;
+  T.scenes.forEach((s, i) => {
+    const b = blocks[i], last = i === T.scenes.length - 1, out = last ? 0 : ease((t - s.end) / .25);
+    b.style.display = t >= s.start && (t < s.end + .25 || last) ? 'block' : 'none';
+    b.style.opacity = 1 - out;
+    b.style.transform = `translateY(${-70 * out}px)`;
+    b.querySelectorAll('.w').forEach(w => {
+      const k = back((t - +w.dataset.s + .08) / .32);
+      w.style.opacity = cl((t - +w.dataset.s + .08) / .1);
+      w.style.transform = `translateY(${34 * (1 - k)}px) scale(${.88 + .12 * k})`;
+    });
+  });
+  $('#art').style.transform = `scale(${1.02 + .02 * Math.sin(t * .6)})`;
+  art(t, E);
+};
+seek(0);
+</script>
+</body></html>
