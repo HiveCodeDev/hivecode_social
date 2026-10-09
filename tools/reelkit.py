@@ -67,7 +67,7 @@ seek(0);
 """
 
 
-def voice(scenes_spec, mp3, rate="+8%", hold=1.4):
+def voice(scenes_spec, mp3, rate="+0%", hold=1.4):
     """Says all scene texts in one take; returns (total seconds, scenes with words/start/end)."""
     text = " ".join(s for s, _, _ in scenes_spec)
     dur, words = say(text, mp3, rate=rate)
