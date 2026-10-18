@@ -20,3 +20,6 @@ assets/clients/
 # Local agent context
 CLAUDE.md
 .claude/
+
+# Windows Task Scheduler publish logs
+logs/

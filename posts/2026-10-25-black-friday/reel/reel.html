@@ -1,0 +1,159 @@
+<!doctype html><html lang="pt"><head><meta charset="utf-8">
+<style>@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&display=block');
+
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&display=block');
+:root{--night:#121125;--deep:#16132f;--ink:#f3f1fb;--soft:#c9c3e6;--muted:#9a93c0;
+--pink:#EF5AFE;--violet:#D752FE;--blue:#4877FE;}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--night);color:var(--ink);font-family:'Geologica',sans-serif;position:relative}
+.hex{position:absolute;inset:0;opacity:.5}
+.glow{position:absolute;border-radius:50%;filter:blur(120px);opacity:.45}
+.frame{position:absolute;inset:0;padding:96px 88px;display:flex;flex-direction:column}
+.eyebrow{display:inline-flex;align-items:center;gap:14px;font-size:24px;font-weight:500;letter-spacing:.14em;
+text-transform:uppercase;color:var(--soft)}
+.eyebrow i{width:14px;height:14px;transform:rotate(30deg);background:linear-gradient(135deg,var(--pink),var(--blue));
+clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+h1{font-weight:600;font-size:84px;line-height:1.04;letter-spacing:-.025em;margin-top:40px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--violet)}
+p.lead{font-size:34px;line-height:1.4;color:var(--soft);font-weight:300;margin-top:32px;max-width:860px}
+.content{flex:1;display:flex;flex-direction:column;justify-content:center;padding-bottom:40px}
+.content>.eyebrow{align-self:flex-start}
+.foot{display:flex;align-items:center;justify-content:space-between;font-size:26px;color:var(--muted)}
+.brand{display:flex;align-items:center;gap:16px;font-weight:600;font-size:30px;color:var(--ink)}
+.brand img{width:52px;height:52px}
+.shot{border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.14);
+box-shadow:0 40px 90px -30px rgba(72,119,254,.55);background:#000}
+.shot .bar{height:44px;background:#1d1a3a;display:flex;align-items:center;gap:10px;padding:0 18px;font-size:19px;color:var(--muted)}
+.shot .bar b{width:12px;height:12px;border-radius:50%;background:#3a3566}
+.shot .bar span{margin-left:14px}
+.shot img{display:block;width:100%}
+
+html,body{width:1080px;height:1920px}
+.top{position:absolute;left:88px;right:88px;top:150px;display:flex;justify-content:space-between;align-items:center;font-size:28px;color:var(--muted);z-index:5}
+.txt{position:absolute;left:88px;width:904px;top:300px;font-weight:600;line-height:1.08;letter-spacing:-.025em;z-index:4}
+.txt .w{display:inline-block;opacity:0;margin-right:.24em}
+.txt .w.em{color:var(--violet)}
+#art{position:absolute;inset:0;transform-origin:540px 1140px}
+#art>*{position:absolute}
+
+.cal{left:340px;top:870px;width:400px;height:420px;border-radius:30px;background:#f3f1fb;color:#121125;overflow:hidden;opacity:0;text-align:center;box-shadow:0 40px 90px -30px rgba(0,0,0,.9)}
+.cal .ctop{height:110px;background:#121125;color:#f3f1fb;font-size:40px;font-weight:700;display:grid;place-items:center;border:4px solid #f3f1fb;border-radius:30px 30px 0 0}
+.cal b{display:block;font-size:180px;font-weight:800;line-height:1.1;margin-top:20px}
+.cal span{font-size:40px;font-weight:600}
+.panel{border-radius:28px;background:#1b1638;border:1px solid rgba(255,255,255,.16);opacity:0;box-shadow:0 40px 80px -30px rgba(0,0,0,.8)}
+#vis{left:120px;top:880px;width:840px;height:220px;padding:30px 40px}
+#vis small{font-size:30px;color:var(--soft)}#vis b{display:block;font-size:110px;font-weight:800;letter-spacing:-.03em}
+#gauge{left:300px;top:1150px;width:480px;height:280px;padding-top:20px;text-align:center}
+.ok{width:96px;height:96px;border-radius:50%;background:#2fbf71;display:grid;place-items:center;opacity:0}
+.ph{left:350px;top:860px;width:380px;height:600px;border-radius:52px;background:#0d0b1c;border:2px solid rgba(255,255,255,.2);padding:14px;opacity:0;box-shadow:0 40px 90px -30px rgba(215,82,254,.6)}
+.ph .scr{height:100%;border-radius:40px;background:#1b1638;padding:34px 26px;display:flex;flex-direction:column;gap:22px}
+.step{display:flex;align-items:center;gap:18px;padding:22px 24px;border-radius:20px;background:rgba(255,255,255,.06);font-size:32px;font-weight:600}
+.step i{width:44px;height:44px;border-radius:50%;border:3px solid rgba(255,255,255,.4);display:grid;place-items:center;font-style:normal;font-size:24px}
+#stock{left:220px;top:880px;width:640px;height:520px;padding:40px;display:flex;flex-direction:column;gap:26px}
+#stock .prod{height:200px;border-radius:20px;background:linear-gradient(150deg,rgba(239,90,254,.55),rgba(72,119,254,.55))}
+#stock .row{display:flex;justify-content:space-between;align-items:center;font-size:40px;font-weight:700}
+#sold{padding:12px 24px;border-radius:999px;background:#ff4d6d;font-size:30px;opacity:0}
+.li{left:150px;display:flex;align-items:center;gap:22px;padding:26px 36px;border-radius:999px;background:#1b1638;border:1px solid rgba(255,255,255,.16);font-size:38px;font-weight:600;opacity:0;white-space:nowrap}
+.li i{width:52px;height:52px;border-radius:50%;background:#2fbf71;display:grid;place-items:center}
+#logo{left:440px;top:930px;width:200px;height:200px;opacity:0}
+#cta{left:88px;right:88px;top:1220px;display:flex;justify-content:center;opacity:0}
+#cta span{padding:32px 54px;border-radius:999px;background:#265ADF;font-size:44px;font-weight:600;box-shadow:0 30px 70px -20px rgba(72,119,254,.8)}
+</style></head><body>
+<span class="glow" style="width:720px;height:720px;left:-220px;top:-160px;background:#4877FE"></span>
+<span class="glow" style="width:680px;height:680px;right:-260px;bottom:260px;background:#D752FE"></span>
+<div class="top"><span class="brand"><img src="file:///C:/Users/saloc/Documents/hivecode_social/assets/logo_side.png" alt="">HiveCode</span><span>hivecode.pt</span></div>
+<div class="txt" style="font-size:92px"><span class="w" data-s="0.100">Falta</span><span class="w" data-s="0.450">um</span><span class="w" data-s="0.500">mês</span><span class="w" data-s="0.762">para</span><span class="w" data-s="0.875">a</span><span class="w em" data-s="0.925">Black</span><span class="w em" data-s="1.113">Friday.</span></div><div class="txt" style="font-size:100px"><span class="w" data-s="2.500">O</span><span class="w" data-s="2.638">seu</span><span class="w" data-s="2.775">site</span><span class="w" data-s="2.987">está</span><span class="w em" data-s="3.188">preparado?</span></div><div class="txt" style="font-size:76px"><span class="w" data-s="4.575">Primeiro:</span><span class="w" data-s="5.175">aguenta</span><span class="w em" data-s="5.525">muitas</span><span class="w em" data-s="5.825">visitas</span><span class="w" data-s="6.213">ao</span><span class="w" data-s="6.312">mesmo</span><span class="w" data-s="6.600">tempo,</span><span class="w" data-s="7.062">sem</span><span class="w" data-s="7.250">ficar</span><span class="w" data-s="7.575">lento?</span></div><div class="txt" style="font-size:80px"><span class="w" data-s="8.812">Segundo:</span><span class="w" data-s="9.550">comprar</span><span class="w" data-s="9.887">no</span><span class="w em" data-s="10.012">telemóvel</span><span class="w" data-s="10.525">é</span><span class="w" data-s="10.625">simples</span><span class="w" data-s="10.988">e</span><span class="w" data-s="11.062">rápido?</span></div><div class="txt" style="font-size:72px"><span class="w" data-s="12.363">Terceiro:</span><span class="w" data-s="13.012">o</span><span class="w em" data-s="13.137">stock</span><span class="w" data-s="13.338">está</span><span class="w" data-s="13.537">sempre</span><span class="w" data-s="13.850">certo,</span><span class="w" data-s="14.375">para</span><span class="w" data-s="14.488">não</span><span class="w" data-s="14.625">vender</span><span class="w" data-s="14.900">o</span><span class="w" data-s="14.963">que</span><span class="w" data-s="15.025">já</span><span class="w" data-s="15.137">não</span><span class="w" data-s="15.300">tem?</span></div><div class="txt" style="font-size:84px"><span class="w" data-s="16.438">Se</span><span class="w" data-s="16.613">a</span><span class="w" data-s="16.650">resposta</span><span class="w" data-s="17.100">a</span><span class="w" data-s="17.137">alguma</span><span class="w" data-s="17.400">for</span><span class="w" data-s="17.637">não,</span><span class="w" data-s="18.087">ainda</span><span class="w" data-s="18.350">vai</span><span class="w" data-s="18.500">a</span><span class="w em" data-s="18.575">tempo.</span></div><div class="txt" style="font-size:88px"><span class="w" data-s="19.837">Fale</span><span class="w" data-s="20.163">connosco</span><span class="w" data-s="20.637">em</span><span class="w em" data-s="20.775">hivecode.pt.</span></div><div id="art">
+<div class="cal" id="cal"><div class="ctop">Novembro</div><b>27</b><span>Black Friday</span></div>
+<div class="panel" id="vis"><small>Visitas agora</small><b id="visv">0</b></div>
+<div class="panel" id="gauge"><svg viewBox="0 0 200 110" width="400" height="220"><path d="M20 100 A80 80 0 0 1 180 100" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="18" stroke-linecap="round"/>
+<path d="M20 100 A80 80 0 0 1 100 20" fill="none" stroke="#2fbf71" stroke-width="18" stroke-linecap="round"/>
+<line id="needle" x1="100" y1="100" x2="100" y2="34" stroke="#f3f1fb" stroke-width="7" stroke-linecap="round" style="transform-origin:100px 100px"/><circle cx="100" cy="100" r="10" fill="#f3f1fb"/></svg><div style="font-size:32px;font-weight:600;margin-top:-6px">Rápido</div></div>
+<span class="ok" id="ok1" style="left:830px;top:1180px"><svg viewBox="0 0 24 24" width="52" height="52" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span>
+<div class="ph" id="ph"><div class="scr">
+<div class="step" id="st0"><i>1</i>Carrinho</div><div class="step" id="st1"><i>2</i>Pagamento</div><div class="step" id="st2"><i>3</i>Concluído</div></div></div>
+<span class="ok" id="ok2" style="left:760px;top:880px"><svg viewBox="0 0 24 24" width="52" height="52" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span>
+<div class="panel" id="stock"><div class="prod"></div><div class="row">Produto A<span id="stv">Stock: 5</span></div>
+<div class="row"><span style="font-size:32px;color:var(--soft)">Atualizado em tempo real</span><span id="sold">Esgotado</span></div></div>
+<span class="ok" id="ok3" style="left:820px;top:860px"><svg viewBox="0 0 24 24" width="52" height="52" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span>
+<div class="li" id="l0" style="top:900px"><i><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Aguenta muitas visitas</div>
+<div class="li" id="l1" style="top:1040px"><i><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Compra simples no telemóvel</div>
+<div class="li" id="l2" style="top:1180px"><i><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Stock sempre certo</div>
+<img id="logo" src="file:///C:/Users/saloc/Documents/hivecode_social/assets/logo_side.png" alt="">
+<div id="cta"><span>hivecode.pt</span></div>
+</div>
+<script>
+const T = {"ev": {"s3": 4.425, "visitas": 5.825, "s4": 8.662, "tel": 10.0125, "s5": 12.213, "stock": 13.1375, "s6": 16.288, "s7": 19.688, "site": 20.775}, "scenes": [{"start": 0, "end": 2.35}, {"start": 2.35, "end": 4.425}, {"start": 4.425, "end": 8.662}, {"start": 8.662, "end": 12.213}, {"start": 12.213, "end": 16.288}, {"start": 16.288, "end": 19.688}, {"start": 19.688, "end": 24.272}]}, E = T.ev;
+const cl = x => Math.min(Math.max(x, 0), 1);
+const ease = x => 1 - Math.pow(1 - cl(x), 3);
+const back = x => { x = cl(x); const c = 1.9; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const blocks = $$('.txt'), glows = $$('.glow');
+// Shows an element from `a` (pops in) until `b` (slides out left); returns visibility 0..1.
+function stage(el, t, a, b, dist = 60) {
+  const k = back((t - a) / .5), o = ease((t - b) / .3);
+  el.style.opacity = cl((t - a) / .12) * (1 - o);
+  el.style.transform = `translate(${-160 * o}px,${dist * (1 - k)}px) scale(${.92 + .08 * k})`;
+  return cl((t - a) / .12) * (1 - o);
+}
+function pop(el, t, a, base = '') {
+  const k = back((t - a) / .45);
+  el.style.opacity = cl((t - a) / .1);
+  el.style.transform = `${base} scale(${k})`;
+}
+
+const fmt = n => String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+function art(t, E) {
+  stage($('#cal'), t, .15, E.s3);
+  // 1. Traffic climbs, the gauge holds in the green.
+  stage($('#vis'), t, E.s3 + .2, E.s4); stage($('#gauge'), t, E.s3 + .45, E.s4);
+  $('#visv').textContent = fmt(4873 * ease((t - E.visitas) / 1.8));
+  $('#needle').style.transform = `rotate(${-55 + 6 * Math.sin(t * 9)}deg)`;
+  pop($('#ok1'), t, E.s4 - .6); $('#ok1').style.opacity *= 1 - ease((t - E.s4) / .3);
+  // 2. Three-step checkout lights up across the sentence.
+  stage($('#ph'), t, E.s4 + .2, E.s5);
+  const span = Math.max(.6, (E.s5 - E.s4 - 1) / 3);
+  [0, 1, 2].forEach(i => {
+    const on = t > E.tel + span * i, el = $('#st' + i);
+    el.style.background = on ? 'rgba(38,90,223,.9)' : 'rgba(255,255,255,.06)';
+    el.style.transform = `scale(${1 + .05 * Math.max(0, 1 - Math.abs(t - E.tel - span * i) / .2)})`;
+  });
+  pop($('#ok2'), t, E.s5 - .5); $('#ok2').style.opacity *= 1 - ease((t - E.s5) / .3);
+  // 3. Stock counts down with each order, then shows "Esgotado".
+  stage($('#stock'), t, E.s5 + .2, E.s6);
+  const left = Math.max(0, 5 - Math.floor(Math.max(0, t - E.stock) * 2.2));
+  $('#stv').textContent = `Stock: ${left}`;
+  pop($('#sold'), t, E.stock + 2.4);
+  pop($('#ok3'), t, E.s6 - .5); $('#ok3').style.opacity *= 1 - ease((t - E.s6) / .3);
+  // Recap checklist.
+  ['#l0', '#l1', '#l2'].forEach((s, i) => stage($(s), t, E.s6 + .25 + .3 * i, E.s7));
+  // Close.
+  const lg = back((t - E.s7 - .1) / .5);
+  $('#logo').style.opacity = cl((t - E.s7 - .1) / .1);
+  $('#logo').style.transform = `rotate(${-120 * (1 - lg)}deg) scale(${lg})`;
+  const ct = back((t - E.site) / .45);
+  $('#cta').style.opacity = cl((t - E.site) / .1);
+  $('#cta').style.transform = `scale(${ct * (1 + .03 * Math.sin((t - E.site) * 5) * cl(t - E.site - .5))})`;
+}
+
+window.seek = t => {
+  glows[0].style.transform = `translate(${40 * Math.sin(t * .5)}px,${30 * Math.cos(t * .4)}px)`;
+  glows[1].style.transform = `translate(${-50 * Math.sin(t * .35)}px,${40 * Math.cos(t * .45)}px)`;
+  T.scenes.forEach((s, i) => {
+    const b = blocks[i], last = i === T.scenes.length - 1, out = last ? 0 : ease((t - s.end) / .25);
+    b.style.display = t >= s.start && (t < s.end + .25 || last) ? 'block' : 'none';
+    b.style.opacity = 1 - out;
+    b.style.transform = `translateY(${-70 * out}px)`;
+    b.querySelectorAll('.w').forEach(w => {
+      const k = back((t - +w.dataset.s + .08) / .32);
+      w.style.opacity = cl((t - +w.dataset.s + .08) / .1);
+      w.style.transform = `translateY(${34 * (1 - k)}px) scale(${.88 + .12 * k})`;
+    });
+  });
+  $('#art').style.transform = `scale(${1.02 + .02 * Math.sin(t * .6)})`;
+  art(t, E);
+};
+seek(0);
+</script>
+</body></html>

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "2026-10-19-so-quem-gere",
+    "date": "2026-10-19",
+    "time": "12:30",
+    "theme": "Só quem gere uma empresa conhece",
+    "type": "carousel",
+    "image_urls": [
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-19-so-quem-gere/slides/01/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-19-so-quem-gere/slides/02/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-19-so-quem-gere/slides/03/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-19-so-quem-gere/slides/04/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-19-so-quem-gere/slides/05/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-19-so-quem-gere/slides/06/post.jpg"
+    ],
+    "destination": "https://hivecode.pt/business?utm_source=instagram&utm_medium=social&utm_campaign=so-quem-gere",
+    "caption": "Ficheiros com três versões, faturas ao fim do dia e encomendas espalhadas por emails. Quantas destas já lhe aconteceram? 😅\n\nNa HiveCode Business, desenvolvemos software à medida que junta tudo num só lugar.\n\nSaiba mais em hivecode.pt/business\n\n#softwareamedida #empreendedorismo #pequenasempresas #gestaoempresarial #portugal",
+    "status": "approved",
+  "approved_at": "2026-10-18",
+    "media_id": null
+  }
+]
