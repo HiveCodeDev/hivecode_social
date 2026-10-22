@@ -70,7 +70,7 @@ ART = f"""
 <div class="li" id="l0" style="top:900px"><i>{CHECK.format(s=30)}</i>Aguenta muitas visitas</div>
 <div class="li" id="l1" style="top:1040px"><i>{CHECK.format(s=30)}</i>Compra simples no telemóvel</div>
 <div class="li" id="l2" style="top:1180px"><i>{CHECK.format(s=30)}</i>Stock sempre certo</div>
-<img id="logo" src="{ASSETS}/logo_side.png" alt="">
+<img id="logo" src="{ASSETS}/logo_mark.svg" alt="">
 <div id="cta"><span>hivecode.pt</span></div>
 """
 
