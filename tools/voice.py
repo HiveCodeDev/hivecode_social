@@ -18,11 +18,13 @@ SPOKEN = [
     ("hivecode.pt/business", "Haive Code ponto pê tê barra bízness"),
     ("hivecode.pt", "Haive Code ponto pê tê"),
     ("HiveCode", "Haive Code"),
+    ("mockup", "mócâp"),
 ]
 MERGE = [
     (["Haive", "Code", "ponto", "pê", "tê", "barra", "bízness"], "hivecode.pt/business"),
     (["Haive", "Code", "ponto", "pê", "tê"], "hivecode.pt"),
     (["Haive", "Code"], "HiveCode"),
+    (["mócâp"], "mockup"),
 ]
 
 

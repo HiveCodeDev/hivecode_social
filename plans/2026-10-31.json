@@ -1,0 +1,23 @@
+[
+  {
+    "id": "2026-10-31-sustos",
+    "date": "2026-10-31",
+    "time": "11:00",
+    "theme": "5 sustos de quem tem um negócio online (carrossel Halloween)",
+    "type": "carousel",
+    "image_urls": [
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-31-sustos/slides/01/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-31-sustos/slides/02/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-31-sustos/slides/03/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-31-sustos/slides/04/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-31-sustos/slides/05/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-31-sustos/slides/06/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-10-31-sustos/slides/07/post.jpg"
+    ],
+    "destination": "https://hivecode.pt/?utm_source=instagram&utm_medium=social&utm_campaign=halloween-sustos",
+    "caption": "Para quem tem um negócio online, há sustos piores do que o Halloween. 🎃\n\nSite em baixo, domínio expirado, aviso de \"não seguro\", encomendas perdidas no email e nenhuma cópia de segurança.\n\nUm site bem cuidado deixa estes sustos lá fora. hivecode.pt\n\n#halloween #criacaodesites #lojaonline #pequenosnegocios #portugal",
+    "status": "approved",
+    "media_id": null,
+    "approved_at": "2026-10-22"
+  }
+]

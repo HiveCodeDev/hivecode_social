@@ -88,7 +88,10 @@ def at(scenes, scene, token):
     return next(w[1] for w in scenes[scene]["words"] if w[0] == token)
 
 
-def page(scenes, ev, art_html, art_css, art_js, corner="hivecode.pt"):
+def page(scenes, ev, art_html, art_css, art_js, corner="hivecode.pt", theme=None):
+    if theme:
+        import themes
+        art_css = themes.css(theme) + art_css
     blocks = "".join(
         f'<div class="txt" style="font-size:{s["size"]}px">'
         + "".join(f'<span class="w{" em" if w in s["em"] else ""}" data-s="{st:.3f}">{w}</span>' for w, st, _ in s["words"])
@@ -98,11 +101,11 @@ def page(scenes, ev, art_html, art_css, art_js, corner="hivecode.pt"):
     timeline = {"ev": ev, "scenes": [{"start": s["start"], "end": s["end"]} for s in scenes]}
     js = JS.replace("__T__", json.dumps(timeline, ensure_ascii=False)).replace("__ART__", art_js)
     return f"""<!doctype html><html lang="pt"><head><meta charset="utf-8">
-<style>@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&display=block');
+<style>@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=block');
 {BASE_CSS}{CSS}{art_css}</style></head><body>
 <span class="glow" style="width:720px;height:720px;left:-220px;top:-160px;background:#4877FE"></span>
 <span class="glow" style="width:680px;height:680px;right:-260px;bottom:260px;background:#D752FE"></span>
-<div class="top"><span class="brand"><img src="{ASSETS}/logo_side.png" alt="">HiveCode</span><span>{corner}</span></div>
+<div class="top"><span class="brand"><img src="{ASSETS}/logo_mark.svg" alt="">HiveCode</span><span>{corner}</span></div>
 {blocks}<div id="art">{art_html}</div>
 <script>{js}</script>
 </body></html>"""

@@ -1,0 +1,159 @@
+<!doctype html><html lang="pt"><head><meta charset="utf-8">
+<style>@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=block');
+
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&display=block');
+:root{--night:#121125;--deep:#16132f;--ink:#f3f1fb;--soft:#c9c3e6;--muted:#9a93c0;
+--pink:#EF5AFE;--violet:#D752FE;--blue:#4877FE;}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--night);color:var(--ink);font-family:'Geologica',sans-serif;position:relative}
+.hex{position:absolute;inset:0;opacity:.5}
+.glow{position:absolute;border-radius:50%;filter:blur(120px);opacity:.45}
+.frame{position:absolute;inset:0;padding:96px 88px;display:flex;flex-direction:column}
+.eyebrow{display:inline-flex;align-items:center;gap:14px;font-size:24px;font-weight:500;letter-spacing:.14em;
+text-transform:uppercase;color:var(--soft)}
+.eyebrow i{width:14px;height:14px;transform:rotate(30deg);background:linear-gradient(135deg,var(--pink),var(--blue));
+clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+h1{font-weight:600;font-size:84px;line-height:1.04;letter-spacing:-.025em;margin-top:40px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--violet)}
+p.lead{font-size:34px;line-height:1.4;color:var(--soft);font-weight:300;margin-top:32px;max-width:860px}
+.content{flex:1;display:flex;flex-direction:column;justify-content:center;padding-bottom:40px}
+.content>.eyebrow{align-self:flex-start}
+.foot{display:flex;align-items:center;justify-content:space-between;font-size:26px;color:var(--muted)}
+.brand{display:flex;align-items:center;gap:16px;font-weight:600;font-size:30px;color:var(--ink)}
+.brand img{width:52px;height:52px}
+.shot{border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.14);
+box-shadow:0 40px 90px -30px rgba(72,119,254,.55);background:#000}
+.shot .bar{height:44px;background:#1d1a3a;display:flex;align-items:center;gap:10px;padding:0 18px;font-size:19px;color:var(--muted)}
+.shot .bar b{width:12px;height:12px;border-radius:50%;background:#3a3566}
+.shot .bar span{margin-left:14px}
+.shot img{display:block;width:100%}
+
+html,body{width:1080px;height:1920px}
+.top{position:absolute;left:88px;right:88px;top:150px;display:flex;justify-content:space-between;align-items:center;font-size:28px;color:var(--muted);z-index:5}
+.txt{position:absolute;left:88px;width:904px;top:300px;font-weight:600;line-height:1.08;letter-spacing:-.025em;z-index:4}
+.txt .w{display:inline-block;opacity:0;margin-right:.24em}
+.txt .w.em{color:var(--violet)}
+#art{position:absolute;inset:0;transform-origin:540px 1140px}
+#art>*{position:absolute}
+
+:root{--night:#265ADF;--deep:#265ADF;--ink:#ffffff;--soft:#dbe5ff;--muted:#b7c8ff;
+--violet:#FFD84D;--pink:#FFD84D;--blue:#FFD84D}
+body{background:#265ADF;color:#ffffff}
+.brand{color:#ffffff}.brand img{filter:brightness(0) invert(1)}
+.glow,.hex{display:none}
+
+.wc{border-radius:28px;background:#fff;color:#121125;opacity:0;box-shadow:0 40px 80px -30px rgba(10,20,80,.7)}
+#tag{left:330px;top:900px;width:420px;height:300px;border-radius:30px 30px 30px 30px;display:grid;place-items:center;font-size:220px;font-weight:800;color:#265ADF}
+#tag:before{content:"";position:absolute;left:-46px;top:105px;width:90px;height:90px;border-radius:50%;background:#265ADF;border:14px solid #fff}
+.pg{left:340px;top:930px;width:400px;height:500px;border-radius:22px;background:#fff;opacity:0;padding:40px 36px;box-shadow:0 30px 60px -30px rgba(10,20,80,.8)}
+.pg b{display:block;height:26px;border-radius:13px;background:#dbe5ff;margin-bottom:22px}
+#shop{left:200px;top:900px;width:680px;padding:40px;display:flex;flex-direction:column;gap:22px}
+#shop .r{display:flex;justify-content:space-between;align-items:center;font-size:38px;font-weight:600}
+#pay{padding:26px;border-radius:18px;background:#265ADF;color:#fff;font-size:38px;font-weight:600;text-align:center}
+#cont{left:170px;top:900px;width:740px;height:520px}
+#cont>*{position:absolute}
+.ph{left:0;top:0;width:340px;height:260px;border-radius:22px;background:linear-gradient(150deg,#FFD84D,#ff9f43);opacity:0}
+.ln{left:380px;width:360px;height:26px;border-radius:13px;background:#fff;opacity:0}
+.lang{padding:18px 30px;border-radius:999px;background:#121125;color:#fff;font-size:36px;font-weight:700;opacity:0}
+#care{left:240px;top:900px;width:600px;padding:40px;display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+#care .m{height:110px;border-radius:16px;background:#eef1fb;display:grid;place-items:center;font-size:26px;font-weight:600;color:#8a8fb0}
+#care .m.on{background:#2fbf71;color:#fff}
+#care .h{grid-column:1/-1;font-size:36px;font-weight:700}
+.cmp{display:flex;flex-direction:column;align-items:center;gap:20px;opacity:0;font-size:34px;font-weight:600}
+.cmp .wc{opacity:1;display:grid;place-items:center;font-size:90px}
+#logo{left:440px;top:930px;width:200px;height:200px;opacity:0}
+#cta{left:88px;right:88px;top:1220px;display:flex;justify-content:center;opacity:0}
+#cta span{padding:32px 54px;border-radius:999px;background:#fff;color:#265ADF;font-size:44px;font-weight:700;box-shadow:0 30px 70px -20px rgba(10,20,80,.7)}
+</style></head><body>
+<span class="glow" style="width:720px;height:720px;left:-220px;top:-160px;background:#4877FE"></span>
+<span class="glow" style="width:680px;height:680px;right:-260px;bottom:260px;background:#D752FE"></span>
+<div class="top"><span class="brand"><img src="file:///C:/Users/saloc/Documents/hivecode_social/assets/logo_mark.svg" alt="">HiveCode</span><span>hivecode.pt</span></div>
+<div class="txt" style="font-size:120px"><span class="w" data-s="0.100">Quanto</span><span class="w em" data-s="0.425">custa</span><span class="w" data-s="0.725">um</span><span class="w" data-s="0.825">site?</span></div><div class="txt" style="font-size:100px"><span class="w" data-s="2.163">Depende</span><span class="w" data-s="2.575">de</span><span class="w em" data-s="2.675">quatro</span><span class="w" data-s="2.975">coisas.</span></div><div class="txt" style="font-size:92px"><span class="w" data-s="4.388">Primeiro,</span><span class="w" data-s="5.025">o</span><span class="w" data-s="5.125">número</span><span class="w" data-s="5.375">de</span><span class="w em" data-s="5.475">páginas.</span></div><div class="txt" style="font-size:76px"><span class="w" data-s="6.950">Segundo,</span><span class="w" data-s="7.650">se</span><span class="w" data-s="7.812">precisa</span><span class="w" data-s="8.188">de</span><span class="w em" data-s="8.262">loja</span><span class="w em" data-s="8.488">online,</span><span class="w" data-s="9.113">com</span><span class="w" data-s="9.262">pagamentos</span><span class="w" data-s="9.725">e</span><span class="w" data-s="9.775">encomendas.</span></div><div class="txt" style="font-size:80px"><span class="w" data-s="11.300">Terceiro,</span><span class="w" data-s="11.988">os</span><span class="w em" data-s="12.150">conteúdos:</span><span class="w" data-s="12.988">textos,</span><span class="w" data-s="13.600">fotografias</span><span class="w" data-s="14.225">e</span><span class="w" data-s="14.287">traduções.</span></div><div class="txt" style="font-size:80px"><span class="w" data-s="15.825">Quarto,</span><span class="w" data-s="16.413">a</span><span class="w em" data-s="16.488">manutenção</span><span class="w" data-s="17.075">depois</span><span class="w" data-s="17.350">de</span><span class="w" data-s="17.438">o</span><span class="w" data-s="17.550">site</span><span class="w" data-s="17.762">estar</span><span class="w" data-s="18.000">no</span><span class="w" data-s="18.125">ar.</span></div><div class="txt" style="font-size:70px"><span class="w" data-s="19.275">Um</span><span class="w" data-s="19.425">site</span><span class="w" data-s="19.712">de</span><span class="w" data-s="19.812">apresentação</span><span class="w" data-s="20.488">e</span><span class="w" data-s="20.550">uma</span><span class="w" data-s="20.688">loja</span><span class="w" data-s="20.950">com</span><span class="w" data-s="21.087">centenas</span><span class="w" data-s="21.512">de</span><span class="w" data-s="21.587">produtos</span><span class="w em" data-s="22.050">não</span><span class="w em" data-s="22.238">custam</span><span class="w em" data-s="22.525">o</span><span class="w em" data-s="22.562">mesmo.</span></div><div class="txt" style="font-size:76px"><span class="w" data-s="23.875">Fale</span><span class="w" data-s="24.200">connosco</span><span class="w" data-s="24.663">em</span><span class="w em" data-s="24.775">hivecode.pt</span><span class="w" data-s="25.837">e</span><span class="w" data-s="25.938">saiba</span><span class="w" data-s="26.212">quanto</span><span class="w" data-s="26.475">custa</span><span class="w" data-s="26.750">o</span><span class="w" data-s="26.863">seu.</span></div><div id="art">
+<div class="wc" id="tag"><span id="q">?</span></div>
+<div class="pg" id="p0"><b style="width:60%"></b><b></b><b style="width:85%"></b><b style="width:70%"></b></div><div class="pg" id="p1"><b style="width:60%"></b><b></b><b style="width:85%"></b><b style="width:70%"></b></div><div class="pg" id="p2"><b style="width:60%"></b><b></b><b style="width:85%"></b><b style="width:70%"></b></div><div class="pg" id="p3"><b style="width:60%"></b><b></b><b style="width:85%"></b><b style="width:70%"></b></div><div class="pg" id="p4"><b style="width:60%"></b><b></b><b style="width:85%"></b><b style="width:70%"></b></div>
+<div class="wc" id="shop"><div class="r">🛒 Carrinho<span>3</span></div><div class="r" style="color:#8a8499;font-size:32px">Entrega · Pagamento · Fatura</div><div id="pay">Pagar</div></div>
+<div id="cont"><span class="ph" id="ph"></span>
+<span class="ln" id="l0" style="top:20px"></span><span class="ln" id="l1" style="top:80px;width:300px"></span><span class="ln" id="l2" style="top:140px;width:330px"></span>
+<span class="lang" id="pt" style="left:40px;top:330px">PT</span><span class="lang" id="en" style="left:200px;top:330px">EN</span><span class="lang" id="es" style="left:360px;top:330px">ES</span></div>
+<div class="wc" id="care"><div class="h">Manutenção</div><span class="m" id="m0">Jan</span><span class="m" id="m1">Fev</span><span class="m" id="m2">Mar</span><span class="m" id="m3">Abr</span><span class="m" id="m4">Mai</span><span class="m" id="m5">Jun</span></div>
+<div class="cmp" id="c0" style="left:150px;top:960px"><div class="wc" style="width:260px;height:320px">📄</div>Apresentação</div>
+<div class="cmp" id="c1" style="left:520px;top:880px"><div class="wc" style="width:400px;height:400px">🏬</div>Loja com 500 produtos</div>
+<img id="logo" src="file:///C:/Users/saloc/Documents/hivecode_social/assets/logo_mark_white.svg" alt="">
+<div id="cta"><span>hivecode.pt</span></div>
+</div>
+<script>
+const T = {"ev": {"s3": 4.237, "pag": 5.475, "s4": 6.8, "pagam": 9.2625, "s5": 11.15, "textos": 12.9875, "trad": 14.2875, "s6": 15.675, "manut": 16.4875, "s7": 19.125, "s8": 23.725, "site": 24.775}, "scenes": [{"start": 0, "end": 2.013}, {"start": 2.013, "end": 4.237}, {"start": 4.237, "end": 6.8}, {"start": 6.8, "end": 11.15}, {"start": 11.15, "end": 15.675}, {"start": 15.675, "end": 19.125}, {"start": 19.125, "end": 23.725}, {"start": 23.725, "end": 29.432}]}, E = T.ev;
+const cl = x => Math.min(Math.max(x, 0), 1);
+const ease = x => 1 - Math.pow(1 - cl(x), 3);
+const back = x => { x = cl(x); const c = 1.9; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const blocks = $$('.txt'), glows = $$('.glow');
+// Shows an element from `a` (pops in) until `b` (slides out left); returns visibility 0..1.
+function stage(el, t, a, b, dist = 60) {
+  const k = back((t - a) / .5), o = ease((t - b) / .3);
+  el.style.opacity = cl((t - a) / .12) * (1 - o);
+  el.style.transform = `translate(${-160 * o}px,${dist * (1 - k)}px) scale(${.92 + .08 * k})`;
+  return cl((t - a) / .12) * (1 - o);
+}
+function pop(el, t, a, base = '') {
+  const k = back((t - a) / .45);
+  el.style.opacity = cl((t - a) / .1);
+  el.style.transform = `${base} scale(${k})`;
+}
+
+function art(t, E) {
+  // The question: a price tag whose "?" wobbles.
+  stage($('#tag'), t, .2, E.s3);
+  $('#q').style.display = 'inline-block';
+  $('#q').style.transform = `rotate(${12 * Math.sin(t * 5)}deg)`;
+  // 1. Pages stack up one by one.
+  for (let i = 0; i < 5; i++) {
+    const el = $('#p' + i), a = E.pag - .6 + .22 * i;
+    const v = stage(el, t, a, E.s4, 40);
+    el.style.transform += ` translate(${(i - 2) * 26}px,${(i - 2) * -22}px) rotate(${(i - 2) * 3}deg)`;
+    el.style.opacity = v;
+  }
+  // 2. The shop: the pay button pulses as the sentence says "pagamentos".
+  stage($('#shop'), t, E.s4 + .2, E.s5);
+  $('#pay').style.transform = `scale(${1 + .06 * Math.max(0, 1 - Math.abs(t - E.pagam) / .3)})`;
+  // 3. Content: photo, text lines, languages.
+  const cv = 1 - ease((t - E.s6) / .3);
+  pop($('#ph'), t, E.textos - .2); $('#ph').style.opacity = cl((t - E.textos + .2) / .1) * cv;
+  ['#l0', '#l1', '#l2'].forEach((s, i) => { const a = E.textos + .1 * i; $(s).style.opacity = cl((t - a) / .15) * cv; $(s).style.transform = `scaleX(${ease((t - a) / .4)})`; $(s).style.transformOrigin = 'left'; });
+  ['#pt', '#en', '#es'].forEach((s, i) => { pop($(s), t, E.trad + .18 * i); $(s).style.opacity = cl((t - E.trad - .18 * i) / .1) * cv; });
+  // 4. Care: months tick green.
+  stage($('#care'), t, E.s6 + .2, E.s7);
+  for (let i = 0; i < 6; i++) $('#m' + i).className = 'm' + (t > E.manut + .3 * i ? ' on' : '');
+  // Small vs large.
+  stage($('#c0'), t, E.s7 + .3, E.s8); stage($('#c1'), t, E.s7 + .6, E.s8);
+  // Close.
+  const lg = back((t - E.s8 - .1) / .5);
+  $('#logo').style.opacity = cl((t - E.s8 - .1) / .1);
+  $('#logo').style.transform = `rotate(${-120 * (1 - lg)}deg) scale(${lg})`;
+  const ct = back((t - E.site) / .45);
+  $('#cta').style.opacity = cl((t - E.site) / .1);
+  $('#cta').style.transform = `scale(${ct * (1 + .03 * Math.sin((t - E.site) * 5) * cl(t - E.site - .5))})`;
+}
+
+window.seek = t => {
+  glows[0].style.transform = `translate(${40 * Math.sin(t * .5)}px,${30 * Math.cos(t * .4)}px)`;
+  glows[1].style.transform = `translate(${-50 * Math.sin(t * .35)}px,${40 * Math.cos(t * .45)}px)`;
+  T.scenes.forEach((s, i) => {
+    const b = blocks[i], last = i === T.scenes.length - 1, out = last ? 0 : ease((t - s.end) / .25);
+    b.style.display = t >= s.start && (t < s.end + .25 || last) ? 'block' : 'none';
+    b.style.opacity = 1 - out;
+    b.style.transform = `translateY(${-70 * out}px)`;
+    b.querySelectorAll('.w').forEach(w => {
+      const k = back((t - +w.dataset.s + .08) / .32);
+      w.style.opacity = cl((t - +w.dataset.s + .08) / .1);
+      w.style.transform = `translateY(${34 * (1 - k)}px) scale(${.88 + .12 * k})`;
+    });
+  });
+  $('#art').style.transform = `scale(${1.02 + .02 * Math.sin(t * .6)})`;
+  art(t, E);
+};
+seek(0);
+</script>
+</body></html>

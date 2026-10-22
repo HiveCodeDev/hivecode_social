@@ -73,7 +73,10 @@ def hex_svg():
 HEX = hex_svg()
 
 
-def page(body, extra_css=""):
+def page(body, extra_css="", theme=None):
+    if theme:
+        import themes
+        extra_css = themes.SERIF + "\n" + themes.css(theme) + extra_css
     # @import is only valid at the top of a stylesheet, so hoist any from extra_css.
     lines = extra_css.splitlines()
     imports = "\n".join(line for line in lines if line.strip().startswith("@import"))
@@ -85,7 +88,7 @@ def page(body, extra_css=""):
 <span class="glow" style="width:620px;height:620px;left:-180px;top:-160px;background:#4877FE"></span>
 <span class="glow" style="width:560px;height:560px;right:-200px;bottom:-120px;background:#D752FE"></span>
 <div class="frame"><div class="content">{body}</div>
-<div class="foot"><span class="brand"><img src="{ASSETS}/logo_side.png" alt="">HiveCode</span><span>hivecode.pt</span></div>
+<div class="foot"><span class="brand"><img src="{ASSETS}/logo_mark.svg" alt="">HiveCode</span><span>hivecode.pt</span></div>
 </div></body></html>"""
 
 

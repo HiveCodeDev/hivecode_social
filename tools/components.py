@@ -42,7 +42,7 @@ def diagram(modules, center="O seu sistema"):
         'x1="0" y1="0" x2="904" y2="660"><stop offset="0" stop-color="#EF5AFE"/><stop offset="1" stop-color="#4877FE"/>'
         '</linearGradient></defs><g stroke="url(#ln)" stroke-width="3" stroke-linecap="round" opacity=".75">'
         + "".join(lines)
-        + f'</g></svg><span class="core"><img src="{ASSETS}/logo_side.png" alt=""><b>{center}</b></span>'
+        + f'</g></svg><span class="core"><img src="{ASSETS}/logo_mark.svg" alt=""><b>{center}</b></span>'
         + "".join(pills)
         + "</div>"
     )

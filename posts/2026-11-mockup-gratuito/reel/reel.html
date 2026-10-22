@@ -1,0 +1,161 @@
+<!doctype html><html lang="pt"><head><meta charset="utf-8">
+<style>@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=block');
+
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&display=block');
+:root{--night:#121125;--deep:#16132f;--ink:#f3f1fb;--soft:#c9c3e6;--muted:#9a93c0;
+--pink:#EF5AFE;--violet:#D752FE;--blue:#4877FE;}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--night);color:var(--ink);font-family:'Geologica',sans-serif;position:relative}
+.hex{position:absolute;inset:0;opacity:.5}
+.glow{position:absolute;border-radius:50%;filter:blur(120px);opacity:.45}
+.frame{position:absolute;inset:0;padding:96px 88px;display:flex;flex-direction:column}
+.eyebrow{display:inline-flex;align-items:center;gap:14px;font-size:24px;font-weight:500;letter-spacing:.14em;
+text-transform:uppercase;color:var(--soft)}
+.eyebrow i{width:14px;height:14px;transform:rotate(30deg);background:linear-gradient(135deg,var(--pink),var(--blue));
+clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+h1{font-weight:600;font-size:84px;line-height:1.04;letter-spacing:-.025em;margin-top:40px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--violet)}
+p.lead{font-size:34px;line-height:1.4;color:var(--soft);font-weight:300;margin-top:32px;max-width:860px}
+.content{flex:1;display:flex;flex-direction:column;justify-content:center;padding-bottom:40px}
+.content>.eyebrow{align-self:flex-start}
+.foot{display:flex;align-items:center;justify-content:space-between;font-size:26px;color:var(--muted)}
+.brand{display:flex;align-items:center;gap:16px;font-weight:600;font-size:30px;color:var(--ink)}
+.brand img{width:52px;height:52px}
+.shot{border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.14);
+box-shadow:0 40px 90px -30px rgba(72,119,254,.55);background:#000}
+.shot .bar{height:44px;background:#1d1a3a;display:flex;align-items:center;gap:10px;padding:0 18px;font-size:19px;color:var(--muted)}
+.shot .bar b{width:12px;height:12px;border-radius:50%;background:#3a3566}
+.shot .bar span{margin-left:14px}
+.shot img{display:block;width:100%}
+
+html,body{width:1080px;height:1920px}
+.top{position:absolute;left:88px;right:88px;top:150px;display:flex;justify-content:space-between;align-items:center;font-size:28px;color:var(--muted);z-index:5}
+.txt{position:absolute;left:88px;width:904px;top:300px;font-weight:600;line-height:1.08;letter-spacing:-.025em;z-index:4}
+.txt .w{display:inline-block;opacity:0;margin-right:.24em}
+.txt .w.em{color:var(--violet)}
+#art{position:absolute;inset:0;transform-origin:540px 1140px}
+#art>*{position:absolute}
+
+:root{--night:#ECECF1;--deep:#ECECF1;--ink:#121125;--soft:#4a4560;--muted:#8a8499;
+--violet:#9B3CF0;--pink:#9B3CF0;--blue:#9B3CF0}
+body{background:#ECECF1;color:#121125}
+.brand{color:#121125}.brand img{}
+.glow,.hex{display:none}
+body{background-image:radial-gradient(#c4c3d0 2px,transparent 2px);background-size:36px 36px}
+
+#br{left:150px;top:860px;width:780px;height:540px;border-radius:26px;background:#fff;overflow:hidden;opacity:0;box-shadow:0 30px 60px -30px rgba(18,17,37,.35);outline:4px solid #9B3CF0;outline-offset:10px;transform-origin:0 50%}
+#sel{left:150px;top:820px;padding:8px 18px;border-radius:10px;background:#9B3CF0;color:#fff;font-size:26px;font-weight:600;opacity:0}
+#br .bar{height:54px;background:#eef1fb;display:flex;align-items:center;gap:10px;padding:0 22px}
+#br .bar b{width:14px;height:14px;border-radius:50%;background:#c9d3f5}
+#br .empty{position:absolute;inset:80px 30px 30px;border:4px dashed #c9d3f5;border-radius:18px;display:grid;place-items:center;font-size:150px;font-weight:800;color:#c9d3f5}
+#hd{position:absolute;left:30px;right:30px;top:76px;height:56px;display:flex;align-items:center;gap:16px;opacity:0}
+#lg{width:56px;height:56px;border-radius:16px;background:#121125;display:grid;place-items:center;color:#FFD84D;font-size:30px;font-weight:800}
+#hd span{font-size:28px;font-weight:700;color:#121125}
+#hero{position:absolute;left:30px;right:30px;top:150px;height:200px;border-radius:18px;background:#dbe5ff;opacity:0}
+.tl{position:absolute;left:30px;height:22px;border-radius:11px;background:#dbe5ff;opacity:0;transform-origin:left}
+#bt{position:absolute;left:30px;top:460px;width:200px;height:52px;border-radius:14px;background:#c9d3f5;opacity:0}
+.sw{width:84px;height:84px;border-radius:50%;border:6px solid #fff;opacity:0;box-shadow:0 20px 40px -16px rgba(18,17,37,.35)}
+#ph{left:770px;top:960px;width:220px;height:440px;border-radius:36px;background:#121125;padding:10px;opacity:0;box-shadow:0 40px 80px -30px rgba(18,17,37,.45)}
+#ph .s{height:100%;border-radius:28px;background:#fff;overflow:hidden;padding:16px 12px;display:flex;flex-direction:column;gap:10px}
+#ph i{display:block;border-radius:8px;background:#dbe5ff}
+#code{left:290px;top:1440px;display:flex;align-items:center;gap:18px;padding:22px 34px;border-radius:999px;background:#121125;color:#fff;font-size:38px;font-weight:600;opacity:0}
+#code b{font-family:monospace;color:#FFD84D}
+#free{left:700px;top:1300px;padding:22px 40px;border-radius:16px;background:#FFD84D;color:#121125;font-size:48px;font-weight:800;opacity:0;box-shadow:0 30px 60px -20px rgba(18,17,37,.35)}
+#q{left:240px;top:880px;width:600px;padding:44px 48px;border-radius:26px;background:#fff;color:#121125;opacity:0;box-shadow:0 40px 80px -30px rgba(18,17,37,.35)}
+#q h3{font-size:44px;font-weight:800}
+#q .r{display:flex;justify-content:space-between;font-size:32px;padding:18px 0;border-bottom:2px solid #eef1fb;color:#4a4560}
+#stamp{left:560px;top:1300px;padding:20px 30px;border:6px solid #2fbf71;border-radius:16px;color:#2fbf71;background:#fff;font-size:40px;font-weight:800;opacity:0}
+#cta{left:88px;right:88px;top:1220px;display:flex;justify-content:center;opacity:0}
+#cta span{padding:36px 60px;border-radius:999px;background:#9B3CF0;color:#fff;font-size:52px;font-weight:700;box-shadow:0 30px 70px -20px rgba(18,17,37,.35)}
+</style></head><body>
+<span class="glow" style="width:720px;height:720px;left:-220px;top:-160px;background:#4877FE"></span>
+<span class="glow" style="width:680px;height:680px;right:-260px;bottom:260px;background:#D752FE"></span>
+<div class="top"><span class="brand"><img src="file:///C:/Users/saloc/Documents/hivecode_social/assets/logo_mark.svg" alt="">HiveCode</span><span>hivecode.pt</span></div>
+<div class="txt" style="font-size:92px"><span class="w" data-s="0.100">Antes</span><span class="w" data-s="0.388">de</span><span class="w" data-s="0.450">investir</span><span class="w" data-s="0.775">num</span><span class="w" data-s="0.900">site,</span><span class="w" data-s="1.525">quer</span><span class="w em" data-s="1.675">ver</span><span class="w" data-s="1.825">como</span><span class="w" data-s="2.000">vai</span><span class="w" data-s="2.112">ficar?</span></div><div class="txt" style="font-size:104px"><span class="w" data-s="3.388">Fazemos</span><span class="w" data-s="3.850">um</span><span class="w em" data-s="3.888">mockup</span><span class="w em" data-s="4.225">gratuito.</span></div><div class="txt" style="font-size:88px"><span class="w" data-s="5.612">Um</span><span class="w" data-s="5.713">mockup</span><span class="w" data-s="6.138">é</span><span class="w" data-s="6.225">uma</span><span class="w em" data-s="6.350">imagem</span><span class="w" data-s="6.688">do</span><span class="w" data-s="6.825">seu</span><span class="w" data-s="6.925">futuro</span><span class="w" data-s="7.312">site,</span></div><div class="txt" style="font-size:80px"><span class="w" data-s="7.950">com</span><span class="w" data-s="8.050">o</span><span class="w" data-s="8.162">seu</span><span class="w em" data-s="8.287">logótipo,</span><span class="w" data-s="9.037">as</span><span class="w" data-s="9.188">suas</span><span class="w em" data-s="9.412">cores</span><span class="w" data-s="9.750">e</span><span class="w" data-s="9.825">os</span><span class="w" data-s="9.925">seus</span><span class="w em" data-s="10.113">conteúdos.</span></div><div class="txt" style="font-size:88px"><span class="w" data-s="11.537">Vê</span><span class="w" data-s="11.738">como</span><span class="w" data-s="11.938">fica</span><span class="w" data-s="12.150">no</span><span class="w em" data-s="12.275">computador</span><span class="w" data-s="12.762">e</span><span class="w" data-s="12.825">no</span><span class="w em" data-s="12.938">telemóvel,</span></div><div class="txt" style="font-size:84px"><span class="w em" data-s="13.850">antes</span><span class="w" data-s="14.113">de</span><span class="w" data-s="14.162">escrevermos</span><span class="w" data-s="14.688">uma</span><span class="w" data-s="14.787">única</span><span class="w" data-s="15.150">linha</span><span class="w" data-s="15.363">de</span><span class="w" data-s="15.438">código.</span></div><div class="txt" style="font-size:78px"><span class="w" data-s="16.762">Com</span><span class="w" data-s="16.925">o</span><span class="w" data-s="16.975">mockup,</span><span class="w" data-s="17.600">recebe</span><span class="w" data-s="17.950">um</span><span class="w em" data-s="18.025">orçamento</span><span class="w" data-s="18.488">claro</span><span class="w" data-s="18.775">e</span><span class="w em" data-s="18.913">sem</span><span class="w em" data-s="19.075">compromisso.</span></div><div class="txt" style="font-size:100px"><span class="w" data-s="20.575">Peça</span><span class="w" data-s="20.850">o</span><span class="w" data-s="20.962">seu</span><span class="w" data-s="21.075">em</span><span class="w em" data-s="21.175">hivecode.pt.</span></div><div id="art">
+<div id="sel">Mockup · 1440 × 900</div>
+<div id="br"><div class="bar"><b></b><b></b><b></b></div><div class="empty" id="empty"><span id="qm">?</span></div>
+<div id="hd"><span id="lg">A</span><span>A sua empresa</span></div><div id="hero"></div>
+<span class="tl" id="t0" style="top:376px;width:60%"></span><span class="tl" id="t1" style="top:414px;width:45%"></span><span id="bt"></span></div>
+<span class="sw" id="c0" style="left:300px;top:1440px;background:#121125"></span>
+<span class="sw" id="c1" style="left:410px;top:1440px;background:#FF8A1F"></span>
+<span class="sw" id="c2" style="left:520px;top:1440px;background:#FFD84D"></span>
+<div id="ph"><div class="s"><i style="height:30px;width:60%;background:#121125"></i><i style="height:150px;background:linear-gradient(150deg,#FFD84D,#FF8A1F)"></i><i style="height:16px;width:80%"></i><i style="height:16px;width:60%"></i><i style="height:40px;width:70%;background:#121125"></i></div></div>
+<div id="code"><b>&lt;/&gt;</b>0 linhas de código</div>
+<div id="free">Gratuito</div>
+<div id="q"><h3>Orçamento</h3><div class="r">Páginas<span>5</span></div><div class="r">Loja online<span>Não</span></div><div class="r" style="border:0">Manutenção<span>Mensal</span></div></div>
+<div id="stamp">Sem compromisso ✓</div>
+<div id="cta"><span>hivecode.pt</span></div>
+</div>
+<script>
+const T = {"ev": {"grat": 4.225, "s3": 5.462, "imag": 6.35, "logo": 8.2875, "cores": 9.4125, "cont": 10.1125, "s5": 11.387, "comp": 12.275, "tele": 12.9375, "s6": 13.7, "s7": 16.613, "comp2": 19.075, "s8": 20.425, "site": 21.175}, "scenes": [{"start": 0, "end": 3.238}, {"start": 3.238, "end": 5.462}, {"start": 5.462, "end": 7.8}, {"start": 7.8, "end": 11.387}, {"start": 11.387, "end": 13.7}, {"start": 13.7, "end": 16.613}, {"start": 16.613, "end": 20.425}, {"start": 20.425, "end": 24.656}]}, E = T.ev;
+const cl = x => Math.min(Math.max(x, 0), 1);
+const ease = x => 1 - Math.pow(1 - cl(x), 3);
+const back = x => { x = cl(x); const c = 1.9; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const blocks = $$('.txt'), glows = $$('.glow');
+// Shows an element from `a` (pops in) until `b` (slides out left); returns visibility 0..1.
+function stage(el, t, a, b, dist = 60) {
+  const k = back((t - a) / .5), o = ease((t - b) / .3);
+  el.style.opacity = cl((t - a) / .12) * (1 - o);
+  el.style.transform = `translate(${-160 * o}px,${dist * (1 - k)}px) scale(${.92 + .08 * k})`;
+  return cl((t - a) / .12) * (1 - o);
+}
+function pop(el, t, a, base = '') {
+  const k = back((t - a) / .45);
+  el.style.opacity = cl((t - a) / .1);
+  el.style.transform = `${base} scale(${k})`;
+}
+
+function art(t, E) {
+  // The mockup: an empty browser that fills in as it is explained, then shrinks beside a phone.
+  const out = ease((t - E.s7) / .3);
+  const v = stage($('#br'), t, .2, E.s7);
+  const sm = ease((t - E.comp) / .5);
+  $('#br').style.transform += ` scale(${1 - .22 * sm}) translateY(${-40 * sm}px)`;
+  $('#br').style.left = `${150 - 70 * sm}px`;
+  $('#empty').style.opacity = 1 - ease((t - E.imag) / .3);
+  $('#qm').style.display = 'inline-block'; $('#qm').style.transform = `rotate(${8 * Math.sin(t * 4)}deg)`;
+  pop($('#hero'), t, E.imag); pop($('#t0'), t, E.imag + .2); pop($('#t1'), t, E.imag + .3); pop($('#bt'), t, E.imag + .4);
+  pop($('#hd'), t, E.logo);
+  $('#sel').style.opacity = v * (1 - sm);
+  // Colours: swatches pop, then the hero and button take them.
+  const col = t > E.cores + .6;
+  ['#c0', '#c1', '#c2'].forEach((s, i) => { pop($(s), t, E.cores + .15 * i); $(s).style.opacity = cl((t - E.cores - .15 * i) / .1) * (1 - ease((t - E.s5) / .3)); });
+  $('#hero').style.background = col ? 'linear-gradient(150deg,#FFD84D,#FF8A1F)' : '#dbe5ff';
+  $('#bt').style.background = col ? '#121125' : '#c9d3f5';
+  ['#t0', '#t1'].forEach(s => $(s).style.background = t > E.cont ? '#4a4560' : '#dbe5ff');
+  // Laptop and phone.
+  stage($('#ph'), t, E.tele - .1, E.s7);
+  stage($('#code'), t, E.s6 + .3, E.s7);
+  pop($('#free'), t, E.grat, 'rotate(-8deg)'); $('#free').style.opacity = cl((t - E.grat) / .1) * (1 - ease((t - E.s3) / .3));
+  // The quote, stamped.
+  stage($('#q'), t, E.s7 + .2, E.s8);
+  pop($('#stamp'), t, E.comp2, 'rotate(-10deg)'); $('#stamp').style.opacity = cl((t - E.comp2) / .1) * (1 - ease((t - E.s8) / .3));
+  // Close.
+  const ct = back((t - E.site) / .45);
+  $('#cta').style.opacity = cl((t - E.site) / .1);
+  $('#cta').style.transform = `scale(${ct * (1 + .03 * Math.sin((t - E.site) * 5) * cl(t - E.site - .5))})`;
+}
+
+window.seek = t => {
+  glows[0].style.transform = `translate(${40 * Math.sin(t * .5)}px,${30 * Math.cos(t * .4)}px)`;
+  glows[1].style.transform = `translate(${-50 * Math.sin(t * .35)}px,${40 * Math.cos(t * .45)}px)`;
+  T.scenes.forEach((s, i) => {
+    const b = blocks[i], last = i === T.scenes.length - 1, out = last ? 0 : ease((t - s.end) / .25);
+    b.style.display = t >= s.start && (t < s.end + .25 || last) ? 'block' : 'none';
+    b.style.opacity = 1 - out;
+    b.style.transform = `translateY(${-70 * out}px)`;
+    b.querySelectorAll('.w').forEach(w => {
+      const k = back((t - +w.dataset.s + .08) / .32);
+      w.style.opacity = cl((t - +w.dataset.s + .08) / .1);
+      w.style.transform = `translateY(${34 * (1 - k)}px) scale(${.88 + .12 * k})`;
+    });
+  });
+  $('#art').style.transform = `scale(${1.02 + .02 * Math.sin(t * .6)})`;
+  art(t, E);
+};
+seek(0);
+</script>
+</body></html>
