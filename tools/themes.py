@@ -21,6 +21,7 @@ THEMES = {
     "canvas": dict(bg="#ECECF1", ink="#121125", soft="#4a4560", muted="#8a8499", accent="#9B3CF0", logo=""),
     "receipt": dict(bg="#FBFAF6", ink="#111111", soft="#444444", muted="#888888", accent="#D7263D", logo=""),
     "screen": dict(bg="#E6E8EE", ink="#16181D", soft="#4b505c", muted="#8a8f9c", accent="#0A84FF", logo=""),
+    "halloween": dict(bg="#120B1F", ink="#F1ECFF", soft="#c5b8e6", muted="#8a7bb0", accent="#9BFF5B", logo=""),
     "lilac": dict(bg="#B8A4F4", ink="#1A1033", soft="#35265e", muted="#4d3b85", accent="#3A12A8", logo=""),
     "terracotta": dict(bg="#E2603A", ink="#23130D", soft="#4a2418", muted="#7a3a24", accent="#FFF1DC", logo=""),
     "forest": dict(bg="#0F3D2E", ink="#F3EFE6", soft="#b9cfc3", muted="#7fa393", accent="#F4C542",

@@ -166,7 +166,7 @@ def render(page_path, work, total, voice_mp3, hits, out_mp4, music=None, music_v
     tracks = len(hits) + 1
     if music:
         inputs += ["-stream_loop", "-1", "-i", str(music)]
-        chains.append(f"[{len(hits) + 2}:a]atrim=0:{total:.3f},afade=t=in:d=.8,afade=t=out:st={max(0, total - 1.5):.3f}:d=1.5,"
+        chains.append(f"[{len(hits) + 2}:a]atrim=0:{total:.3f},afade=t=in:d=0.8,afade=t=out:st={max(0, total - 1.5):.3f}:d=1.5,"
                       f"volume={music_vol}[v{tracks}]")
         tracks += 1
     mix = ";".join(chains) + ";" + "".join(f"[v{n}]" for n in range(tracks)) + f"amix=inputs={tracks}:normalize=0[a]"

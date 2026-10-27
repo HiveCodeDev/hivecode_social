@@ -1,0 +1,177 @@
+<!doctype html><html lang="pt"><head><meta charset="utf-8">
+<style>@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500;700&display=block');
+
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&display=block');
+:root{--night:#121125;--deep:#16132f;--ink:#f3f1fb;--soft:#c9c3e6;--muted:#9a93c0;
+--pink:#EF5AFE;--violet:#D752FE;--blue:#4877FE;}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--night);color:var(--ink);font-family:'Geologica',sans-serif;position:relative}
+.hex{position:absolute;inset:0;opacity:.5}
+.glow{position:absolute;border-radius:50%;filter:blur(120px);opacity:.45}
+.frame{position:absolute;inset:0;padding:96px 88px;display:flex;flex-direction:column}
+.eyebrow{display:inline-flex;align-items:center;gap:14px;font-size:24px;font-weight:500;letter-spacing:.14em;
+text-transform:uppercase;color:var(--soft)}
+.eyebrow i{width:14px;height:14px;transform:rotate(30deg);background:linear-gradient(135deg,var(--pink),var(--blue));
+clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+h1{font-weight:600;font-size:84px;line-height:1.04;letter-spacing:-.025em;margin-top:40px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--violet)}
+p.lead{font-size:34px;line-height:1.4;color:var(--soft);font-weight:300;margin-top:32px;max-width:860px}
+.content{flex:1;display:flex;flex-direction:column;justify-content:center;padding-bottom:40px}
+.content>.eyebrow{align-self:flex-start}
+.foot{display:flex;align-items:center;justify-content:space-between;font-size:26px;color:var(--muted)}
+.brand{display:flex;align-items:center;gap:16px;font-weight:600;font-size:30px;color:var(--ink)}
+.brand img{width:52px;height:52px}
+.shot{border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.14);
+box-shadow:0 40px 90px -30px rgba(72,119,254,.55);background:#000}
+.shot .bar{height:44px;background:#1d1a3a;display:flex;align-items:center;gap:10px;padding:0 18px;font-size:19px;color:var(--muted)}
+.shot .bar b{width:12px;height:12px;border-radius:50%;background:#3a3566}
+.shot .bar span{margin-left:14px}
+.shot img{display:block;width:100%}
+
+html,body{width:1080px;height:1920px}
+.top{position:absolute;left:88px;right:88px;top:150px;display:flex;justify-content:space-between;align-items:center;font-size:28px;color:var(--muted);z-index:5}
+.txt{position:absolute;left:88px;width:904px;top:300px;font-weight:600;line-height:1.08;letter-spacing:-.025em;z-index:4}
+.txt .w{display:inline-block;opacity:0;margin-right:.24em}
+.txt .w.em{color:var(--violet)}
+#art{position:absolute;inset:0;transform-origin:540px 1140px}
+#art>*{position:absolute}
+
+:root{--night:#120B1F;--deep:#120B1F;--ink:#F1ECFF;--soft:#c5b8e6;--muted:#8a7bb0;
+--violet:#9BFF5B;--pink:#9BFF5B;--blue:#9BFF5B}
+body{background:#120B1F;color:#F1ECFF}
+.brand{color:#F1ECFF}.brand img{}
+.glow,.hex{display:none}
+
+#moon{left:770px;top:660px;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle at 40% 40%,#fffbe6,#f3e9b8 60%,#d8c98a);box-shadow:0 0 120px 40px rgba(243,233,184,.25)}
+.fog{width:1400px;height:300px;border-radius:50%;background:radial-gradient(ellipse,rgba(200,190,255,.22),transparent 70%);filter:blur(20px)}
+.bat{z-index:3}
+#flash{inset:0;background:#e9e3ff;opacity:0;z-index:8}
+#shop{left:190px;top:1000px;width:700px;height:520px;background:#0a0614;border:3px solid #2a1f45;border-radius:14px 14px 0 0;opacity:0}
+#shop .win{position:absolute;left:60px;top:150px;width:300px;height:230px;background:#1a1230;border:3px solid #2a1f45}
+#shop .door{position:absolute;right:70px;bottom:0;width:200px;height:340px;background:#1a1230;border:3px solid #2a1f45}
+#sign{position:absolute;left:24px;top:60px;padding:8px 14px;background:#e5484d;color:#fff;font-size:28px;font-weight:800;transform:rotate(-6deg)}
+#clock{left:60px;top:880px;font-size:72px;font-weight:800;color:#9BFF5B;text-shadow:0 0 30px rgba(155,255,91,.6);opacity:0;font-variant-numeric:tabular-nums}
+#br{left:120px;top:960px;width:840px;height:560px;border-radius:24px;background:#1b1230;border:2px solid rgba(155,255,91,.45);overflow:hidden;opacity:0;box-shadow:0 0 80px -10px rgba(155,255,91,.35)}
+#br .bar{height:60px;background:#140c26;display:flex;align-items:center;gap:12px;padding:0 22px;font-size:24px;color:#8a7bb0}
+#br .bar b{width:14px;height:14px;border-radius:50%;background:#3a2c5e}
+#warn{display:none;color:#ff4d6d;font-weight:700}
+.pane{position:absolute;left:0;right:0;top:60px;bottom:0;display:grid;place-items:center;opacity:0}
+#e503{font-size:220px;font-weight:800;color:#9BFF5B;text-shadow:0 0 40px rgba(155,255,91,.7)}
+#ct{padding:30px 44px;border-radius:20px;background:#2a1f45;font-size:48px;font-weight:700}
+#ns{display:flex;align-items:center;gap:26px;padding:30px 40px;border-radius:20px;background:rgba(229,72,77,.15);border:2px solid #ff4d6d;color:#ffb3c0;font-size:46px;font-weight:700}
+.gh{z-index:4;opacity:0}
+#pump{left:390px;top:960px;font-size:300px;opacity:0;filter:drop-shadow(0 0 60px rgba(255,140,40,.6))}
+#logo{left:440px;top:980px;width:200px;height:200px;opacity:0}
+#cta{left:88px;right:88px;top:1260px;display:flex;justify-content:center;opacity:0}
+#cta span{padding:32px 56px;border-radius:999px;background:#9BFF5B;color:#120B1F;font-size:48px;font-weight:800;box-shadow:0 0 70px -10px rgba(155,255,91,.8)}
+</style></head><body>
+<span class="glow" style="width:720px;height:720px;left:-220px;top:-160px;background:#4877FE"></span>
+<span class="glow" style="width:680px;height:680px;right:-260px;bottom:260px;background:#D752FE"></span>
+<div class="top"><span class="brand"><img src="file:///C:/Users/saloc/Documents/hivecode_social/assets/logo_mark.svg" alt="">HiveCode</span><span>hivecode.pt</span></div>
+<div class="txt" style="font-size:96px"><span class="w em" data-s="0.102">Meia-noite.</span><span class="w" data-s="1.755">A</span><span class="w" data-s="1.888">sua</span><span class="w" data-s="2.048">loja</span><span class="w" data-s="2.314">está</span><span class="w" data-s="2.513">fechada.</span></div><div class="txt" style="font-size:92px"><span class="w" data-s="3.976">Mas</span><span class="w" data-s="4.176">no</span><span class="w" data-s="4.335">site,</span><span class="w" data-s="4.894">algo</span><span class="w em" data-s="5.106">estranho</span><span class="w" data-s="5.452">acontece.</span></div><div class="txt" style="font-size:84px"><span class="w" data-s="7.074">Um</span><span class="w" data-s="7.261">cliente</span><span class="w" data-s="7.699">tenta</span><span class="w" data-s="7.899">encomendar…</span><span class="w" data-s="8.750">e</span><span class="w" data-s="8.843">a</span><span class="w" data-s="8.923">página</span><span class="w em" data-s="9.335">não</span><span class="w em" data-s="9.495">abre.</span></div><div class="txt" style="font-size:84px"><span class="w" data-s="10.731">Outro</span><span class="w" data-s="11.024">procura</span><span class="w" data-s="11.423">o</span><span class="w" data-s="11.543">seu</span><span class="w" data-s="11.676">contacto…</span><span class="w" data-s="12.407">e</span><span class="w" data-s="12.513">ele</span><span class="w em" data-s="12.699">desaparece.</span></div><div class="txt" style="font-size:88px"><span class="w" data-s="14.348">Um</span><span class="w" data-s="14.535">terceiro</span><span class="w" data-s="14.934">vê</span><span class="w" data-s="15.080">o</span><span class="w" data-s="15.146">aviso:</span><span class="w em" data-s="15.771">não</span><span class="w em" data-s="15.997">seguro.</span></div><div class="txt" style="font-size:88px"><span class="w" data-s="17.420">Não</span><span class="w" data-s="17.633">são</span><span class="w" data-s="17.806">fantasmas.</span><span class="w" data-s="19.495">São</span><span class="w em" data-s="19.774">clientes</span><span class="w" data-s="20.239">que</span><span class="w" data-s="20.359">perde.</span></div><div class="txt" style="font-size:80px"><span class="w" data-s="21.648">Neste</span><span class="w" data-s="21.941">Halloween,</span><span class="w" data-s="22.606">assuste</span><span class="w" data-s="22.951">a</span><span class="w em" data-s="23.018">concorrência,</span><span class="w" data-s="23.962">não</span><span class="w" data-s="24.148">os</span><span class="w" data-s="24.268">clientes.</span></div><div class="txt" style="font-size:110px"><span class="w em" data-s="25.798">hivecode.pt.</span></div><div id="art">
+<span id="moon"></span>
+<span class="fog" id="f0" style="left:-200px;top:1500px"></span><span class="fog" id="f1" style="left:-100px;top:1650px"></span>
+<span class="bat" id="bat0"><svg viewBox="0 0 100 40" width="150" height="60.0"><path d="M50 14c-3-6-7-6-8 0-6-8-18-10-30-6 8 2 12 8 12 16 4-4 10-4 14 0 2-4 6-6 12-4 6-2 10 0 12 4 4-4 10-4 14 0 0-8 4-14 12-16-12-4-24-2-30 6-1-6-5-6-8 0z" fill="#05020b"/></svg></span><span class="bat" id="bat1"><svg viewBox="0 0 100 40" width="110" height="44.0"><path d="M50 14c-3-6-7-6-8 0-6-8-18-10-30-6 8 2 12 8 12 16 4-4 10-4 14 0 2-4 6-6 12-4 6-2 10 0 12 4 4-4 10-4 14 0 0-8 4-14 12-16-12-4-24-2-30 6-1-6-5-6-8 0z" fill="#05020b"/></svg></span><span class="bat" id="bat2"><svg viewBox="0 0 100 40" width="90" height="36.0"><path d="M50 14c-3-6-7-6-8 0-6-8-18-10-30-6 8 2 12 8 12 16 4-4 10-4 14 0 2-4 6-6 12-4 6-2 10 0 12 4 4-4 10-4 14 0 0-8 4-14 12-16-12-4-24-2-30 6-1-6-5-6-8 0z" fill="#05020b"/></svg></span>
+<div id="clock">00:00</div>
+<div id="shop"><span class="win"></span><span class="door"><span id="sign">Fechado</span></span></div>
+<div id="br"><div class="bar"><b></b><b></b><b></b><span id="warn">⚠ Não seguro</span><span style="margin-left:14px">o-seu-negocio.pt</span></div>
+<div class="pane" id="p0"><span id="e503">503</span></div>
+<div class="pane" id="p1"><span id="ct">📞 Contactos</span></div>
+<div class="pane" id="p2"><span id="ns">⚠ Não seguro</span></div></div>
+<span class="gh" id="g0"><svg viewBox="0 0 80 90" width="220" height="246.40000000000003"><path d="M8 88V38a32 32 0 0 1 64 0v50l-10.6-9-10.7 9-10.7-9-10.7 9-10.6-9z" fill="#EDE7FF" opacity=".92"/><ellipse cx="28" cy="38" rx="6" ry="9" fill="#120B1F"/><ellipse cx="52" cy="38" rx="6" ry="9" fill="#120B1F"/><ellipse cx="40" cy="60" rx="7" ry="9" fill="#120B1F"/></svg></span><span class="gh" id="g1"><svg viewBox="0 0 80 90" width="170" height="190.4"><path d="M8 88V38a32 32 0 0 1 64 0v50l-10.6-9-10.7 9-10.7-9-10.7 9-10.6-9z" fill="#EDE7FF" opacity=".92"/><ellipse cx="28" cy="38" rx="6" ry="9" fill="#120B1F"/><ellipse cx="52" cy="38" rx="6" ry="9" fill="#120B1F"/><ellipse cx="40" cy="60" rx="7" ry="9" fill="#120B1F"/></svg></span><span class="gh" id="g2"><svg viewBox="0 0 80 90" width="140" height="156.8"><path d="M8 88V38a32 32 0 0 1 64 0v50l-10.6-9-10.7 9-10.7-9-10.7 9-10.6-9z" fill="#EDE7FF" opacity=".92"/><ellipse cx="28" cy="38" rx="6" ry="9" fill="#120B1F"/><ellipse cx="52" cy="38" rx="6" ry="9" fill="#120B1F"/><ellipse cx="40" cy="60" rx="7" ry="9" fill="#120B1F"/></svg></span>
+<span id="pump">🎃</span>
+<img id="logo" src="file:///C:/Users/saloc/Documents/hivecode_social/assets/logo_mark.svg" alt="">
+<div id="cta"><span>hivecode.pt</span></div>
+<span id="flash"></span>
+</div>
+<script>
+const T = {"ev": {"s2": 3.826, "s3": 6.924, "s4": 10.581, "nao1": 9.335125, "s5": 14.198, "desap": 12.699458, "nao2": 15.771291, "s6": 17.27, "s7": 21.498, "conc": 23.017833, "s8": 25.648, "site": 25.797875, "light": [0.05, 3.926, 17.169999999999998]}, "scenes": [{"start": 0, "end": 3.826}, {"start": 3.826, "end": 6.924}, {"start": 6.924, "end": 10.581}, {"start": 10.581, "end": 14.198}, {"start": 14.198, "end": 17.27}, {"start": 17.27, "end": 21.498}, {"start": 21.498, "end": 25.648}, {"start": 25.648, "end": 29.479999999999997}]}, E = T.ev;
+const cl = x => Math.min(Math.max(x, 0), 1);
+const ease = x => 1 - Math.pow(1 - cl(x), 3);
+const back = x => { x = cl(x); const c = 1.9; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const blocks = $$('.txt'), glows = $$('.glow');
+// Shows an element from `a` (pops in) until `b` (slides out left); returns visibility 0..1.
+function stage(el, t, a, b, dist = 60) {
+  const k = back((t - a) / .5), o = ease((t - b) / .3);
+  el.style.opacity = cl((t - a) / .12) * (1 - o);
+  el.style.transform = `translate(${-160 * o}px,${dist * (1 - k)}px) scale(${.92 + .08 * k})`;
+  return cl((t - a) / .12) * (1 - o);
+}
+function pop(el, t, a, base = '') {
+  const k = back((t - a) / .45);
+  el.style.opacity = cl((t - a) / .1);
+  el.style.transform = `${base} scale(${k})`;
+}
+
+const flick = t => (Math.sin(t * 47) * Math.sin(t * 13) > .55 ? .55 : 1);
+function art(t, E) {
+  // Ambience: drifting fog, bats crossing, lightning flashes.
+  $('#f0').style.transform = `translateX(${60 * Math.sin(t * .3)}px)`;
+  $('#f1').style.transform = `translateX(${-80 * Math.sin(t * .25)}px)`;
+  [[0, 0, 600, 1.0], [1, 4.5, 760, 1.3], [2, 9, 680, 1.1]].forEach(([i, d, y, sp]) => {
+    const p = ((t - d) * .18 * sp) % 1.4 - .2, b = $('#bat' + i);
+    b.style.transform = `translate(${-200 + p * 1400}px,${y + 40 * Math.sin((t - d) * 3)}px) scaleY(${.7 + .3 * Math.abs(Math.sin(t * 14 + i))})`;
+    b.style.opacity = t > d ? 1 : 0;
+  });
+  $('#flash').style.opacity = E.light.reduce((m, l) => Math.max(m, .55 * Math.max(0, 1 - Math.abs(t - l) / .09), .3 * Math.max(0, 1 - Math.abs(t - l - .22) / .07)), 0);
+  // Midnight: the clock and the closed shop.
+  pop($('#clock'), t, .1); $('#clock').style.opacity = cl((t - .1) / .1) * (1 - ease((t - E.s2) / .3));
+  $('#clock').textContent = t < .6 ? '23:59' : '00:00';
+  stage($('#shop'), t, .4, E.s2);
+  $('#sign').style.transform = `rotate(${-6 + 5 * Math.sin(t * 2.5)}deg)`;
+  // The haunted site.
+  const v = stage($('#br'), t, E.s2 + .2, E.s6);
+  $('#br').style.opacity = v * (t < E.s3 ? flick(t) : 1);
+  const show = (s, a, b) => { $(s).style.opacity = cl((t - a) / .2) * (1 - cl((t - b) / .2)); };
+  show('#p0', E.nao1 - .1, E.s4); $('#e503').style.transform = `translate(${8 * Math.sin(t * 50)}px,${4 * Math.sin(t * 37)}px)`;
+  $('#e503').style.opacity = flick(t + 1);
+  show('#p1', E.s4 + .1, E.s5);
+  const gone = ease((t - E.desap) / 1);
+  $('#ct').style.opacity = 1 - gone; $('#ct').style.filter = `blur(${12 * gone}px)`; $('#ct').style.transform = `translateY(${-80 * gone}px) scale(${1 + .2 * gone})`;
+  show('#p2', E.s5 + .1, E.s6);
+  $('#warn').style.display = t > E.nao2 && t < E.s6 ? 'inline' : 'none';
+  $('#ns').style.transform = `scale(${1 + .05 * Math.max(0, Math.sin(t * 7.5))})`;
+  // The lost customers float off as ghosts.
+  [[0, 280, 1080], [1, 600, 1180], [2, 160, 1300]].forEach(([i, x, y]) => {
+    const a = E.s6 + .2 + .35 * i, k = ease((t - a) / .6), o = ease((t - E.s7) / .4), g = $('#g' + i);
+    g.style.opacity = cl((t - a) / .3) * .9 * (1 - o);
+    g.style.transform = `translate(${x + 30 * Math.sin(t * 2 + i)}px,${y - 60 * k - 140 * o + 20 * Math.sin(t * 3 + i)}px)`;
+  });
+  // Scare the competition: a pumpkin, then the close.
+  pop($('#pump'), t, E.conc - .2); $('#pump').style.opacity = cl((t - E.conc + .2) / .1) * (1 - ease((t - E.s8) / .3));
+  const lg = back((t - E.s8 - .05) / .5);
+  $('#logo').style.opacity = cl((t - E.s8 - .05) / .1);
+  $('#logo').style.transform = `rotate(${-120 * (1 - lg)}deg) scale(${lg})`;
+  const ct = back((t - E.site) / .45);
+  $('#cta').style.opacity = cl((t - E.site) / .1);
+  $('#cta').style.transform = `scale(${ct * (1 + .03 * Math.sin((t - E.site) * 5) * cl(t - E.site - .5))})`;
+}
+
+window.seek = t => {
+  glows[0].style.transform = `translate(${40 * Math.sin(t * .5)}px,${30 * Math.cos(t * .4)}px)`;
+  glows[1].style.transform = `translate(${-50 * Math.sin(t * .35)}px,${40 * Math.cos(t * .45)}px)`;
+  T.scenes.forEach((s, i) => {
+    const b = blocks[i], last = i === T.scenes.length - 1, out = last ? 0 : ease((t - s.end) / .25);
+    b.style.display = t >= s.start && (t < s.end + .25 || last) ? 'block' : 'none';
+    b.style.opacity = 1 - out;
+    b.style.transform = `translateY(${-70 * out}px)`;
+    b.querySelectorAll('.w').forEach(w => {
+      const k = back((t - +w.dataset.s + .08) / .32);
+      w.style.opacity = cl((t - +w.dataset.s + .08) / .1);
+      w.style.transform = `translateY(${34 * (1 - k)}px) scale(${.88 + .12 * k})`;
+    });
+  });
+  $('#art').style.transform = `scale(${1.02 + .02 * Math.sin(t * .6)})`;
+  art(t, E);
+  // Real-video background: one pre-extracted frame per video frame; wait until it is drawn.
+  if (T.bg) {
+    const img = $('#bg'), src = `${T.bg.dir}/${String(Math.min(T.bg.n, Math.round(t * 30) + 1)).padStart(5, '0')}.jpg`;
+    if (img.getAttribute('src') !== src) { img.src = src; return img.decode().catch(() => {}); }
+  }
+};
+seek(0);
+</script>
+</body></html>
