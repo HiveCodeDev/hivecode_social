@@ -88,6 +88,9 @@ try {
       children.push(child.id);
     }
     params = { media_type: "CAROUSEL", children: children.join(","), caption: post.caption };
+  } else if (post.type === "story") {
+    // Stories take no caption; stickers (links, polls) cannot be added through the API.
+    params = { media_type: "STORIES", ...(post.video_url ? { video_url: post.video_url } : { image_url: post.image_url }) };
   } else {
     params = { image_url: post.image_url, caption: post.caption };
   }
@@ -95,7 +98,7 @@ try {
   await ready(container.id);
 
   const { id } = await call("POST", `${account}/media_publish`, { creation_id: container.id });
-  const { permalink } = await call("GET", id, { fields: "permalink" });
+  const { permalink = null } = await call("GET", id, { fields: "permalink" }).catch(() => ({}));
   post.media_id = id;
   post.permalink = permalink;
   post.status = "published";
