@@ -1,0 +1,163 @@
+<!doctype html><html lang="pt"><head><meta charset="utf-8">
+<style>@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500;700&display=block');
+
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&display=block');
+:root{--night:#121125;--deep:#16132f;--ink:#f3f1fb;--soft:#c9c3e6;--muted:#9a93c0;
+--pink:#EF5AFE;--violet:#D752FE;--blue:#4877FE;}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--night);color:var(--ink);font-family:'Geologica',sans-serif;position:relative}
+.hex{position:absolute;inset:0;opacity:.5}
+.glow{position:absolute;border-radius:50%;filter:blur(120px);opacity:.45}
+.frame{position:absolute;inset:0;padding:96px 88px;display:flex;flex-direction:column}
+.eyebrow{display:inline-flex;align-items:center;gap:14px;font-size:24px;font-weight:500;letter-spacing:.14em;
+text-transform:uppercase;color:var(--soft)}
+.eyebrow i{width:14px;height:14px;transform:rotate(30deg);background:linear-gradient(135deg,var(--pink),var(--blue));
+clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+h1{font-weight:600;font-size:84px;line-height:1.04;letter-spacing:-.025em;margin-top:40px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--violet)}
+p.lead{font-size:34px;line-height:1.4;color:var(--soft);font-weight:300;margin-top:32px;max-width:860px}
+.content{flex:1;display:flex;flex-direction:column;justify-content:center;padding-bottom:40px}
+.content>.eyebrow{align-self:flex-start}
+.foot{display:flex;align-items:center;justify-content:space-between;font-size:26px;color:var(--muted)}
+.brand{display:flex;align-items:center;gap:16px;font-weight:600;font-size:30px;color:var(--ink)}
+.brand img{width:52px;height:52px}
+.shot{border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.14);
+box-shadow:0 40px 90px -30px rgba(72,119,254,.55);background:#000}
+.shot .bar{height:44px;background:#1d1a3a;display:flex;align-items:center;gap:10px;padding:0 18px;font-size:19px;color:var(--muted)}
+.shot .bar b{width:12px;height:12px;border-radius:50%;background:#3a3566}
+.shot .bar span{margin-left:14px}
+.shot img{display:block;width:100%}
+
+html,body{width:1080px;height:1920px}
+.top{position:absolute;left:88px;right:88px;top:150px;display:flex;justify-content:space-between;align-items:center;font-size:28px;color:var(--muted);z-index:5}
+.txt{position:absolute;left:88px;width:904px;top:300px;font-weight:600;line-height:1.08;letter-spacing:-.025em;z-index:4}
+.txt .w{display:inline-block;opacity:0;margin-right:.24em}
+.txt .w.em{color:var(--violet)}
+#art{position:absolute;inset:0;transform-origin:540px 1140px}
+#art>*{position:absolute}
+
+:root{--night:#0F3D2E;--deep:#0F3D2E;--ink:#F3EFE6;--soft:#b9cfc3;--muted:#7fa393;
+--violet:#F4C542;--pink:#F4C542;--blue:#F4C542}
+body{background:#0F3D2E;color:#F3EFE6}
+.brand{color:#F3EFE6}.brand img{filter:brightness(0) invert(1)}
+.glow,.hex{display:none}
+body,.txt{font-family:'IBM Plex Mono',monospace}.txt{letter-spacing:-.04em}.top{border-bottom:3px dashed #F3EFE6;padding-bottom:22px}
+
+#call{left:240px;top:960px;width:600px;padding:34px 40px;background:#fff;color:#111;border:3px solid #111;box-shadow:10px 10px 0 #082a1f;display:flex;align-items:center;gap:28px;opacity:0}
+#call i{width:110px;height:110px;border-radius:50%;background:#111;display:grid;place-items:center;font-style:normal;font-size:56px;flex:none}
+#call small{display:block;font-size:28px;color:#555}#call b{font-size:44px}
+#tm{left:690px;top:820px;padding:14px 28px;background:#fff;border:3px solid #D7263D;color:#D7263D;font-size:52px;font-weight:700;font-variant-numeric:tabular-nums;opacity:0}
+.src{width:620px;height:430px;background:#fff;color:#111;border:3px solid #111;padding:30px 34px;opacity:0;box-shadow:10px 10px 0 #082a1f}
+.src h4{font-size:32px;font-weight:700;margin-bottom:22px;padding-bottom:16px;border-bottom:3px dashed #111}
+.src .r{height:22px;background:#e4e1d8;margin-bottom:20px}
+.x{position:absolute;right:-24px;top:-24px;width:80px;height:80px;border-radius:50%;background:#D7263D;color:#fff;display:grid;place-items:center;font-size:44px;font-weight:800;opacity:0}
+#xl{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:2px solid #111}#xl span{height:44px;border:1px solid #bbb}
+#nb{background:repeating-linear-gradient(#fff 0 50px,#c9d6f0 50px 52px);color:#2a2550}
+#nb p{font-size:34px;font-style:italic;line-height:52px;font-family:Georgia,serif}
+#q{left:140px;top:960px;width:800px;padding:30px 36px;background:#fff;color:#111;border:3px solid #111;box-shadow:10px 10px 0 #082a1f;display:flex;align-items:center;gap:22px;font-size:46px;font-weight:600;opacity:0}
+#cur{display:inline-block;width:4px;height:52px;background:#111;margin-left:4px}
+#res{left:140px;top:1130px;width:800px;padding:34px 40px;background:#fff;color:#111;border:3px solid #111;box-shadow:10px 10px 0 #082a1f;opacity:0}
+#res small{display:block;font-size:26px;color:#555;padding-bottom:14px;border-bottom:3px dashed #111}#res b{display:block;font-size:46px;margin-top:16px}
+#res span{display:inline-block;margin-top:18px;padding:10px 20px;background:#111;color:#fff;font-size:28px;font-weight:600}
+#logo{left:440px;top:930px;width:200px;height:200px;opacity:0}
+#cta{left:88px;right:88px;top:1220px;display:flex;justify-content:center;opacity:0}
+#cta span{padding:30px 52px;background:#F3EFE6;color:#0F3D2E;font-size:42px;font-weight:700;box-shadow:10px 10px 0 #F4C542}
+</style></head><body>
+<span class="glow" style="width:720px;height:720px;left:-220px;top:-160px;background:#4877FE"></span>
+<span class="glow" style="width:680px;height:680px;right:-260px;bottom:260px;background:#D752FE"></span>
+<div class="top"><span class="brand"><img src="file:///C:/Users/saloc/Documents/hivecode_social/assets/logo_mark.svg" alt="">HiveCode</span><span>Business</span></div>
+<div class="txt" style="font-size:88px"><span class="w" data-s="0.100">Um</span><span class="w" data-s="0.263">cliente</span><span class="w" data-s="0.588">liga:</span><span class="w" data-s="1.125">onde</span><span class="w" data-s="1.275">está</span><span class="w" data-s="1.438">a</span><span class="w" data-s="1.475">minha</span><span class="w em" data-s="1.587">encomenda?</span></div><div class="txt" style="font-size:104px"><span class="w" data-s="3.025">Procura</span><span class="w" data-s="3.438">no</span><span class="w em" data-s="3.550">email.</span></div><div class="txt" style="font-size:110px"><span class="w" data-s="4.825">No</span><span class="w em" data-s="4.987">Excel.</span></div><div class="txt" style="font-size:110px"><span class="w" data-s="6.338">No</span><span class="w em" data-s="6.475">caderno.</span></div><div class="txt" style="font-size:92px"><span class="w em" data-s="7.875">Cinco</span><span class="w em" data-s="8.188">minutos</span><span class="w" data-s="8.562">depois,</span><span class="w" data-s="9.213">ainda</span><span class="w" data-s="9.475">não</span><span class="w" data-s="9.613">sabe.</span></div><div class="txt" style="font-size:84px"><span class="w" data-s="10.863">Com</span><span class="w" data-s="10.988">um</span><span class="w" data-s="11.088">sistema</span><span class="w" data-s="11.363">à</span><span class="w" data-s="11.412">medida,</span><span class="w" data-s="12.062">escreve</span><span class="w" data-s="12.412">o</span><span class="w em" data-s="12.475">nome</span><span class="w" data-s="12.675">do</span><span class="w" data-s="12.775">cliente</span></div><div class="txt" style="font-size:88px"><span class="w" data-s="13.150">e</span><span class="w" data-s="13.238">a</span><span class="w" data-s="13.287">resposta</span><span class="w" data-s="13.700">aparece</span><span class="w" data-s="14.050">em</span><span class="w em" data-s="14.150">cinco</span><span class="w em" data-s="14.400">segundos.</span></div><div class="txt" style="font-size:76px"><span class="w" data-s="15.750">Saiba</span><span class="w" data-s="16.100">mais</span><span class="w" data-s="16.375">em</span><span class="w em" data-s="16.475">hivecode.pt/business.</span></div><div id="art">
+<div id="call"><i>📞</i><div><small>Chamada recebida</small><b>Cliente</b></div></div>
+<div id="tm">0:00</div>
+<div class="src" id="s0" style="left:150px;top:960px"><h4>✉️ Email</h4><div class="r" style="width:90%"></div><div class="r" style="width:70%"></div><div class="r" style="width:80%"></div><div class="r" style="width:60%"></div><span class="x" id="x0">✕</span></div>
+<div class="src" id="s1" style="left:230px;top:1020px"><h4><span style="color:#2fbf71">■</span> Excel</h4><div id="xl"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><span class="x" id="x1">✕</span></div>
+<div class="src" id="nb" style="left:310px;top:1080px;position:absolute"><h4>Caderno</h4><p>Encomenda… Silva?<br>ou terça?</p><span class="x" id="x2">✕</span></div>
+<div id="q">🔍 <span id="typed"></span><span id="cur"></span></div>
+<div id="res"><small>Encomenda nº 214 · Silva</small><b>Em preparação</b><span>Entrega amanhã</span></div>
+<img id="logo" src="file:///C:/Users/saloc/Documents/hivecode_social/assets/logo_mark.svg" alt="">
+<div id="cta"><span>hivecode.pt/business</span></div>
+</div>
+<script>
+const T = {"ev": {"s2": 2.875, "s3": 4.675, "s4": 6.188, "s5": 7.725, "s6": 10.713, "nome": 12.475, "resp": 13.2875, "seg": 14.4, "s8": 15.6, "site": 16.475}, "scenes": [{"start": 0, "end": 2.875}, {"start": 2.875, "end": 4.675}, {"start": 4.675, "end": 6.188}, {"start": 6.188, "end": 7.725}, {"start": 7.725, "end": 10.713}, {"start": 10.713, "end": 13.0}, {"start": 13.0, "end": 15.6}, {"start": 15.6, "end": 20.648}]}, E = T.ev;
+const cl = x => Math.min(Math.max(x, 0), 1);
+const ease = x => 1 - Math.pow(1 - cl(x), 3);
+const back = x => { x = cl(x); const c = 1.9; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const blocks = $$('.txt'), glows = $$('.glow');
+// Shows an element from `a` (pops in) until `b` (slides out left); returns visibility 0..1.
+function stage(el, t, a, b, dist = 60) {
+  const k = back((t - a) / .5), o = ease((t - b) / .3);
+  el.style.opacity = cl((t - a) / .12) * (1 - o);
+  el.style.transform = `translate(${-160 * o}px,${dist * (1 - k)}px) scale(${.92 + .08 * k})`;
+  return cl((t - a) / .12) * (1 - o);
+}
+function pop(el, t, a, base = '') {
+  const k = back((t - a) / .45);
+  el.style.opacity = cl((t - a) / .1);
+  el.style.transform = `${base} scale(${k})`;
+}
+
+const mmss = s => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
+function art(t, E) {
+  // The call rings.
+  stage($('#call'), t, .2, E.s2);
+  $('#call i').style.transform = `rotate(${t < E.s2 ? 14 * Math.sin(t * 30) * (Math.sin(t * 3) > 0 ? 1 : 0) : 0}deg)`;
+  // The search: three places pile up, each crossed out when the next opens; a red timer climbs to 5:00.
+  const gone = 1 - ease((t - E.s6) / .3), dim = 1 - .6 * cl((t - E.s5) / .3);
+  [['#s0', E.s2, E.s3], ['#s1', E.s3, E.s4], ['#nb', E.s4, E.s5]].forEach(([s, a, b], i) => {
+    pop($(s), t, a + .1); $(s).style.opacity = cl((t - a - .1) / .1) * gone * dim;
+    pop($('#x' + i), t, b - .25); $('#x' + i).style.opacity *= gone;
+  });
+  const tm = $('#tm'), slow = t < E.s6;
+  tm.style.opacity = cl((t - E.s2) / .2) * (1 - ease((t - E.s8) / .3));
+  if (slow) {
+    tm.textContent = mmss(300 * ease((t - E.s2) / (E.s5 + .6 - E.s2)));
+    tm.style.transform = `translateX(${t > E.s5 ? 6 * Math.sin(t * 40) : 0}px)`;
+    tm.style.color = tm.style.borderColor = '#D7263D';
+  } else {
+    tm.textContent = t < E.seg ? mmss(Math.min(5, (t - E.s6) * 2)) : '0:05';
+    tm.style.transform = '';
+    tm.style.color = tm.style.borderColor = '#1f8a4c';
+  }
+  // The system: type the name, the order appears.
+  stage($('#q'), t, E.s6 + .1, E.s8);
+  const name = 'Silva', k = Math.floor(cl((t - E.nome) / .6) * name.length);
+  $('#typed').textContent = name.slice(0, k);
+  $('#cur').style.opacity = Math.sin(t * 12) > 0 ? 1 : 0;
+  stage($('#res'), t, E.resp, E.s8);
+  // Close.
+  const lg = back((t - E.s8 - .1) / .5);
+  $('#logo').style.opacity = cl((t - E.s8 - .1) / .1);
+  $('#logo').style.transform = `rotate(${-120 * (1 - lg)}deg) scale(${lg})`;
+  const ct = back((t - E.site) / .45);
+  $('#cta').style.opacity = cl((t - E.site) / .1);
+  $('#cta').style.transform = `scale(${ct * (1 + .03 * Math.sin((t - E.site) * 5) * cl(t - E.site - .5))})`;
+}
+
+window.seek = t => {
+  glows[0].style.transform = `translate(${40 * Math.sin(t * .5)}px,${30 * Math.cos(t * .4)}px)`;
+  glows[1].style.transform = `translate(${-50 * Math.sin(t * .35)}px,${40 * Math.cos(t * .45)}px)`;
+  T.scenes.forEach((s, i) => {
+    const b = blocks[i], last = i === T.scenes.length - 1, out = last ? 0 : ease((t - s.end) / .25);
+    b.style.display = t >= s.start && (t < s.end + .25 || last) ? 'block' : 'none';
+    b.style.opacity = 1 - out;
+    b.style.transform = `translateY(${-70 * out}px)`;
+    b.querySelectorAll('.w').forEach(w => {
+      const k = back((t - +w.dataset.s + .08) / .32);
+      w.style.opacity = cl((t - +w.dataset.s + .08) / .1);
+      w.style.transform = `translateY(${34 * (1 - k)}px) scale(${.88 + .12 * k})`;
+    });
+  });
+  $('#art').style.transform = `scale(${1.02 + .02 * Math.sin(t * .6)})`;
+  art(t, E);
+  // Real-video background: one pre-extracted frame per video frame; wait until it is drawn.
+  if (T.bg) {
+    const img = $('#bg'), src = `${T.bg.dir}/${String(Math.min(T.bg.n, Math.round(t * 30) + 1)).padStart(5, '0')}.jpg`;
+    if (img.getAttribute('src') !== src) { img.src = src; return img.decode().catch(() => {}); }
+  }
+};
+seek(0);
+</script>
+</body></html>

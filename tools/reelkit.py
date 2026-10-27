@@ -62,6 +62,11 @@ window.seek = t => {
   });
   $('#art').style.transform = `scale(${1.02 + .02 * Math.sin(t * .6)})`;
   art(t, E);
+  // Real-video background: one pre-extracted frame per video frame; wait until it is drawn.
+  if (T.bg) {
+    const img = $('#bg'), src = `${T.bg.dir}/${String(Math.min(T.bg.n, Math.round(t * 30) + 1)).padStart(5, '0')}.jpg`;
+    if (img.getAttribute('src') !== src) { img.src = src; return img.decode().catch(() => {}); }
+  }
 };
 seek(0);
 """
@@ -88,7 +93,8 @@ def at(scenes, scene, token):
     return next(w[1] for w in scenes[scene]["words"] if w[0] == token)
 
 
-def page(scenes, ev, art_html, art_css, art_js, corner="hivecode.pt", theme=None):
+def page(scenes, ev, art_html, art_css, art_js, corner="hivecode.pt", theme=None, bg=None, gsap=False):
+    """bg: folder of frames from broll() shown full-bleed under a dark shade; gsap: load GSAP for art_js."""
     if theme:
         import themes
         art_css = themes.css(theme) + art_css
@@ -99,15 +105,22 @@ def page(scenes, ev, art_html, art_css, art_js, corner="hivecode.pt", theme=None
         for s in scenes
     )
     timeline = {"ev": ev, "scenes": [{"start": s["start"], "end": s["end"]} for s in scenes]}
+    bg_html = ""
+    if bg:
+        timeline["bg"] = {"dir": Path(bg).as_uri(), "n": len(list(Path(bg).glob("*.jpg")))}
+        bg_html = ('<style>.glow{display:none}</style><img id="bg" alt="" style="position:absolute;inset:0;width:1080px;height:1920px;object-fit:cover">'
+                   '<span style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,9,24,.88) 0%,'
+                   'rgba(10,9,24,.55) 38%,rgba(10,9,24,.25) 60%,rgba(10,9,24,.7) 100%)"></span>')
+    gsap_tag = '<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>' if gsap else ""
     js = JS.replace("__T__", json.dumps(timeline, ensure_ascii=False)).replace("__ART__", art_js)
     return f"""<!doctype html><html lang="pt"><head><meta charset="utf-8">
-<style>@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=block');
+<style>@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500;700&display=block');
 {BASE_CSS}{CSS}{art_css}</style></head><body>
-<span class="glow" style="width:720px;height:720px;left:-220px;top:-160px;background:#4877FE"></span>
+{bg_html}<span class="glow" style="width:720px;height:720px;left:-220px;top:-160px;background:#4877FE"></span>
 <span class="glow" style="width:680px;height:680px;right:-260px;bottom:260px;background:#D752FE"></span>
 <div class="top"><span class="brand"><img src="{ASSETS}/logo_mark.svg" alt="">HiveCode</span><span>{corner}</span></div>
 {blocks}<div id="art">{art_html}</div>
-<script>{js}</script>
+{gsap_tag}<script>{js}</script>
 </body></html>"""
 
 
@@ -123,8 +136,25 @@ SFX = {
 }
 
 
-def render(page_path, work, total, voice_mp3, hits, out_mp4):
-    """Frames from the page, then voice + sound effects (name, seconds) mixed into the mp4."""
+def broll(clips, work):
+    """Cuts (mp4, start, seconds) clips into one 1080x1920 30 fps frame folder for page(bg=...)."""
+    out = Path(work) / "broll"
+    if out.exists():
+        for f in out.glob("*.jpg"):
+            f.unlink()
+    out.mkdir(parents=True, exist_ok=True)
+    inputs, chains = [], []
+    for n, (mp4, start, secs) in enumerate(clips):
+        inputs += ["-ss", str(start), "-t", str(secs), "-i", str(mp4)]
+        chains.append(f"[{n}:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps={FPS},setsar=1[c{n}]")
+    graph = ";".join(chains) + ";" + "".join(f"[c{n}]" for n in range(len(clips))) + f"concat=n={len(clips)}:v=1:a=0[v]"
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", *inputs, "-filter_complex", graph, "-map", "[v]", "-q:v", "3",
+                    str(out / "%05d.jpg")], check=True)
+    return out
+
+
+def render(page_path, work, total, voice_mp3, hits, out_mp4, music=None, music_vol=.12):
+    """Frames from the page, then voice + sound effects (name, seconds) and optional looped music mixed into the mp4."""
     work = Path(work)
     subprocess.run(["node", str(ROOT / "tools" / "reel.mjs"), str(page_path), str(work / "frames"), f"{total:.3f}", str(FPS)], check=True)
     for name, (src, af) in SFX.items():
@@ -133,7 +163,13 @@ def render(page_path, work, total, voice_mp3, hits, out_mp4):
     for n, (name, when) in enumerate(hits, 2):
         inputs += ["-i", str(work / f"{name}.wav")]
         chains.append(f"[{n}:a]adelay={max(0, int(when * 1000))}:all=1[v{n - 1}]")
-    mix = ";".join(chains) + ";" + "".join(f"[v{n}]" for n in range(len(hits) + 1)) + f"amix=inputs={len(hits) + 1}:normalize=0[a]"
+    tracks = len(hits) + 1
+    if music:
+        inputs += ["-stream_loop", "-1", "-i", str(music)]
+        chains.append(f"[{len(hits) + 2}:a]atrim=0:{total:.3f},afade=t=in:d=.8,afade=t=out:st={max(0, total - 1.5):.3f}:d=1.5,"
+                      f"volume={music_vol}[v{tracks}]")
+        tracks += 1
+    mix = ";".join(chains) + ";" + "".join(f"[v{n}]" for n in range(tracks)) + f"amix=inputs={tracks}:normalize=0[a]"
     subprocess.run([
         "ffmpeg", "-y", "-loglevel", "error", "-framerate", str(FPS), "-i", str(work / "frames" / "%05d.jpg"), *inputs,
         "-filter_complex", mix, "-map", "0:v", "-map", "[a]",
@@ -141,6 +177,11 @@ def render(page_path, work, total, voice_mp3, hits, out_mp4):
         "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-t", f"{total:.3f}", "-movflags", "+faststart",
         str(out_mp4),
     ], check=True)
+
+
+def cover_page(html, out_jpg):
+    """A designed cover (1080x1920 page, key text inside the 4:5 grid crop) instead of a video frame."""
+    subprocess.run(["node", str(ROOT / "tools" / "render_one.mjs"), str(html), str(out_jpg), "1080", "1920"], check=True)
 
 
 def cover(mp4, seconds, out_jpg):

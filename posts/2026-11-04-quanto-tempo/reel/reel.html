@@ -1,0 +1,175 @@
+<!doctype html><html lang="pt"><head><meta charset="utf-8">
+<style>@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500;700&display=block');
+
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&display=block');
+:root{--night:#121125;--deep:#16132f;--ink:#f3f1fb;--soft:#c9c3e6;--muted:#9a93c0;
+--pink:#EF5AFE;--violet:#D752FE;--blue:#4877FE;}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--night);color:var(--ink);font-family:'Geologica',sans-serif;position:relative}
+.hex{position:absolute;inset:0;opacity:.5}
+.glow{position:absolute;border-radius:50%;filter:blur(120px);opacity:.45}
+.frame{position:absolute;inset:0;padding:96px 88px;display:flex;flex-direction:column}
+.eyebrow{display:inline-flex;align-items:center;gap:14px;font-size:24px;font-weight:500;letter-spacing:.14em;
+text-transform:uppercase;color:var(--soft)}
+.eyebrow i{width:14px;height:14px;transform:rotate(30deg);background:linear-gradient(135deg,var(--pink),var(--blue));
+clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+h1{font-weight:600;font-size:84px;line-height:1.04;letter-spacing:-.025em;margin-top:40px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--violet)}
+p.lead{font-size:34px;line-height:1.4;color:var(--soft);font-weight:300;margin-top:32px;max-width:860px}
+.content{flex:1;display:flex;flex-direction:column;justify-content:center;padding-bottom:40px}
+.content>.eyebrow{align-self:flex-start}
+.foot{display:flex;align-items:center;justify-content:space-between;font-size:26px;color:var(--muted)}
+.brand{display:flex;align-items:center;gap:16px;font-weight:600;font-size:30px;color:var(--ink)}
+.brand img{width:52px;height:52px}
+.shot{border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.14);
+box-shadow:0 40px 90px -30px rgba(72,119,254,.55);background:#000}
+.shot .bar{height:44px;background:#1d1a3a;display:flex;align-items:center;gap:10px;padding:0 18px;font-size:19px;color:var(--muted)}
+.shot .bar b{width:12px;height:12px;border-radius:50%;background:#3a3566}
+.shot .bar span{margin-left:14px}
+.shot img{display:block;width:100%}
+
+html,body{width:1080px;height:1920px}
+.top{position:absolute;left:88px;right:88px;top:150px;display:flex;justify-content:space-between;align-items:center;font-size:28px;color:var(--muted);z-index:5}
+.txt{position:absolute;left:88px;width:904px;top:300px;font-weight:600;line-height:1.08;letter-spacing:-.025em;z-index:4}
+.txt .w{display:inline-block;opacity:0;margin-right:.24em}
+.txt .w.em{color:var(--violet)}
+#art{position:absolute;inset:0;transform-origin:540px 1140px}
+#art>*{position:absolute}
+
+:root{--night:#B8A4F4;--deep:#B8A4F4;--ink:#1A1033;--soft:#35265e;--muted:#4d3b85;
+--violet:#3A12A8;--pink:#3A12A8;--blue:#3A12A8}
+body{background:#B8A4F4;color:#1A1033}
+.brand{color:#1A1033}.brand img{}
+.glow,.hex{display:none}
+
+#win{left:80px;top:780px;width:920px;height:760px;border-radius:22px;background:#fff;overflow:hidden;opacity:0;box-shadow:0 50px 100px -40px rgba(26,16,51,.6)}
+#win .tb{height:58px;background:#F2F3F6;border-bottom:1px solid #E1E3E9;display:flex;align-items:center;gap:12px;padding:0 22px;font-size:22px;color:#8a8f9c}
+#win .tb b{width:16px;height:16px;border-radius:50%}
+.pane{position:absolute;left:0;right:0;top:58px;bottom:0;padding:40px;opacity:0}
+#p0{display:grid;place-items:center;font-size:200px}
+#p1{display:flex;align-items:center;justify-content:space-between;padding:40px 60px}
+#p1 span{padding:22px 26px;border-radius:16px;background:#F2F3F6;font-size:28px;font-weight:600;opacity:0}
+.bub{max-width:560px;padding:24px 30px;border-radius:24px;font-size:32px;margin-bottom:24px;opacity:0}
+.bub.a{background:#5B2EE0;color:#fff;margin-left:auto;border-bottom-right-radius:6px}
+.bub.b{background:#F2F3F6;color:#16181D;border-bottom-left-radius:6px}
+.blk{position:absolute;border-radius:14px;background:#E6E8EE}
+#tag{position:absolute;right:30px;top:30px;padding:12px 24px;border-radius:12px;background:#FFD84D;color:#16181D;font-size:28px;font-weight:800;transform:rotate(6deg);opacity:0}
+#p4{background:#16181D;font-family:'IBM Plex Mono',monospace}
+.cl{height:22px;border-radius:6px;margin-bottom:22px;transform-origin:left}
+#p5 .url{display:flex;align-items:center;gap:14px;padding:18px 24px;border-radius:14px;background:#F2F3F6;font-size:30px;color:#4b505c}
+#live{position:absolute;right:40px;bottom:40px;padding:22px 32px;border-radius:18px;background:#1f8a4c;color:#fff;font-size:34px;font-weight:700;opacity:0}
+#track{left:120px;right:120px;top:1610px;height:120px;opacity:0}
+#track .ln{position:absolute;left:30px;right:30px;top:28px;height:8px;border-radius:4px;background:rgba(26,16,51,.25)}
+#fill{position:absolute;left:30px;top:28px;height:8px;border-radius:4px;background:#1A1033;width:0}
+.st{position:absolute;top:0;width:64px;height:64px;margin-left:-32px;border-radius:50%;background:#B8A4F4;border:4px solid rgba(26,16,51,.35);display:grid;place-items:center;font-size:26px;font-weight:700;color:#35265e}
+.st.on{background:#1A1033;border-color:#1A1033;color:#ffffff}
+.st small{position:absolute;top:78px;white-space:nowrap;font-size:26px;font-weight:700;color:#1A1033}
+#cur{left:0;top:0;width:44px;height:44px;opacity:0;z-index:5}
+#logo{left:440px;top:930px;width:200px;height:200px;opacity:0}
+#cta{left:88px;right:88px;top:1220px;display:flex;justify-content:center;opacity:0}
+#cta span{padding:32px 56px;border-radius:999px;background:#1A1033;color:#ffffff;font-size:46px;font-weight:600;box-shadow:0 30px 70px -24px rgba(26,16,51,.7)}
+</style></head><body>
+<span class="glow" style="width:720px;height:720px;left:-220px;top:-160px;background:#4877FE"></span>
+<span class="glow" style="width:680px;height:680px;right:-260px;bottom:260px;background:#D752FE"></span>
+<div class="top"><span class="brand"><img src="file:///C:/Users/saloc/Documents/hivecode_social/assets/logo_mark.svg" alt="">HiveCode</span><span>hivecode.pt</span></div>
+<div class="txt" style="font-size:104px"><span class="w" data-s="0.100">Quanto</span><span class="w em" data-s="0.412">tempo</span><span class="w" data-s="0.675">demora</span><span class="w" data-s="0.938">a</span><span class="w" data-s="0.963">fazer</span><span class="w" data-s="1.238">um</span><span class="w" data-s="1.350">site?</span></div><div class="txt" style="font-size:84px"><span class="w" data-s="2.650">Depende</span><span class="w" data-s="2.975">do</span><span class="w" data-s="3.087">projeto,</span><span class="w" data-s="3.712">mas</span><span class="w" data-s="3.862">o</span><span class="w em" data-s="3.938">caminho</span><span class="w" data-s="4.275">é</span><span class="w" data-s="4.388">sempre</span><span class="w" data-s="4.650">o</span><span class="w" data-s="4.688">mesmo.</span></div><div class="txt" style="font-size:88px"><span class="w" data-s="6.025">Primeiro,</span><span class="w" data-s="6.600">uma</span><span class="w em" data-s="6.763">conversa</span><span class="w" data-s="7.200">sobre</span><span class="w" data-s="7.375">o</span><span class="w" data-s="7.487">seu</span><span class="w" data-s="7.588">negócio.</span></div><div class="txt" style="font-size:84px"><span class="w" data-s="8.988">Depois,</span><span class="w" data-s="9.675">um</span><span class="w em" data-s="9.750">mockup</span><span class="w em" data-s="10.100">gratuito</span><span class="w" data-s="10.512">para</span><span class="w" data-s="10.650">ver</span><span class="w" data-s="10.850">como</span><span class="w" data-s="11.025">vai</span><span class="w" data-s="11.150">ficar.</span></div><div class="txt" style="font-size:88px"><span class="w" data-s="12.488">Aprovado</span><span class="w" data-s="12.975">o</span><span class="w" data-s="13.012">mockup,</span><span class="w em" data-s="13.637">desenvolvemos</span><span class="w" data-s="14.162">o</span><span class="w" data-s="14.275">site.</span></div><div class="txt" style="font-size:88px"><span class="w" data-s="15.537">Por</span><span class="w" data-s="15.713">fim,</span><span class="w" data-s="16.212">testamos</span><span class="w" data-s="16.613">e</span><span class="w" data-s="16.712">pomos</span><span class="w" data-s="16.938">o</span><span class="w" data-s="17.038">site</span><span class="w em" data-s="17.250">no</span><span class="w em" data-s="17.387">ar.</span></div><div class="txt" style="font-size:84px"><span class="w" data-s="18.538">Peça</span><span class="w" data-s="18.825">um</span><span class="w" data-s="18.875">orçamento</span><span class="w em" data-s="19.300">gratuito</span><span class="w" data-s="19.725">em</span><span class="w em" data-s="19.875">hivecode.pt.</span></div><div id="art">
+<div id="win"><div class="tb"><b style="background:#ff5f57"></b><b style="background:#febc2e"></b><b style="background:#28c840"></b><span id="ttl" style="margin-left:18px">Novo projeto</span></div>
+<div class="pane" id="p0">⏳</div>
+<div class="pane" id="p1"><span id="o0">1. Conversa</span><span id="o1">2. Mockup</span><span id="o2">3. Código</span><span id="o3">4. No ar</span></div>
+<div class="pane" id="p2"><div class="bub a" id="m0">Fale-nos do seu negócio.</div><div class="bub b" id="m1">Temos uma loja e queremos vender online.</div><div class="bub a" id="m2">Perfeito. Vamos preparar uma proposta.</div></div>
+<div class="pane" id="p3"><div class="blk" id="k0" style="left:40px;right:40px;top:40px;height:60px"></div><div class="blk" id="k1" style="left:40px;right:40px;top:130px;height:260px"></div>
+<div class="blk" id="k2" style="left:40px;width:380px;top:420px;height:30px"></div><div class="blk" id="k3" style="left:40px;width:260px;top:470px;height:30px"></div>
+<div class="blk" id="k4" style="left:40px;width:240px;top:540px;height:70px"></div><span id="tag">Gratuito</span></div>
+<div class="pane" id="p4"><div class="cl" style="width:40%;background:#c792ea"></div><div class="cl" style="width:70%;background:#82aaff"></div><div class="cl" style="width:55%;background:#c3e88d"></div><div class="cl" style="width:80%;background:#82aaff"></div><div class="cl" style="width:35%;background:#f78c6c"></div><div class="cl" style="width:65%;background:#c3e88d"></div><div class="cl" style="width:50%;background:#c792ea"></div><div class="cl" style="width:75%;background:#82aaff"></div></div>
+<div class="pane" id="p5"><div class="url">🔒 www.o-seu-negocio.pt</div><div style="margin-top:30px;height:300px;border-radius:18px;background:linear-gradient(150deg,#d9ccff,#5B2EE0)"></div>
+<div style="margin-top:24px;height:28px;width:60%;border-radius:8px;background:#E6E8EE"></div><div id="live">● Online</div></div></div>
+<div id="track"><span class="ln"></span><span id="fill"></span><span class="st" id="t0" style="left:30px">1<small>Conversa</small></span><span class="st" id="t1" style="left:290px">2<small>Mockup</small></span><span class="st" id="t2" style="left:550px">3<small>Código</small></span><span class="st" id="t3" style="left:810px">4<small>No ar</small></span></div>
+<svg id="cur" viewBox="0 0 24 24"><path d="M4 2l16 10-7 1.5L9.5 21z" fill="#16181D" stroke="#fff" stroke-width="1.5"/></svg>
+<img id="logo" src="file:///C:/Users/saloc/Documents/hivecode_social/assets/logo_mark.svg" alt="">
+<div id="cta"><span>hivecode.pt</span></div>
+</div>
+<script>
+const T = {"ev": {"s2": 2.5, "cam": 3.9375, "s3": 5.875, "s4": 8.838, "mock": 9.75, "grat": 10.1, "s5": 12.338, "dev": 13.6375, "s6": 15.387, "ar": 17.3875, "s7": 18.388, "site": 19.875}, "scenes": [{"start": 0, "end": 2.5}, {"start": 2.5, "end": 5.875}, {"start": 5.875, "end": 8.838}, {"start": 8.838, "end": 12.338}, {"start": 12.338, "end": 15.387}, {"start": 15.387, "end": 18.388}, {"start": 18.388, "end": 23.36}]}, E = T.ev;
+const cl = x => Math.min(Math.max(x, 0), 1);
+const ease = x => 1 - Math.pow(1 - cl(x), 3);
+const back = x => { x = cl(x); const c = 1.9; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const blocks = $$('.txt'), glows = $$('.glow');
+// Shows an element from `a` (pops in) until `b` (slides out left); returns visibility 0..1.
+function stage(el, t, a, b, dist = 60) {
+  const k = back((t - a) / .5), o = ease((t - b) / .3);
+  el.style.opacity = cl((t - a) / .12) * (1 - o);
+  el.style.transform = `translate(${-160 * o}px,${dist * (1 - k)}px) scale(${.92 + .08 * k})`;
+  return cl((t - a) / .12) * (1 - o);
+}
+function pop(el, t, a, base = '') {
+  const k = back((t - a) / .45);
+  el.style.opacity = cl((t - a) / .1);
+  el.style.transform = `${base} scale(${k})`;
+}
+
+const show = (s, a, b) => { $(s).style.opacity = cl((t0 - a) / .25) * (1 - cl((t0 - b) / .25)); };
+let t0 = 0;
+function art(t, E) {
+  t0 = t;
+  stage($('#win'), t, .15, E.s7);
+  $('#ttl').textContent = t < E.s3 ? 'Novo projeto' : t < E.s4 ? 'Conversa' : t < E.s5 ? 'Mockup' : t < E.s6 ? 'site.html' : 'www.o-seu-negocio.pt';
+  show('#p0', 0, E.s2); $('#p0').style.transform = `rotate(${t < E.s2 ? 180 * ease((t % 1.5) / .6) : 0}deg)`;
+  show('#p1', E.s2, E.s3); [0, 1, 2, 3].forEach(i => pop($('#o' + i), t, E.cam + .2 * i));
+  show('#p2', E.s3, E.s4); [0, 1, 2].forEach(i => pop($('#m' + i), t, E.s3 + .3 + .7 * i));
+  show('#p3', E.s4, E.s5);
+  [0, 1, 2, 3, 4].forEach(i => { const k = $('#k' + i); pop(k, t, E.s4 + .3 + .25 * i); });
+  const col = t > E.mock + .4;
+  $('#k1').style.background = col ? 'linear-gradient(150deg,#d9ccff,#5B2EE0)' : '#E6E8EE';
+  $('#k4').style.background = col ? '#16181D' : '#E6E8EE';
+  pop($('#tag'), t, E.grat, 'rotate(6deg)');
+  show('#p4', E.s5, E.s6); $$('.cl').forEach((c, i) => c.style.transform = `scaleX(${ease((t - E.dev - .15 * i) / .3)})`);
+  show('#p5', E.s6, 99); pop($('#live'), t, E.ar);
+  // The four-step track fills as each phase starts.
+  stage($('#track'), t, E.s2 + .2, E.s7);
+  const marks = [E.s3, E.s4, E.s5, E.s6];
+  let f = 0;
+  marks.forEach((m, i) => { const on = t > m; $('#t' + i).className = 'st' + (on ? ' on' : ''); if (on) f = i; });
+  $('#fill').style.width = `${(t > E.s3 ? f / 3 + ease((t - marks[f]) / .5) * 0 : 0) * 780}px`;
+  // A cursor that clicks each new step.
+  const cur = $('#cur'), clicks = [[540, 1400, E.s3 - .4], [700, 1100, E.s4 - .4], [600, 1300, E.s5 - .4], [760, 1450, E.ar - .4]];
+  cur.style.opacity = cl((t - E.s3 + 1) / .2) * (1 - cl((t - E.s7) / .2));
+  let x = 900, y = 1700;
+  clicks.forEach(([cx, cy, ct]) => { if (t > ct - .6) { const k = ease((t - ct + .6) / .6); x = x + (cx - x) * k; y = y + (cy - y) * k; } });
+  cur.style.transform = `translate(${x}px,${y}px) scale(${clicks.some(([, , ct]) => Math.abs(t - ct) < .08) ? .8 : 1})`;
+  // Close.
+  const lg = back((t - E.s7 - .1) / .5);
+  $('#logo').style.opacity = cl((t - E.s7 - .1) / .1);
+  $('#logo').style.transform = `rotate(${-120 * (1 - lg)}deg) scale(${lg})`;
+  const ct = back((t - E.site) / .45);
+  $('#cta').style.opacity = cl((t - E.site) / .1);
+  $('#cta').style.transform = `scale(${ct * (1 + .03 * Math.sin((t - E.site) * 5) * cl(t - E.site - .5))})`;
+}
+
+window.seek = t => {
+  glows[0].style.transform = `translate(${40 * Math.sin(t * .5)}px,${30 * Math.cos(t * .4)}px)`;
+  glows[1].style.transform = `translate(${-50 * Math.sin(t * .35)}px,${40 * Math.cos(t * .45)}px)`;
+  T.scenes.forEach((s, i) => {
+    const b = blocks[i], last = i === T.scenes.length - 1, out = last ? 0 : ease((t - s.end) / .25);
+    b.style.display = t >= s.start && (t < s.end + .25 || last) ? 'block' : 'none';
+    b.style.opacity = 1 - out;
+    b.style.transform = `translateY(${-70 * out}px)`;
+    b.querySelectorAll('.w').forEach(w => {
+      const k = back((t - +w.dataset.s + .08) / .32);
+      w.style.opacity = cl((t - +w.dataset.s + .08) / .1);
+      w.style.transform = `translateY(${34 * (1 - k)}px) scale(${.88 + .12 * k})`;
+    });
+  });
+  $('#art').style.transform = `scale(${1.02 + .02 * Math.sin(t * .6)})`;
+  art(t, E);
+  // Real-video background: one pre-extracted frame per video frame; wait until it is drawn.
+  if (T.bg) {
+    const img = $('#bg'), src = `${T.bg.dir}/${String(Math.min(T.bg.n, Math.round(t * 30) + 1)).padStart(5, '0')}.jpg`;
+    if (img.getAttribute('src') !== src) { img.src = src; return img.decode().catch(() => {}); }
+  }
+};
+seek(0);
+</script>
+</body></html>

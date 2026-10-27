@@ -1,0 +1,23 @@
+[
+  {
+    "id": "2026-11-08-teste-30-segundos",
+    "date": "2026-11-08",
+    "time": "11:00",
+    "theme": "Teste de 30 segundos: o seu site está a perder clientes? (carrossel papel)",
+    "type": "carousel",
+    "image_urls": [
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-11-08-teste-30-segundos/slides/01/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-11-08-teste-30-segundos/slides/02/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-11-08-teste-30-segundos/slides/03/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-11-08-teste-30-segundos/slides/04/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-11-08-teste-30-segundos/slides/05/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-11-08-teste-30-segundos/slides/06/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-11-08-teste-30-segundos/slides/07/post.jpg"
+    ],
+    "destination": "https://hivecode.pt/?utm_source=instagram&utm_medium=social&utm_campaign=teste-30-segundos",
+    "caption": "Cinco perguntas, trinta segundos: o seu site está a perder clientes? Conte quantas respostas são \"não\". ✅\n\nPeça um mockup e um orçamento gratuitos em hivecode.pt\n\n#criacaodesites #webdesign #negociolocal #pequenasempresas #portugal",
+    "status": "approved",
+    "media_id": null,
+    "approved_at": "2026-10-27"
+  }
+]

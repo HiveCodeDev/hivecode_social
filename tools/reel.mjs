@@ -59,7 +59,7 @@ await sleep(1500);
 await send("Runtime.evaluate", { expression: "document.fonts.ready.then(() => true)", awaitPromise: true });
 
 for (let f = 0; f < frames; f++) {
-  await send("Runtime.evaluate", { expression: `window.seek(${f / fps})` });
+  await send("Runtime.evaluate", { expression: `window.seek(${f / fps})`, awaitPromise: true });
   const shot = await send("Page.captureScreenshot", {
     format: "jpeg",
     quality: 92,
