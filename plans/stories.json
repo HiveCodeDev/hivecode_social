@@ -6,9 +6,11 @@
     "theme": "Saiu hoje: antes e depois da padaria (story animada)",
     "type": "story",
     "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-10-27-saiu/story.mp4",
-    "status": "approved",
-    "media_id": null,
-    "approved_at": "2026-10-27"
+    "status": "published",
+    "media_id": "18101313770436865",
+    "approved_at": "2026-10-27",
+    "permalink": "https://www.instagram.com/stories/hivec0de/4017337244955272382",
+    "published_at": "2026-10-27T18:00:43.330Z"
   },
   {
     "id": "story-2026-10-28-dica",
@@ -16,10 +18,12 @@
     "time": "18:00",
     "theme": "Dica: abra o site no telemóvel (story animada)",
     "type": "story",
-    "status": "approved",
-    "media_id": null,
+    "status": "published",
+    "media_id": "18210182971365425",
     "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-10-28-dica/story.mp4",
-    "approved_at": "2026-10-27"
+    "approved_at": "2026-10-27",
+    "permalink": "https://www.instagram.com/stories/hivec0de/4018062324967552797",
+    "published_at": "2026-10-28T18:01:13.629Z"
   },
   {
     "id": "story-2026-10-29-saiu",
@@ -27,10 +31,12 @@
     "time": "18:00",
     "theme": "Saiu hoje: quanto custa um site (story animada)",
     "type": "story",
-    "status": "approved",
-    "media_id": null,
+    "status": "published",
+    "media_id": "17978461929156282",
     "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-10-29-saiu/story.mp4",
-    "approved_at": "2026-10-27"
+    "approved_at": "2026-10-27",
+    "permalink": "https://www.instagram.com/stories/hivec0de/4018786781553500839",
+    "published_at": "2026-10-29T18:00:40.820Z"
   },
   {
     "id": "story-2026-10-30-halloween",
@@ -38,15 +44,17 @@
     "time": "18:00",
     "theme": "Hoje no perfil: 5 sustos (story animada)",
     "type": "story",
-    "status": "approved",
-    "media_id": null,
+    "status": "published",
+    "media_id": "18180051391437745",
     "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-10-30-halloween/story.mp4",
-    "approved_at": "2026-10-27"
+    "approved_at": "2026-10-27",
+    "permalink": "https://www.instagram.com/stories/hivec0de/4019511529585030836",
+    "published_at": "2026-10-30T18:00:38.257Z"
   },
   {
     "id": "story-2026-10-31-halloween",
     "date": "2026-10-31",
-    "time": "18:00",
+    "time": "15:30",
     "theme": "Feliz Halloween, story animada com música (story animada)",
     "type": "story",
     "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-10-31-halloween/story.mp4",
@@ -57,7 +65,7 @@
   {
     "id": "story-2026-11-02-oferta",
     "date": "2026-11-02",
-    "time": "18:00",
+    "time": "15:30",
     "theme": "Mockup e orçamento gratuitos (story animada)",
     "type": "story",
     "status": "approved",
@@ -68,7 +76,7 @@
   {
     "id": "story-2026-11-03-saiu",
     "date": "2026-11-03",
-    "time": "18:00",
+    "time": "15:30",
     "theme": "Saiu hoje: mockup gratuito (story animada)",
     "type": "story",
     "status": "approved",
@@ -77,14 +85,58 @@
     "approved_at": "2026-10-27"
   },
   {
+    "id": "story-2026-11-04-saiu",
+    "date": "2026-11-04",
+    "time": "15:30",
+    "theme": "Saiu hoje: quanto tempo demora um site (story animada)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-04-saiu/story.mp4",
+    "approved_at": "2026-10-30"
+  },
+  {
+    "id": "story-2026-11-05-saiu",
+    "date": "2026-11-05",
+    "time": "15:30",
+    "theme": "Saiu hoje: 5 minutos ou 5 segundos (story animada)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-05-saiu/story.mp4",
+    "approved_at": "2026-10-30"
+  },
+  {
     "id": "story-2026-11-06-resumo",
     "date": "2026-11-06",
-    "time": "18:00",
+    "time": "15:30",
     "theme": "Resumo da semana: três reels (story animada)",
     "type": "story",
     "status": "approved",
     "media_id": null,
     "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-06-resumo/story.mp4",
     "approved_at": "2026-10-27"
+  },
+  {
+    "id": "story-2026-11-07-saiu",
+    "date": "2026-11-07",
+    "time": "15:30",
+    "theme": "Saiu hoje: Instagram ou site (story animada)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-07-saiu/story.mp4",
+    "approved_at": "2026-10-30"
+  },
+  {
+    "id": "story-2026-11-08-saiu",
+    "date": "2026-11-08",
+    "time": "15:30",
+    "theme": "Saiu hoje: teste de 30 segundos (story animada)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-08-saiu/story.mp4",
+    "approved_at": "2026-10-30"
   }
 ]

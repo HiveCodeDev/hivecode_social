@@ -145,6 +145,61 @@ $('#play').style.transform = `scale(${back((t - .8) / .5) * (1 + .08 * Math.max(
   $('#c' + i).style.transform = `translate(${x}px,${(1 - k) * 600 + Math.abs(i - 1) * 40 * sp}px) rotate(${r}deg) scale(${.8 + .2 * k - .12 * sp})`;
   $('#c' + i).style.opacity = cl((t - a) / .1); $('#c' + i).style.zIndex = i === 1 ? 3 : 2; });""",
         hits=[("whoosh", .45), ("whoosh", .95), ("whoosh", 1.45), ("pop", 2.4), ("pop", 4.2)]),
+    # 8. "Saiu hoje": a calendar flips through the days and lands on a question mark.
+    "2026-11-04-saiu": dict(theme="lilac", total=6.5, arrow="A resposta está no perfil", arrow_at=3.6, arrow_css="background:#1A1033;color:#fff",
+        lines=[("Quanto tempo demora um site?", 130, {"tempo"}, 0, 6.5, .3)],
+        css="""#cal{left:230px;top:1010px;width:620px;height:660px;border-radius:40px;background:#fff;overflow:hidden;box-shadow:0 50px 100px -30px rgba(26,16,51,.6)}
+#cal .b{height:130px;background:#3A12A8}
+#cal .r{position:absolute;top:-30px;width:34px;height:100px;border-radius:17px;background:#1A1033;border:6px solid #fff}
+#day{left:0;right:0;top:150px;text-align:center;color:#1A1033;font-size:380px;font-weight:800;letter-spacing:-.05em;font-variant-numeric:tabular-nums}""",
+        html='<div id="cal"><div class="b"></div><span class="r" style="left:150px"></span><span class="r" style="right:150px"></span><div id="day">1</div></div>',
+        js="""$('#day').textContent = t < 2.6 ? String(Math.floor(t * 12) % 30 + 1) : '?';
+$('#day').style.color = t < 2.6 ? '#1A1033' : '#3A12A8';
+$('#cal').style.transform = `rotate(${-3 + 2 * Math.sin(t * 2)}deg) scale(${back((t - .2) / .5) * (t > 2.6 && t < 2.8 ? 1.06 : 1)})`;""",
+        hits=[("pop", .2)] + [("click", .4 + .18 * i) for i in range(12)] + [("thump", 2.6), ("pop", 3.6)]),
+    # 9. "Saiu hoje": a timer reaches five minutes, gets struck out, and the order turns up at once.
+    "2026-11-05-saiu": dict(theme="receipt", total=6.5, arrow="Veja como no perfil", arrow_at=4.0, arrow_css="background:#111;color:#fff",
+        lines=[("5 minutos.", 190, {"minutos."}, 0, 2.8, .3), ("Ou 5 segundos.", 170, {"segundos."}, 2.8, 6.5, 2.9)],
+        css="""#ctr{left:0;right:0;top:860px;text-align:center;font-size:290px;font-weight:700;letter-spacing:-.06em;color:#111;font-variant-numeric:tabular-nums}
+#cut{left:120px;top:1010px;width:840px;height:22px;background:#D7263D;transform-origin:left center}
+#ok{left:130px;right:130px;top:1240px;padding:48px 54px;border-radius:24px;background:#111;color:#FBFAF6;font-size:60px;font-weight:700;opacity:0}
+#ok small{display:block;margin-top:14px;font-size:40px;font-weight:400;color:#bdbdbd}""",
+        html='<div id="ctr">00:00</div><span id="cut"></span><div id="ok">✓ Encomenda encontrada<small>Cliente: Silva</small></div>',
+        js="""const s = Math.min(300, Math.floor(t * 115));
+$('#ctr').textContent = String(Math.floor(s / 60)).padStart(2, '0') + ':' + String(s % 60).padStart(2, '0');
+$('#ctr').style.opacity = 1 - .75 * cl((t - 3.0) / .3);
+$('#cut').style.transform = `rotate(-3deg) scaleX(${ease((t - 2.7) / .25)})`;
+pop($('#ok'), t, 3.3);""",
+        hits=[("click", .4 + .25 * i) for i in range(9)] + [("thump", 2.7), ("whoosh", 2.9), ("pop", 3.3), ("pop", 4.0)]),
+    # 10. "Saiu hoje": a phone and a website collide, with VS between them.
+    "2026-11-07-saiu": dict(theme="blue", total=6.5, arrow="A resposta está no perfil", arrow_at=3.6, arrow_css="background:#FFD84D;color:#121125",
+        lines=[("Tenho Instagram. Preciso de um site?", 116, {"site?"}, 0, 6.5, .3)],
+        css="""#ph{left:110px;top:960px;width:310px;height:580px;box-sizing:border-box;padding:60px 18px;border-radius:52px;background:#121125;border:10px solid #fff;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;align-content:start}
+#ph i{aspect-ratio:1;border-radius:8px;background:linear-gradient(135deg,#EF5AFE,#4877FE)}
+#wn{left:500px;top:1040px;width:470px;height:410px;border-radius:24px;background:#fff;overflow:hidden;box-shadow:0 50px 100px -30px rgba(10,20,80,.7)}
+#wn .b{height:50px;background:#dbe5ff}#wn .h{margin:26px;height:170px;border-radius:16px;background:#265ADF}#wn .l{margin:0 26px 16px;height:24px;border-radius:12px;background:#dbe5ff}
+#vs{left:360px;top:1150px;width:200px;height:200px;border-radius:50%;background:#FFD84D;color:#121125;display:grid;place-items:center;font-size:92px;font-weight:800;opacity:0;z-index:3}""",
+        html=f"""<div id="ph">{'<i></i>' * 9}</div><div id="wn"><div class="b"></div><div class="h"></div><div class="l" style="width:70%"></div><div class="l" style="width:45%"></div></div><div id="vs">VS</div>""",
+        js="""const k = ease((t - .5) / .7), sh = t > 1.2 && t < 1.5 ? 10 * Math.sin(t * 90) : 0;
+$('#ph').style.transform = `translate(${-620 * (1 - k) + sh}px,${sh / 2}px) rotate(-4deg)`;
+$('#wn').style.transform = `translate(${620 * (1 - k) - sh}px,${-sh / 2}px) rotate(3deg)`;
+pop($('#vs'), t, 1.25);""",
+        hits=[("whoosh", .5), ("thump", 1.2), ("pop", 1.25), ("pop", 3.6)]),
+    # 11. "Saiu hoje": five answers tick themselves and the score stays blurred.
+    "2026-11-08-saiu": dict(theme="paper", total=7.0, arrow="Faça o teste no perfil", arrow_at=4.4, arrow_css="background:#121125;color:#F6F1E7",
+        lines=[("Teste de 30 segundos.", 150, {"segundos."}, 0, 7.0, .3)],
+        css="""#list{left:110px;right:110px;top:860px}
+.q{display:flex;align-items:center;gap:30px;height:118px;border-bottom:3px solid #e0d8c6;font-size:46px;font-weight:600;color:#121125;opacity:0}
+.q b{flex:none;width:68px;height:68px;box-sizing:border-box;border:6px solid #265ADF;border-radius:16px;display:grid;place-items:center;color:#fff;font-size:46px}
+#res{left:110px;right:110px;top:1500px;padding:34px 40px;border-radius:24px;background:#121125;color:#F6F1E7;font-size:52px;font-weight:700;text-align:center;opacity:0}
+#res span{display:inline-block;filter:blur(16px)}""",
+        html='<div id="list">' + "".join(f'<div class="q" id="q{i}"><b id="k{i}">✓</b>{q}</div>' for i, q in enumerate(
+            ["Abre em 3 segundos?", "Horário à vista?", "Lê-se sem zoom?", "Aparece no Google?", "Atualizado?"])) + '</div><div id="res">O seu resultado: <span>3 em 5</span></div>',
+        js="""[0, 1, 2, 3, 4].forEach(i => { const a = .7 + .45 * i, on = t > a + .25;
+  $('#q' + i).style.opacity = cl((t - a) / .2); $('#q' + i).style.transform = `translateX(${60 * (1 - ease((t - a) / .3))}px)`;
+  $('#k' + i).style.background = on ? '#265ADF' : 'transparent'; });
+pop($('#res'), t, 3.2);""",
+        hits=[("pop", .95 + .45 * i) for i in range(5)] + [("thump", 3.2), ("pop", 4.4)]),
 }
 
 
