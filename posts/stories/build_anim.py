@@ -37,6 +37,29 @@ function arrowAt(t, a) {
 """
 
 
+# End card: everything blurs and the logo appears with the site below; the arrow stays sharp.
+OUTRO = 1.6
+OUTRO_CSS = """
+#arrow{z-index:60}
+#outro{inset:0;z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:40px;opacity:0;color:#fff}
+#outro img{width:300px;height:300px}
+#outro b{font-size:76px;font-weight:700;letter-spacing:-.01em}
+"""
+BASE_CSS += OUTRO_CSS
+OUTRO_HTML = f'<div id="outro"><img id="olg" src="{(ROOT / "assets" / "logo_mark_white.svg").as_uri()}" alt=""><b id="ourl">hivecode.pt</b></div>'
+OUTRO_JS = r"""
+function outroAt(t, a) {
+  const el = $('#outro'), k = ease((t - a) / .4);
+  el.style.opacity = k > 0 ? 1 : 0;
+  el.style.backdropFilter = `blur(${28 * k}px)`;
+  el.style.background = `rgba(18,17,37,${.7 * k})`;
+  document.querySelectorAll('.txt').forEach(x => { x.style.filter = `blur(${28 * k}px) opacity(${1 - .7 * k})`; });  // the text sits above the art
+  $('#olg').style.transform = `scale(${back((t - a - .15) / .45)})`;
+  $('#ourl').style.opacity = cl((t - a - .4) / .3);
+}
+"""
+
+
 def thumb(path):
     return Path(path).as_uri()
 
@@ -206,18 +229,19 @@ pop($('#res'), t, 3.2);""",
 def build(name, s):
     work = ROOT / "reels" / f"story-{name}"
     work.mkdir(parents=True, exist_ok=True)
-    scenes = [{"words": [(w, round(first + .26 * i, 3), 0) for i, w in enumerate(text.split())], "size": size, "em": em, "start": a, "end": b}
+    total = s["total"] + OUTRO
+    scenes = [{"words": [(w, round(first + .26 * i, 3), 0) for i, w in enumerate(text.split())], "size": size, "em": em, "start": a, "end": b if b < s["total"] else total}
               for text, size, em, a, b, first in s["lines"]]
-    art = s["html"] + ARROW.format(label=s["arrow"])
-    js = ARROW_JS + "function art(t, E) {\n" + s["js"] + f"\narrowAt(t, {s['arrow_at']});\n}}"
+    art = s["html"] + ARROW.format(label=s["arrow"]) + OUTRO_HTML
+    js = ARROW_JS + OUTRO_JS + "function art(t, E) {\n" + s["js"] + f"\narrowAt(t, {s['arrow_at']});\noutroAt(t, {s['total']});\n}}"
     css = BASE_CSS + f"#arrow{{{s['arrow_css']}}}" + s["css"]
     page = HERE / name / "story.html"
     page.parent.mkdir(exist_ok=True)
     page.write_text(reelkit.page(scenes, {}, art, css, js, theme=s["theme"]), encoding="utf-8")
     silent = work / "silence.mp3"
-    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=mono", "-t", str(s["total"]), str(silent)], check=True)
-    bgm = music(s["total"] + .5, work / "music.wav") if s.get("music") else None
-    reelkit.render(page, work, s["total"], silent, s["hits"], HERE / name / "story.mp4", music=bgm, music_vol=.3)
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=mono", "-t", str(total), str(silent)], check=True)
+    bgm = music(total + .5, work / "music.wav") if s.get("music") else None
+    reelkit.render(page, work, total, silent, s["hits"] + [("whoosh", s["total"])], HERE / name / "story.mp4", music=bgm, music_vol=.3)
     print(name, "ok")
 
 
