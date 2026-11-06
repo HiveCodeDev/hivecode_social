@@ -1,0 +1,147 @@
+<!doctype html><html lang="pt"><head><meta charset="utf-8">
+<style>@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500;700&display=block');
+
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&display=block');
+:root{--night:#121125;--deep:#16132f;--ink:#f3f1fb;--soft:#c9c3e6;--muted:#9a93c0;
+--pink:#EF5AFE;--violet:#D752FE;--blue:#4877FE;}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--night);color:var(--ink);font-family:'Geologica',sans-serif;position:relative}
+.hex{position:absolute;inset:0;opacity:.5}
+.glow{position:absolute;border-radius:50%;filter:blur(120px);opacity:.45}
+.frame{position:absolute;inset:0;padding:96px 88px;display:flex;flex-direction:column}
+.eyebrow{display:inline-flex;align-items:center;gap:14px;font-size:24px;font-weight:500;letter-spacing:.14em;
+text-transform:uppercase;color:var(--soft)}
+.eyebrow i{width:14px;height:14px;transform:rotate(30deg);background:linear-gradient(135deg,var(--pink),var(--blue));
+clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+h1{font-weight:600;font-size:84px;line-height:1.04;letter-spacing:-.025em;margin-top:40px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--violet)}
+p.lead{font-size:34px;line-height:1.4;color:var(--soft);font-weight:300;margin-top:32px;max-width:860px}
+.content{flex:1;display:flex;flex-direction:column;justify-content:center;padding-bottom:40px}
+.content>.eyebrow{align-self:flex-start}
+.foot{display:flex;align-items:center;justify-content:space-between;font-size:26px;color:var(--muted)}
+.brand{display:flex;align-items:center;gap:16px;font-weight:600;font-size:30px;color:var(--ink)}
+.brand img{width:52px;height:52px}
+.shot{border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.14);
+box-shadow:0 40px 90px -30px rgba(72,119,254,.55);background:#000}
+.shot .bar{height:44px;background:#1d1a3a;display:flex;align-items:center;gap:10px;padding:0 18px;font-size:19px;color:var(--muted)}
+.shot .bar b{width:12px;height:12px;border-radius:50%;background:#3a3566}
+.shot .bar span{margin-left:14px}
+.shot img{display:block;width:100%}
+
+html,body{width:1080px;height:1920px}
+.top{position:absolute;left:88px;right:88px;top:150px;display:flex;justify-content:space-between;align-items:center;font-size:28px;color:var(--muted);z-index:5}
+.txt{position:absolute;left:88px;width:904px;top:300px;font-weight:600;line-height:1.08;letter-spacing:-.025em;z-index:4}
+.txt .w{display:inline-block;opacity:0;margin-right:.24em}
+.txt .w.em{color:var(--violet)}
+#art{position:absolute;inset:0;transform-origin:540px 1140px}
+#art>*{position:absolute}
+
+:root{--night:#D8C3A0;--deep:#D8C3A0;--ink:#2B1B12;--soft:#4d3526;--muted:#7a5c45;
+--violet:#8E1F35;--pink:#8E1F35;--blue:#8E1F35}
+body{background:#D8C3A0;color:#2B1B12}
+.brand{color:#2B1B12}.brand img{}
+.glow,.hex{display:none}
+body{background-image:radial-gradient(rgba(43,27,18,.07) 1.5px,transparent 1.5px);background-size:9px 9px}
+
+.nut{left:0;top:0;opacity:0}
+#ph{left:200px;top:760px;width:680px;height:1060px;box-sizing:border-box;padding:70px 34px 0;border-radius:80px;background:#fff;border:16px solid #2B1B12;opacity:0;overflow:hidden;box-shadow:0 60px 120px -40px rgba(43,27,18,.7)}
+#q{display:flex;align-items:center;gap:16px;padding:22px 26px;border-radius:999px;background:#f3ede4;font-size:34px;color:#2B1B12;height:44px}
+#q i{width:3px;height:40px;background:#8E1F35}
+.res{position:absolute;left:34px;right:34px;height:150px;box-sizing:border-box;padding:24px 28px;border-radius:26px;background:#f7f2ea;opacity:0}
+.res b{display:block;font-size:36px;color:#2B1B12}.res small{font-size:28px;color:#7a5c45}
+.res .img{position:absolute;right:24px;top:24px;width:102px;height:102px;border-radius:18px;background:linear-gradient(140deg,#c9a77b,#8a5a33)}
+#mine{border:5px dashed #8E1F35;background:transparent}
+#mine b{color:#8E1F35}
+#x{position:absolute;right:30px;top:30px;width:90px;height:90px;border-radius:50%;background:#8E1F35;color:#fff;display:grid;place-items:center;font-size:56px;font-weight:800;opacity:0}
+#logo{left:440px;top:930px;width:200px;height:200px;opacity:0}
+#cta{left:88px;right:88px;top:1220px;display:flex;justify-content:center;opacity:0}
+#cta span{padding:32px 56px;border-radius:999px;background:#2B1B12;color:#F3EBDD;font-size:46px;font-weight:600}
+</style></head><body>
+<span class="glow" style="width:720px;height:720px;left:-220px;top:-160px;background:#4877FE"></span>
+<span class="glow" style="width:680px;height:680px;right:-260px;bottom:260px;background:#D752FE"></span>
+<div class="top"><span class="brand"><img src="file:///C:/Users/saloc/Documents/hivecode_social/assets/logo_mark.svg" alt="">HiveCode</span><span>hivecode.pt</span></div>
+<div class="txt" style="font-size:130px"><span class="w" data-s="0.100">Dia</span><span class="w" data-s="0.375">de</span><span class="w" data-s="0.475">São</span><span class="w em" data-s="0.575">Martinho.</span></div><div class="txt" style="font-size:96px"><span class="w" data-s="1.975">Alguém</span><span class="w" data-s="2.350">pesquisa:</span><span class="w em" data-s="3.038">magusto</span><span class="w" data-s="3.513">perto</span><span class="w" data-s="3.788">de</span><span class="w" data-s="3.850">mim.</span></div><div class="txt" style="font-size:104px"><span class="w" data-s="5.000">Aparecem</span><span class="w em" data-s="5.525">três</span><span class="w" data-s="5.787">restaurantes.</span></div><div class="txt" style="font-size:124px"><span class="w" data-s="7.362">O</span><span class="w" data-s="7.500">seu</span><span class="w em" data-s="7.612">não</span><span class="w" data-s="7.725">está</span><span class="w" data-s="7.938">lá.</span></div><div class="txt" style="font-size:86px"><span class="w" data-s="9.037">Hoje,</span><span class="w" data-s="9.713">quem</span><span class="w" data-s="9.825">não</span><span class="w" data-s="9.963">aparece</span><span class="w" data-s="10.312">na</span><span class="w em" data-s="10.425">pesquisa</span><span class="w" data-s="10.812">não</span><span class="w" data-s="10.963">entra</span><span class="w" data-s="11.162">na</span><span class="w" data-s="11.250">escolha.</span></div><div class="txt" style="font-size:82px"><span class="w" data-s="12.600">Um</span><span class="w" data-s="12.725">site</span><span class="w" data-s="12.988">rápido</span><span class="w" data-s="13.412">e</span><span class="w" data-s="13.500">bem</span><span class="w" data-s="13.637">feito</span><span class="w" data-s="13.887">ajuda</span><span class="w" data-s="14.213">o</span><span class="w" data-s="14.312">seu</span><span class="w" data-s="14.425">negócio</span><span class="w" data-s="14.812">a</span><span class="w" data-s="14.912">ser</span><span class="w em" data-s="15.012">encontrado.</span></div><div class="txt" style="font-size:100px"><span class="w" data-s="16.462">Saiba</span><span class="w" data-s="16.825">mais</span><span class="w" data-s="17.087">em</span><span class="w em" data-s="17.188">hivecode.pt.</span></div><div id="art"><span class="nut" id="n0"><svg viewBox="0 0 100 100" width="120" height="120"><path d="M50 6C22 28 6 58 16 80c12 16 56 16 68 0C94 58 78 28 50 6Z" fill="#6B3A1E"/><path d="M16 80c12 16 56 16 68 0-4 10-64 10-68 0Z" fill="#C9A77B"/><path d="M38 24c-6 10-10 22-10 34" stroke="#8a5434" stroke-width="5" fill="none" stroke-linecap="round"/></svg></span><span class="nut" id="n1"><svg viewBox="0 0 100 100" width="120" height="120"><path d="M50 6C22 28 6 58 16 80c12 16 56 16 68 0C94 58 78 28 50 6Z" fill="#6B3A1E"/><path d="M16 80c12 16 56 16 68 0-4 10-64 10-68 0Z" fill="#C9A77B"/><path d="M38 24c-6 10-10 22-10 34" stroke="#8a5434" stroke-width="5" fill="none" stroke-linecap="round"/></svg></span><span class="nut" id="n2"><svg viewBox="0 0 100 100" width="120" height="120"><path d="M50 6C22 28 6 58 16 80c12 16 56 16 68 0C94 58 78 28 50 6Z" fill="#6B3A1E"/><path d="M16 80c12 16 56 16 68 0-4 10-64 10-68 0Z" fill="#C9A77B"/><path d="M38 24c-6 10-10 22-10 34" stroke="#8a5434" stroke-width="5" fill="none" stroke-linecap="round"/></svg></span><span class="nut" id="n3"><svg viewBox="0 0 100 100" width="120" height="120"><path d="M50 6C22 28 6 58 16 80c12 16 56 16 68 0C94 58 78 28 50 6Z" fill="#6B3A1E"/><path d="M16 80c12 16 56 16 68 0-4 10-64 10-68 0Z" fill="#C9A77B"/><path d="M38 24c-6 10-10 22-10 34" stroke="#8a5434" stroke-width="5" fill="none" stroke-linecap="round"/></svg></span><span class="nut" id="n4"><svg viewBox="0 0 100 100" width="120" height="120"><path d="M50 6C22 28 6 58 16 80c12 16 56 16 68 0C94 58 78 28 50 6Z" fill="#6B3A1E"/><path d="M16 80c12 16 56 16 68 0-4 10-64 10-68 0Z" fill="#C9A77B"/><path d="M38 24c-6 10-10 22-10 34" stroke="#8a5434" stroke-width="5" fill="none" stroke-linecap="round"/></svg></span><span class="nut" id="n5"><svg viewBox="0 0 100 100" width="120" height="120"><path d="M50 6C22 28 6 58 16 80c12 16 56 16 68 0C94 58 78 28 50 6Z" fill="#6B3A1E"/><path d="M16 80c12 16 56 16 68 0-4 10-64 10-68 0Z" fill="#C9A77B"/><path d="M38 24c-6 10-10 22-10 34" stroke="#8a5434" stroke-width="5" fill="none" stroke-linecap="round"/></svg></span><div id="ph"><div id="q"><span>🔍</span><span id="qt"></span><i id="caret"></i></div><div class="res" id="r0"><b>Tasca do Largo</b><small>★ 4,7 · 350 m</small><span class="img"></span></div><div class="res" id="r1"><b>Adega Velha</b><small>★ 4,5 · 600 m</small><span class="img"></span></div><div class="res" id="r2"><b>Casa das Castanhas</b><small>★ 4,6 · 900 m</small><span class="img"></span></div><div class="res" id="mine"><b>O seu restaurante</b><small>sem site</small><span id="x">✕</span></div></div><img id="logo" src="file:///C:/Users/saloc/Documents/hivecode_social/assets/logo_mark.svg" alt=""><div id="cta"><span>hivecode.pt</span></div></div>
+<script>
+const T = {"ev": {"s2": 1.825, "s3": 4.85, "tres": 5.525, "s4": 7.212, "nao": 7.6125, "s5": 8.887, "s6": 12.45, "found": 12.924999999999999, "s7": 16.312, "site": 17.1875}, "scenes": [{"start": 0, "end": 1.825}, {"start": 1.825, "end": 4.85}, {"start": 4.85, "end": 7.212}, {"start": 7.212, "end": 8.887}, {"start": 8.887, "end": 12.45}, {"start": 12.45, "end": 16.312}, {"start": 16.312, "end": 20.671999999999997}]}, E = T.ev;
+const cl = x => Math.min(Math.max(x, 0), 1);
+const ease = x => 1 - Math.pow(1 - cl(x), 3);
+const back = x => { x = cl(x); const c = 1.9; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const blocks = $$('.txt'), glows = $$('.glow');
+// Shows an element from `a` (pops in) until `b` (slides out left); returns visibility 0..1.
+function stage(el, t, a, b, dist = 60) {
+  const k = back((t - a) / .5), o = ease((t - b) / .3);
+  el.style.opacity = cl((t - a) / .12) * (1 - o);
+  el.style.transform = `translate(${-160 * o}px,${dist * (1 - k)}px) scale(${.92 + .08 * k})`;
+  return cl((t - a) / .12) * (1 - o);
+}
+function pop(el, t, a, base = '') {
+  const k = back((t - a) / .45);
+  el.style.opacity = cl((t - a) / .1);
+  el.style.transform = `${base} scale(${k})`;
+}
+const NUTS = [[80, 0], [330, 0.3], [600, 0.1], [860, 0.45], [200, 0.6], [720, 0.75]], Q = 'magusto perto de mim';
+function art(t, E) {
+  NUTS.forEach(([x, d], i) => {
+    const p = t - d, el = $('#n' + i), y = 520 + 700 * p * p, out = cl((t - E.s2 + .3) / .4);
+    el.style.opacity = cl(p / .1) * (1 - out);
+    el.style.transform = `translate(${x}px,${Math.min(y, 1650 - 60 * i)}px) rotate(${p * 200 * (i % 2 ? 1 : -1)}deg)`;
+  });
+  stage($('#ph'), t, E.s2 - .2, E.s7);
+  const n = Math.max(0, Math.min(Q.length, Math.floor((t - E.s2 - .1) * 16)));
+  $('#qt').textContent = Q.slice(0, n);
+  $('#caret').style.opacity = Math.floor(t * 3) % 2 && t < E.s3 ? 1 : 0;
+  // Results slide in; the empty slot for "o seu restaurante" stays below until the site arrives.
+  const climb = ease((t - E.found) / .8);
+  [0, 1, 2].forEach(i => {
+    const el = $('#r' + i), k = back((t - E.tres - .25 * i) / .45);
+    el.style.opacity = cl((t - E.tres - .25 * i) / .1);
+    el.style.top = `${170 + 175 * (i + climb)}px`;
+    el.style.transform = `scale(${k})`;
+  });
+  const m = $('#mine');
+  m.style.opacity = cl((t - E.s4) / .15);
+  m.style.top = `${170 + 175 * 3 * (1 - climb)}px`;
+  m.style.transform = `translateX(${t > E.nao && t < E.nao + .4 ? 14 * Math.sin(t * 70) : 0}px)`;
+  const fixed = t > E.found;
+  m.style.borderStyle = fixed ? 'solid' : 'dashed';
+  m.style.background = fixed ? '#fff' : 'transparent';
+  m.querySelector('small').textContent = fixed ? '★ 4,8 · 200 m · Site' : 'sem site';
+  const x = $('#x'); x.style.opacity = fixed ? 0 : cl((t - E.nao) / .1);
+  x.style.transform = `scale(${back((t - E.nao) / .35)})`;
+  $('#ph').style.filter = `saturate(${1 - .6 * cl((t - E.s5) / .3) * (1 - cl((t - E.s6) / .3))})`;
+  const lg = back((t - E.s7 - .1) / .5);
+  $('#logo').style.opacity = cl((t - E.s7 - .1) / .1);
+  $('#logo').style.transform = `rotate(${-120 * (1 - lg)}deg) scale(${lg})`;
+  const ct = back((t - E.site) / .45);
+  $('#cta').style.opacity = cl((t - E.site) / .1);
+  $('#cta').style.transform = `scale(${ct})`;
+}
+
+window.seek = t => {
+  glows[0].style.transform = `translate(${40 * Math.sin(t * .5)}px,${30 * Math.cos(t * .4)}px)`;
+  glows[1].style.transform = `translate(${-50 * Math.sin(t * .35)}px,${40 * Math.cos(t * .45)}px)`;
+  T.scenes.forEach((s, i) => {
+    const b = blocks[i], last = i === T.scenes.length - 1, out = last ? 0 : ease((t - s.end) / .25);
+    b.style.display = t >= s.start && (t < s.end + .25 || last) ? 'block' : 'none';
+    b.style.opacity = 1 - out;
+    b.style.transform = `translateY(${-70 * out}px)`;
+    b.querySelectorAll('.w').forEach(w => {
+      const k = back((t - +w.dataset.s + .08) / .32);
+      w.style.opacity = cl((t - +w.dataset.s + .08) / .1);
+      w.style.transform = `translateY(${34 * (1 - k)}px) scale(${.88 + .12 * k})`;
+    });
+  });
+  $('#art').style.transform = `scale(${1.02 + .02 * Math.sin(t * .6)})`;
+  art(t, E);
+  // Real-video background: one pre-extracted frame per video frame; wait until it is drawn.
+  if (T.bg) {
+    const img = $('#bg'), src = `${T.bg.dir}/${String(Math.min(T.bg.n, Math.round(t * 30) + 1)).padStart(5, '0')}.jpg`;
+    if (img.getAttribute('src') !== src) { img.src = src; return img.decode().catch(() => {}); }
+  }
+};
+seek(0);
+</script>
+</body></html>

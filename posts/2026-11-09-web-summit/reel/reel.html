@@ -1,0 +1,124 @@
+<!doctype html><html lang="pt"><head><meta charset="utf-8">
+<style>@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500;700&display=block');
+
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&display=block');
+:root{--night:#121125;--deep:#16132f;--ink:#f3f1fb;--soft:#c9c3e6;--muted:#9a93c0;
+--pink:#EF5AFE;--violet:#D752FE;--blue:#4877FE;}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--night);color:var(--ink);font-family:'Geologica',sans-serif;position:relative}
+.hex{position:absolute;inset:0;opacity:.5}
+.glow{position:absolute;border-radius:50%;filter:blur(120px);opacity:.45}
+.frame{position:absolute;inset:0;padding:96px 88px;display:flex;flex-direction:column}
+.eyebrow{display:inline-flex;align-items:center;gap:14px;font-size:24px;font-weight:500;letter-spacing:.14em;
+text-transform:uppercase;color:var(--soft)}
+.eyebrow i{width:14px;height:14px;transform:rotate(30deg);background:linear-gradient(135deg,var(--pink),var(--blue));
+clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+h1{font-weight:600;font-size:84px;line-height:1.04;letter-spacing:-.025em;margin-top:40px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--violet)}
+p.lead{font-size:34px;line-height:1.4;color:var(--soft);font-weight:300;margin-top:32px;max-width:860px}
+.content{flex:1;display:flex;flex-direction:column;justify-content:center;padding-bottom:40px}
+.content>.eyebrow{align-self:flex-start}
+.foot{display:flex;align-items:center;justify-content:space-between;font-size:26px;color:var(--muted)}
+.brand{display:flex;align-items:center;gap:16px;font-weight:600;font-size:30px;color:var(--ink)}
+.brand img{width:52px;height:52px}
+.shot{border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.14);
+box-shadow:0 40px 90px -30px rgba(72,119,254,.55);background:#000}
+.shot .bar{height:44px;background:#1d1a3a;display:flex;align-items:center;gap:10px;padding:0 18px;font-size:19px;color:var(--muted)}
+.shot .bar b{width:12px;height:12px;border-radius:50%;background:#3a3566}
+.shot .bar span{margin-left:14px}
+.shot img{display:block;width:100%}
+
+html,body{width:1080px;height:1920px}
+.top{position:absolute;left:88px;right:88px;top:150px;display:flex;justify-content:space-between;align-items:center;font-size:28px;color:var(--muted);z-index:5}
+.txt{position:absolute;left:88px;width:904px;top:300px;font-weight:600;line-height:1.08;letter-spacing:-.025em;z-index:4}
+.txt .w{display:inline-block;opacity:0;margin-right:.24em}
+.txt .w.em{color:var(--violet)}
+#art{position:absolute;inset:0;transform-origin:540px 1140px}
+#art>*{position:absolute}
+
+.chip{left:0;top:0;padding:22px 36px;border-radius:999px;background:rgba(255,255,255,.08);border:2px solid rgba(255,255,255,.22);color:#f3f1fb;font-size:40px;font-weight:600;opacity:0;white-space:nowrap}
+#list{left:88px;right:88px;top:860px;padding:20px 50px;border-radius:36px;background:#fff;color:#121125;opacity:0;box-shadow:0 60px 120px -40px rgba(0,0,0,.7)}
+.row{display:flex;align-items:center;gap:30px;height:170px;font-size:50px;font-weight:600;border-bottom:3px solid #eceaf4;transition:none}
+.row:last-child{border:0}
+.row .ic{font-size:60px;width:80px;text-align:center}
+.row .bx{margin-left:auto;width:84px;height:84px;border-radius:20px;border:6px solid #c9c4dc;display:grid;place-items:center;color:#fff;font-size:56px;font-weight:800}
+.row.on .bx{background:#1f8a4c;border-color:#1f8a4c}
+.row.cur{color:#4877FE}
+#logo{left:440px;top:930px;width:200px;height:200px;opacity:0}
+#cta{left:88px;right:88px;top:1220px;display:flex;justify-content:center;opacity:0}
+#cta span{padding:32px 56px;border-radius:999px;background:linear-gradient(90deg,#D752FE,#4877FE);color:#fff;font-size:46px;font-weight:600}
+</style></head><body>
+<span class="glow" style="width:720px;height:720px;left:-220px;top:-160px;background:#4877FE"></span>
+<span class="glow" style="width:680px;height:680px;right:-260px;bottom:260px;background:#D752FE"></span>
+<div class="top"><span class="brand"><img src="file:///C:/Users/saloc/Documents/hivecode_social/assets/logo_mark.svg" alt="">HiveCode</span><span>hivecode.pt</span></div>
+<div class="txt" style="font-size:92px"><span class="w" data-s="0.100">Esta</span><span class="w" data-s="0.388">semana,</span><span class="w" data-s="0.975">Lisboa</span><span class="w" data-s="1.375">fala</span><span class="w" data-s="1.637">de</span><span class="w em" data-s="1.688">inteligência</span><span class="w em" data-s="2.225">artificial</span><span class="w" data-s="2.750">e</span><span class="w" data-s="2.825">de</span><span class="w" data-s="2.925">startups.</span></div><div class="txt" style="font-size:84px"><span class="w" data-s="4.287">Mas,</span><span class="w" data-s="4.775">para</span><span class="w" data-s="4.862">a</span><span class="w" data-s="4.900">maioria</span><span class="w" data-s="5.237">das</span><span class="w" data-s="5.388">empresas,</span><span class="w" data-s="6.150">o</span><span class="w" data-s="6.225">mais</span><span class="w" data-s="6.438">importante</span><span class="w" data-s="6.862">continua</span><span class="w" data-s="7.225">a</span><span class="w" data-s="7.287">ser</span><span class="w" data-s="7.400">o</span><span class="w em" data-s="7.463">básico.</span></div><div class="txt" style="font-size:88px"><span class="w" data-s="8.800">O</span><span class="w" data-s="8.925">seu</span><span class="w" data-s="9.037">site</span><span class="w" data-s="9.275">abre</span><span class="w" data-s="9.412">em</span><span class="w em" data-s="9.537">três</span><span class="w em" data-s="9.738">segundos</span><span class="w" data-s="10.088">no</span><span class="w" data-s="10.188">telemóvel?</span></div><div class="txt" style="font-size:88px"><span class="w" data-s="11.713">Aparece</span><span class="w" data-s="12.100">no</span><span class="w em" data-s="12.213">Google</span><span class="w" data-s="12.525">quando</span><span class="w" data-s="12.675">procuram</span><span class="w" data-s="13.037">o</span><span class="w" data-s="13.125">seu</span><span class="w" data-s="13.238">serviço?</span></div><div class="txt" style="font-size:104px"><span class="w" data-s="14.588">O</span><span class="w em" data-s="14.713">contacto</span><span class="w" data-s="15.125">está</span><span class="w" data-s="15.275">à</span><span class="w" data-s="15.363">vista?</span></div><div class="txt" style="font-size:80px"><span class="w" data-s="16.712">Se</span><span class="w" data-s="16.850">falhou</span><span class="w" data-s="17.087">alguma,</span><span class="w" data-s="17.850">peça</span><span class="w" data-s="18.087">um</span><span class="w" data-s="18.125">mockup</span><span class="w" data-s="18.575">e</span><span class="w" data-s="18.700">um</span><span class="w" data-s="18.750">orçamento</span><span class="w em" data-s="19.188">gratuitos</span><span class="w" data-s="19.675">em</span><span class="w em" data-s="19.800">hivecode.pt.</span></div><div id="art"><span class="chip" id="c0">IA</span><span class="chip" id="c1">Startups</span><span class="chip" id="c2">Investidores</span><span class="chip" id="c3">Robótica</span><span class="chip" id="c4">Cloud</span><span class="chip" id="c5">Criptomoedas</span><span class="chip" id="c6">Metaverso</span><span class="chip" id="c7">Agentes de IA</span><div id="list"><div class="row" id="r0"><span class="ic">⚡</span>Abre em 3 segundos<span class="bx">✓</span></div><div class="row" id="r1"><span class="ic">🔍</span>Aparece no Google<span class="bx">✓</span></div><div class="row" id="r2"><span class="ic">📞</span>Contacto à vista<span class="bx">✓</span></div></div><img id="logo" src="file:///C:/Users/saloc/Documents/hivecode_social/assets/logo_mark.svg" alt=""><div id="cta"><span>hivecode.pt</span></div></div>
+<script>
+const T = {"ev": {"basico": 7.4625, "tres": 9.5375, "google": 12.2125, "contacto": 14.7125, "s6": 16.562, "site": 19.8}, "scenes": [{"start": 0, "end": 4.137}, {"start": 4.137, "end": 8.65}, {"start": 8.65, "end": 11.562}, {"start": 11.562, "end": 14.438}, {"start": 14.438, "end": 16.562}, {"start": 16.562, "end": 23.288}]}, E = T.ev;
+const cl = x => Math.min(Math.max(x, 0), 1);
+const ease = x => 1 - Math.pow(1 - cl(x), 3);
+const back = x => { x = cl(x); const c = 1.9; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const blocks = $$('.txt'), glows = $$('.glow');
+// Shows an element from `a` (pops in) until `b` (slides out left); returns visibility 0..1.
+function stage(el, t, a, b, dist = 60) {
+  const k = back((t - a) / .5), o = ease((t - b) / .3);
+  el.style.opacity = cl((t - a) / .12) * (1 - o);
+  el.style.transform = `translate(${-160 * o}px,${dist * (1 - k)}px) scale(${.92 + .08 * k})`;
+  return cl((t - a) / .12) * (1 - o);
+}
+function pop(el, t, a, base = '') {
+  const k = back((t - a) / .45);
+  el.style.opacity = cl((t - a) / .1);
+  el.style.transform = `${base} scale(${k})`;
+}
+const CH = [[120, 860], [560, 800], [300, 1010], [640, 1160], [140, 1250], [420, 1380], [120, 1520], [560, 1560]];
+function art(t, E) {
+  // Buzzwords drift in, then fall off the screen when "o básico" is said.
+  CH.forEach(([x, y], i) => {
+    const a = .2 + .25 * i, k = back((t - a) / .5), fall = ease((t - E.basico - .03 * i) / .7);
+    const el = $('#c' + i);
+    el.style.opacity = cl((t - a) / .15) * (1 - fall);
+    el.style.transform = `translate(${x + 12 * Math.sin(t * 1.3 + i)}px,${y + 10 * Math.cos(t * 1.1 + i) + 900 * fall * fall}px) rotate(${40 * fall * (i % 2 ? 1 : -1)}deg) scale(${k})`;
+  });
+  stage($('#list'), t, E.basico + .4, E.s6);
+  const ticks = [E.tres, E.google, E.contacto];
+  [0, 1, 2].forEach(i => {
+    const r = $('#r' + i), on = t > ticks[i] + .6;
+    r.className = 'row' + (on ? ' on' : '') + (t > ticks[i] - .2 && !on ? ' cur' : '');
+    r.querySelector('.bx').style.transform = `scale(${on ? back((t - ticks[i] - .6) / .35) : 1})`;
+  });
+  const lg = back((t - E.s6 - .1) / .5);
+  $('#logo').style.opacity = cl((t - E.s6 - .1) / .1);
+  $('#logo').style.transform = `rotate(${-120 * (1 - lg)}deg) scale(${lg})`;
+  const ct = back((t - E.site) / .45);
+  $('#cta').style.opacity = cl((t - E.site) / .1);
+  $('#cta').style.transform = `scale(${ct})`;
+}
+
+window.seek = t => {
+  glows[0].style.transform = `translate(${40 * Math.sin(t * .5)}px,${30 * Math.cos(t * .4)}px)`;
+  glows[1].style.transform = `translate(${-50 * Math.sin(t * .35)}px,${40 * Math.cos(t * .45)}px)`;
+  T.scenes.forEach((s, i) => {
+    const b = blocks[i], last = i === T.scenes.length - 1, out = last ? 0 : ease((t - s.end) / .25);
+    b.style.display = t >= s.start && (t < s.end + .25 || last) ? 'block' : 'none';
+    b.style.opacity = 1 - out;
+    b.style.transform = `translateY(${-70 * out}px)`;
+    b.querySelectorAll('.w').forEach(w => {
+      const k = back((t - +w.dataset.s + .08) / .32);
+      w.style.opacity = cl((t - +w.dataset.s + .08) / .1);
+      w.style.transform = `translateY(${34 * (1 - k)}px) scale(${.88 + .12 * k})`;
+    });
+  });
+  $('#art').style.transform = `scale(${1.02 + .02 * Math.sin(t * .6)})`;
+  art(t, E);
+  // Real-video background: one pre-extracted frame per video frame; wait until it is drawn.
+  if (T.bg) {
+    const img = $('#bg'), src = `${T.bg.dir}/${String(Math.min(T.bg.n, Math.round(t * 30) + 1)).padStart(5, '0')}.jpg`;
+    if (img.getAttribute('src') !== src) { img.src = src; return img.decode().catch(() => {}); }
+  }
+};
+seek(0);
+</script>
+</body></html>

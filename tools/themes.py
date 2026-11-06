@@ -11,6 +11,8 @@ reelkit.page(..., theme=) drop the hex grid and glows when a theme is given.
   lilac   lavender, deep-violet ink and emphasis
   terracotta warm orange poster, dark-brown ink, cream emphasis (user disliked the orange, 2026-10-27)
   forest  deep green, cream ink, mustard emphasis, monospace (pairs with receipt-style cards)
+  kraft   brown paper-bag, dark-brown ink, wine emphasis (autumn, São Martinho)
+  blackfriday  black with signal yellow, white type (Black Friday)
 """
 
 THEMES = {
@@ -26,6 +28,9 @@ THEMES = {
     "terracotta": dict(bg="#E2603A", ink="#23130D", soft="#4a2418", muted="#7a3a24", accent="#FFF1DC", logo=""),
     "forest": dict(bg="#0F3D2E", ink="#F3EFE6", soft="#b9cfc3", muted="#7fa393", accent="#F4C542",
                    logo="filter:brightness(0) invert(1)"),
+    "kraft": dict(bg="#D8C3A0", ink="#2B1B12", soft="#4d3526", muted="#7a5c45", accent="#8E1F35", logo=""),
+    "blackfriday": dict(bg="#0A0A0A", ink="#FFFFFF", soft="#d6d6d6", muted="#8f8f8f", accent="#FFD400",
+                        logo="filter:brightness(0) invert(1)"),
 }
 
 SERIF = "@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500;700&display=block');"
@@ -49,6 +54,10 @@ body{{background:{t['bg']};color:{t['ink']}}}
     if name == "receipt":
         out += ("body,.txt{font-family:'IBM Plex Mono',monospace}.txt{letter-spacing:-.04em}"
                 ".top{border-bottom:3px dashed #111;padding-bottom:22px}\n")
+    if name == "kraft":
+        out += "body{background-image:radial-gradient(rgba(43,27,18,.07) 1.5px,transparent 1.5px);background-size:9px 9px}\n"
+    if name == "blackfriday":
+        out += "h1 em,.txt .w.em{color:#FFD400}\n"
     if name == "screen":
         out += ("body{background:linear-gradient(180deg,#F2F3F6,#DADDE5)}"
                 ".top{top:0;left:0;right:0;height:64px;padding:0 40px;background:rgba(255,255,255,.75);font-size:24px}"

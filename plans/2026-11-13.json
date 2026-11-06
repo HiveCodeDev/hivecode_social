@@ -1,0 +1,22 @@
+[
+  {
+    "id": "2026-11-13-black-friday-lista",
+    "date": "2026-11-13",
+    "time": "12:30",
+    "theme": "Black Friday: faltam 14 dias (carrossel preto e amarelo)",
+    "type": "carousel",
+    "image_urls": [
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-11-13-black-friday-lista/slides/01/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-11-13-black-friday-lista/slides/02/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-11-13-black-friday-lista/slides/03/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-11-13-black-friday-lista/slides/04/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-11-13-black-friday-lista/slides/05/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-11-13-black-friday-lista/slides/06/post.jpg"
+    ],
+    "destination": "https://hivecode.pt/?utm_source=instagram&utm_medium=social&utm_campaign=black-friday-lista",
+    "caption": "Faltam 14 dias para a Black Friday. Quatro verificações para o seu site não perder vendas no dia de mais visitas: velocidade, promoções à vista, botão de compra e capacidade para o pico. 🛒\n\nGuarde esta lista. Mockup e orçamento gratuitos em hivecode.pt\n\n#criacaodesites #blackfriday #pequenasempresas #comerciolocal #portugal",
+    "status": "approved",
+    "media_id": null,
+    "approved_at": "2026-11-06"
+  }
+]

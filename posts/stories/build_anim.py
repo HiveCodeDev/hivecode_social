@@ -223,6 +223,93 @@ pop($('#vs'), t, 1.25);""",
   $('#k' + i).style.background = on ? '#265ADF' : 'transparent'; });
 pop($('#res'), t, 3.2);""",
         hits=[("pop", .95 + .45 * i) for i in range(5)] + [("thump", 3.2), ("pop", 4.4)]),
+    # 12. "Saiu hoje" (Web Summit): buzzwords float and fall, an empty three-line checklist pops up.
+    "2026-11-09-saiu": dict(theme=None, total=6.5, arrow="Veja o reel no perfil", arrow_at=4.0, arrow_css="background:linear-gradient(90deg,#D752FE,#4877FE);color:#fff",
+        lines=[("Lisboa fala de IA.", 150, {"IA."}, 0, 2.6, .3), ("E o básico?", 200, {"básico?"}, 2.6, 6.5, 2.7)],
+        css=""".chip{left:0;top:0;padding:22px 36px;border-radius:999px;background:rgba(255,255,255,.08);border:2px solid rgba(255,255,255,.22);color:#f3f1fb;font-size:42px;font-weight:600;opacity:0;white-space:nowrap}
+#ck{left:140px;right:140px;top:1020px;padding:16px 44px;border-radius:32px;background:#fff;color:#121125;opacity:0}
+#ck div{display:flex;align-items:center;justify-content:space-between;height:130px;font-size:44px;font-weight:600;border-bottom:3px solid #eceaf4}#ck div:last-child{border:0}
+#ck i{width:70px;height:70px;border-radius:18px;border:6px solid #c9c4dc}""",
+        html="".join(f'<span class="chip" id="c{i}">{w}</span>' for i, w in enumerate(["IA", "Startups", "Robótica", "Investidores", "Cloud", "Agentes de IA"]))
+            + '<div id="ck">' + "".join(f"<div>{r}<i></i></div>" for r in ["Abre em 3 segundos", "Aparece no Google", "Contacto à vista"]) + "</div>",
+        js="""[[120, 900], [560, 840], [200, 1120], [520, 1260], [140, 1420], [480, 1560]].forEach(([x, y], i) => {
+  const a = .2 + .2 * i, f = ease((t - 2.5 - .04 * i) / .6), el = $('#c' + i);
+  el.style.opacity = cl((t - a) / .15) * (1 - f);
+  el.style.transform = `translate(${x + 12 * Math.sin(t * 1.4 + i)}px,${y + 900 * f * f}px) rotate(${40 * f * (i % 2 ? 1 : -1)}deg) scale(${back((t - a) / .45)})`; });
+pop($('#ck'), t, 3.0);""",
+        hits=[("pop", .2 + .2 * i) for i in range(6)] + [("whoosh", 2.5), ("pop", 3.0), ("pop", 4.0)]),
+    # 13. Black Friday countdown: 30 days tick down to 17.
+    "2026-11-10-blackfriday": dict(theme="blackfriday", total=6.5, arrow="Prepare-se no perfil", arrow_at=3.8, arrow_css="background:#FFD400;color:#0A0A0A",
+        lines=[("Black Friday", 190, {"Friday"}, 0, 6.5, .3)],
+        css=""".tape{left:-40px;right:-40px;height:56px;background:repeating-linear-gradient(-45deg,#FFD400 0 40px,#0A0A0A 40px 80px)}
+#fal{left:0;right:0;top:940px;text-align:center;font-size:64px;font-weight:700;color:#fff}
+#ctr{left:0;right:0;top:1020px;text-align:center;font-size:480px;font-weight:800;color:#FFD400;letter-spacing:-.06em;line-height:1;font-variant-numeric:tabular-nums}
+#dias{left:0;right:0;top:1520px;text-align:center;font-size:90px;font-weight:800;color:#fff;letter-spacing:.06em}""",
+        html='<span class="tape" style="bottom:0"></span><div id="fal">Faltam</div><div id="ctr">30</div><div id="dias">DIAS</div>',
+        js="""$('#ctr').textContent = t < 2.4 ? String(30 - Math.floor(t / 2.4 * 13)) : '17';
+$('#ctr').style.transform = `scale(${t > 2.4 && t < 2.7 ? 1.08 : 1})`;
+pop($('#dias'), t, 2.5);""",
+        hits=[("click", .1 + 2.4 / 13 * i) for i in range(13)] + [("thump", 2.4), ("pop", 2.5), ("pop", 3.8)]),
+    # 14. "Saiu hoje" (São Martinho): a search for a magusto, three results, the reader's slot empty.
+    "2026-11-11-saiu": dict(theme="kraft", total=6.5, arrow="Veja o reel no perfil", arrow_at=3.8, arrow_css="background:#2B1B12;color:#F3EBDD",
+        lines=[("O seu restaurante aparece?", 130, {"aparece?"}, 0, 6.5, .3)],
+        css="""#sb{left:110px;right:110px;top:860px;padding:30px 38px;border-radius:999px;background:#fff;font-size:44px;color:#2B1B12;opacity:0}
+.r{left:110px;right:110px;height:130px;box-sizing:border-box;padding:0 40px;border-radius:28px;background:#fff;display:flex;align-items:center;font-size:42px;font-weight:700;color:#2B1B12;opacity:0}
+#me{border:6px dashed #8E1F35;background:transparent;color:#8E1F35;justify-content:space-between}
+#me b{width:84px;height:84px;border-radius:50%;background:#8E1F35;color:#fff;display:grid;place-items:center;font-size:50px}""",
+        html='<div id="sb">🔍 <span id="qt"></span></div>' + "".join(f'<div class="r" id="r{i}" style="top:{1040 + 160 * i}px">{n}</div>' for i, n in enumerate(["Tasca do Largo", "Adega Velha", "Casa das Castanhas"]))
+            + '<div class="r" id="me" style="top:1520px">O seu restaurante<b>✕</b></div>',
+        js="""pop($('#sb'), t, .2); const Q = 'magusto perto de mim';
+$('#qt').textContent = Q.slice(0, Math.max(0, Math.floor((t - .5) * 16)));
+[0, 1, 2].forEach(i => pop($('#r' + i), t, 1.9 + .25 * i));
+pop($('#me'), t, 2.8);""",
+        hits=[("pop", .2)] + [("click", .5 + i / 8) for i in range(10)] + [("pop", 1.9 + .25 * i) for i in range(3)] + [("error", 2.8), ("pop", 3.8)]),
+    # 15. Tip: a stopwatch ring fills to 3 seconds.
+    "2026-11-12-dica": dict(theme="lilac", total=6.5, arrow="Faça o teste no perfil", arrow_at=3.8, arrow_css="background:#1A1033;color:#fff",
+        lines=[("O seu site abre em 3 segundos?", 130, {"3", "segundos?"}, 0, 6.5, .3)],
+        css="""#sw{left:240px;top:880px;width:600px;height:600px}
+#sec{left:240px;top:1080px;width:600px;text-align:center;font-size:170px;font-weight:800;color:#1A1033;letter-spacing:-.05em;font-variant-numeric:tabular-nums}""",
+        html="""<svg id="sw" viewBox="0 0 200 200"><circle cx="100" cy="100" r="86" fill="#fff"/><circle cx="100" cy="100" r="86" fill="none" stroke="#d9ccff" stroke-width="14"/>
+<circle id="ring" cx="100" cy="100" r="86" fill="none" stroke="#3A12A8" stroke-width="14" stroke-linecap="round" stroke-dasharray="540" stroke-dashoffset="540" transform="rotate(-90 100 100)"/>
+<rect x="88" y="0" width="24" height="16" rx="4" fill="#1A1033"/></svg><div id="sec">0,0</div>""",
+        js="""const s = Math.min(3, Math.max(0, (t - .4) * 1.4));
+$('#ring').setAttribute('stroke-dashoffset', 540 * (1 - s / 3));
+$('#sec').textContent = s.toFixed(1).replace('.', ',') + ' s';
+$('#sw').style.transform = `scale(${back((t - .1) / .5) * (s >= 3 && t < 2.9 ? 1.05 : 1)})`;""",
+        hits=[("pop", .1)] + [("click", .4 + .36 * i) for i in range(6)] + [("thump", 2.55), ("pop", 3.8)]),
+    # 16. "Saiu hoje" (Black Friday list): the carousel cover with a "Guarde" bookmark.
+    "2026-11-13-saiu": dict(theme="blackfriday", total=6.5, arrow="Veja a lista no perfil", arrow_at=3.6, arrow_css="background:#FFD400;color:#0A0A0A",
+        lines=[("A lista da Black Friday.", 140, {"lista"}, 0, 6.5, .3)],
+        css="""#pk{left:290px;top:900px;width:500px;outline:6px solid #FFD400;outline-offset:14px}
+#bm{left:680px;top:850px;padding:20px 30px;border-radius:16px;background:#FFD400;color:#0A0A0A;font-size:44px;font-weight:800;transform:rotate(8deg);z-index:3;opacity:0}""",
+        html=f"""<div class="peek" id="pk"><img src="{thumb(POSTS / '2026-11-13-black-friday-lista/slides/01/post.jpg')}"></div><span id="bm">🔖 Guarde</span>""",
+        js="""$('#pk').style.transform = `rotate(${-3 + 2 * Math.sin(t * 1.5)}deg) scale(${back((t - .2) / .6)})`;
+pop($('#bm'), t, 1.6, 'rotate(8deg)');""",
+        hits=[("pop", .2), ("thump", 1.6), ("pop", 3.6)]),
+    # 17. Offer: a wireframe assembles inside a selection box, then a "0 €" price tag lands.
+    "2026-11-14-oferta": dict(theme="canvas", total=6.5, arrow="Peça no perfil", arrow_at=3.8, arrow_css="background:#9B3CF0;color:#fff",
+        lines=[("Veja o seu site antes de o pagar.", 120, {"antes"}, 0, 6.5, .3)],
+        css="""#fr{left:150px;top:940px;width:780px;height:640px;border-radius:20px;background:#fff;outline:4px solid #9B3CF0;outline-offset:10px;box-shadow:0 40px 80px -30px rgba(18,17,37,.4)}
+.wb{position:absolute;border-radius:14px;background:#e6e3ef;opacity:0}
+#lab{left:150px;top:890px;padding:6px 14px;border-radius:8px;background:#9B3CF0;color:#fff;font-size:26px;font-weight:600}
+#pr{left:640px;top:1460px;padding:24px 40px;border-radius:20px;background:#121125;color:#fff;font-size:90px;font-weight:800;transform:rotate(-8deg);opacity:0}""",
+        html='<div id="fr">' + "".join(f'<span class="wb" id="w{i}" style="{s}"></span>' for i, s in enumerate([
+            "left:30px;right:30px;top:30px;height:60px", "left:30px;right:30px;top:120px;height:250px", "left:30px;width:400px;top:400px;height:34px",
+            "left:30px;width:300px;top:460px;height:34px", "left:30px;width:260px;top:530px;height:76px"])) + '</div><span id="lab">Mockup · 1440 × 900</span><span id="pr">0 €</span>',
+        js="""[0, 1, 2, 3, 4].forEach(i => pop($('#w' + i), t, .4 + .3 * i));
+const c = t > 2.1; $('#w1').style.background = c ? 'linear-gradient(150deg,#d9c2ff,#9B3CF0)' : '#e6e3ef'; $('#w4').style.background = c ? '#121125' : '#e6e3ef';
+pop($('#pr'), t, 2.7, 'rotate(-8deg)');""",
+        hits=[("pop", .4 + .3 * i) for i in range(5)] + [("whoosh", 2.1), ("thump", 2.7), ("pop", 3.8)]),
+    # 18. "Saiu hoje" (letra pequena): unreadable fine print zooms up into "Nem o seu cliente."
+    "2026-11-15-saiu": dict(theme="screen", total=6.5, arrow="Veja o reel no perfil", arrow_at=3.8, arrow_css="background:#0A84FF;color:#fff",
+        lines=[("Consegue ler isto?", 160, {"ler"}, 0, 6.5, .3)],
+        css="""#cd{left:140px;right:140px;top:900px;height:560px;border-radius:28px;background:#fff;overflow:hidden;box-shadow:0 40px 80px -30px rgba(22,24,29,.35)}
+#tiny{position:absolute;left:0;right:0;top:270px;text-align:center;font-size:15px;color:#4b505c;transform-origin:50% 50%}""",
+        html='<div id="cd"><div id="tiny">Nem o seu cliente.</div></div>',
+        js="""pop($('#cd'), t, .2);
+$('#tiny').style.transform = `scale(${1 + 3.2 * ease(cl((t - 2.0) / .8))})`;
+$('#tiny').style.color = t > 2.4 ? '#0A84FF' : '#4b505c'; $('#tiny').style.fontWeight = t > 2.4 ? 700 : 400;""",
+        hits=[("pop", .2), ("whoosh", 2.0), ("thump", 2.8), ("pop", 3.8)]),
 }
 
 

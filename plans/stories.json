@@ -58,20 +58,24 @@
     "theme": "Feliz Halloween, story animada com música (story animada)",
     "type": "story",
     "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-10-31-halloween/story.mp4",
-    "status": "approved",
-    "media_id": null,
-    "approved_at": "2026-10-27"
+    "status": "published",
+    "media_id": "18094066730278540",
+    "approved_at": "2026-10-27",
+    "permalink": "https://www.instagram.com/stories/hivec0de/4020160806300719431",
+    "published_at": "2026-10-31T15:30:38.051Z"
   },
   {
     "id": "story-2026-11-02-oferta",
     "date": "2026-11-02",
-    "time": "15:30",
+    "time": "15:00",
     "theme": "Mockup e orçamento gratuitos (story animada)",
     "type": "story",
-    "status": "approved",
-    "media_id": null,
+    "status": "published",
+    "media_id": "18227367019339373",
     "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-02-oferta/story.mp4",
-    "approved_at": "2026-10-27"
+    "approved_at": "2026-10-27",
+    "permalink": "https://www.instagram.com/stories/hivec0de/4021600166988482870",
+    "published_at": "2026-11-02T15:10:25.805Z"
   },
   {
     "id": "story-2026-11-03-saiu",
@@ -79,10 +83,12 @@
     "time": "15:30",
     "theme": "Saiu hoje: mockup gratuito (story animada)",
     "type": "story",
-    "status": "approved",
-    "media_id": null,
+    "status": "published",
+    "media_id": "18082094297425369",
     "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-03-saiu/story.mp4",
-    "approved_at": "2026-10-27"
+    "approved_at": "2026-10-27",
+    "permalink": "https://www.instagram.com/stories/hivec0de/4022335103438898738",
+    "published_at": "2026-11-03T15:30:37.765Z"
   },
   {
     "id": "story-2026-11-04-saiu",
@@ -90,10 +96,12 @@
     "time": "15:30",
     "theme": "Saiu hoje: quanto tempo demora um site (story animada)",
     "type": "story",
-    "status": "approved",
-    "media_id": null,
+    "status": "published",
+    "media_id": "17996721375030477",
     "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-04-saiu/story.mp4",
-    "approved_at": "2026-10-30"
+    "approved_at": "2026-10-30",
+    "permalink": "https://www.instagram.com/stories/hivec0de/4023059869858641464",
+    "published_at": "2026-11-04T15:30:38.426Z"
   },
   {
     "id": "story-2026-11-05-saiu",
@@ -101,10 +109,12 @@
     "time": "15:30",
     "theme": "Saiu hoje: 5 minutos ou 5 segundos (story animada)",
     "type": "story",
-    "status": "approved",
-    "media_id": null,
+    "status": "published",
+    "media_id": "18189031729413066",
     "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-05-saiu/story.mp4",
-    "approved_at": "2026-10-30"
+    "approved_at": "2026-10-30",
+    "permalink": "https://www.instagram.com/stories/hivec0de/4023784651554541787",
+    "published_at": "2026-11-05T15:30:39.319Z"
   },
   {
     "id": "story-2026-11-06-resumo",
@@ -112,10 +122,12 @@
     "time": "15:30",
     "theme": "Resumo da semana: três reels (story animada)",
     "type": "story",
-    "status": "approved",
-    "media_id": null,
+    "status": "published",
+    "media_id": "18127532663310399",
     "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-06-resumo/story.mp4",
-    "approved_at": "2026-10-27"
+    "approved_at": "2026-10-27",
+    "permalink": "https://www.instagram.com/stories/hivec0de/4024509628729085663",
+    "published_at": "2026-11-06T15:31:04.597Z"
   },
   {
     "id": "story-2026-11-07-saiu",
@@ -138,5 +150,82 @@
     "media_id": null,
     "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-08-saiu/story.mp4",
     "approved_at": "2026-10-30"
+  },
+  {
+    "id": "story-2026-11-09-saiu",
+    "date": "2026-11-09",
+    "time": "15:30",
+    "theme": "Saiu hoje: Web Summit, e o básico? (story animada)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-09-saiu/story.mp4",
+    "approved_at": "2026-11-06"
+  },
+  {
+    "id": "story-2026-11-10-blackfriday",
+    "date": "2026-11-10",
+    "time": "15:30",
+    "theme": "Black Friday: faltam 17 dias (story animada)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-10-blackfriday/story.mp4",
+    "approved_at": "2026-11-06"
+  },
+  {
+    "id": "story-2026-11-11-saiu",
+    "date": "2026-11-11",
+    "time": "15:30",
+    "theme": "Saiu hoje: o seu restaurante aparece? (story animada)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-11-saiu/story.mp4",
+    "approved_at": "2026-11-06"
+  },
+  {
+    "id": "story-2026-11-12-dica",
+    "date": "2026-11-12",
+    "time": "15:30",
+    "theme": "Dica: o seu site abre em 3 segundos? (story animada)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-12-dica/story.mp4",
+    "approved_at": "2026-11-06"
+  },
+  {
+    "id": "story-2026-11-13-saiu",
+    "date": "2026-11-13",
+    "time": "15:30",
+    "theme": "Saiu hoje: a lista da Black Friday (story animada)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-13-saiu/story.mp4",
+    "approved_at": "2026-11-06"
+  },
+  {
+    "id": "story-2026-11-14-oferta",
+    "date": "2026-11-14",
+    "time": "15:30",
+    "theme": "Oferta: veja o seu site antes de o pagar (story animada)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-14-oferta/story.mp4",
+    "approved_at": "2026-11-06"
+  },
+  {
+    "id": "story-2026-11-15-saiu",
+    "date": "2026-11-15",
+    "time": "15:30",
+    "theme": "Saiu hoje: consegue ler isto? (story animada)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-15-saiu/story.mp4",
+    "approved_at": "2026-11-06"
   }
 ]
