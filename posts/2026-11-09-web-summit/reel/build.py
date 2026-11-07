@@ -17,7 +17,7 @@ WORK = ROOT / "reels" / HERE.parent.name
 WORK.mkdir(parents=True, exist_ok=True)
 
 SCENES = [
-    ("Esta semana, Lisboa fala de inteligência artificial e de startups.", 92, {"inteligência", "artificial"}),
+    ("Esta semana, a Web Summit fala de inteligência artificial e de startups.", 92, {"inteligência", "artificial"}),
     ("Mas, para a maioria das empresas, o mais importante continua a ser o básico.", 84, {"básico."}),
     ("O seu site abre em três segundos no telemóvel?", 88, {"três", "segundos"}),
     ("Aparece no Google quando procuram o seu serviço?", 88, {"Google"}),

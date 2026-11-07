@@ -225,7 +225,7 @@ pop($('#res'), t, 3.2);""",
         hits=[("pop", .95 + .45 * i) for i in range(5)] + [("thump", 3.2), ("pop", 4.4)]),
     # 12. "Saiu hoje" (Web Summit): buzzwords float and fall, an empty three-line checklist pops up.
     "2026-11-09-saiu": dict(theme=None, total=6.5, arrow="Veja o reel no perfil", arrow_at=4.0, arrow_css="background:linear-gradient(90deg,#D752FE,#4877FE);color:#fff",
-        lines=[("Lisboa fala de IA.", 150, {"IA."}, 0, 2.6, .3), ("E o básico?", 200, {"básico?"}, 2.6, 6.5, 2.7)],
+        lines=[("A Web Summit fala de IA.", 130, {"IA."}, 0, 2.6, .3), ("E o básico?", 200, {"básico?"}, 2.6, 6.5, 2.7)],
         css=""".chip{left:0;top:0;padding:22px 36px;border-radius:999px;background:rgba(255,255,255,.08);border:2px solid rgba(255,255,255,.22);color:#f3f1fb;font-size:42px;font-weight:600;opacity:0;white-space:nowrap}
 #ck{left:140px;right:140px;top:1020px;padding:16px 44px;border-radius:32px;background:#fff;color:#121125;opacity:0}
 #ck div{display:flex;align-items:center;justify-content:space-between;height:130px;font-size:44px;font-weight:600;border-bottom:3px solid #eceaf4}#ck div:last-child{border:0}
