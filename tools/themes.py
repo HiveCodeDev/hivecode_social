@@ -13,6 +13,7 @@ reelkit.page(..., theme=) drop the hex grid and glows when a theme is given.
   forest  deep green, cream ink, mustard emphasis, monospace (pairs with receipt-style cards)
   kraft   brown paper-bag, dark-brown ink, wine emphasis (autumn, São Martinho)
   blackfriday  black with signal yellow, white type (Black Friday)
+  blackmonth   the light twin: signal-yellow ground, black type, emphasis as black highlight
 """
 
 THEMES = {
@@ -31,6 +32,8 @@ THEMES = {
     "kraft": dict(bg="#D8C3A0", ink="#2B1B12", soft="#4d3526", muted="#7a5c45", accent="#8E1F35", logo=""),
     "blackfriday": dict(bg="#0A0A0A", ink="#FFFFFF", soft="#d6d6d6", muted="#8f8f8f", accent="#FFD400",
                         logo="filter:brightness(0) invert(1)"),
+    "blackmonth": dict(bg="#FFD400", ink="#0A0A0A", soft="#2a2a2a", muted="#5c4f00", accent="#0A0A0A",
+                       logo="filter:brightness(0)"),
 }
 
 SERIF = "@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500;700&display=block');"
@@ -58,6 +61,8 @@ body{{background:{t['bg']};color:{t['ink']}}}
         out += "body{background-image:radial-gradient(rgba(43,27,18,.07) 1.5px,transparent 1.5px);background-size:9px 9px}\n"
     if name == "blackfriday":
         out += "h1 em,.txt .w.em{color:#FFD400}\n"
+    if name == "blackmonth":
+        out += "h1 em,.txt .w.em{color:#FFD400;background:#0A0A0A;box-shadow:0 0 0 .1em #0A0A0A;border-radius:.06em}\n"
     if name == "screen":
         out += ("body{background:linear-gradient(180deg,#F2F3F6,#DADDE5)}"
                 ".top{top:0;left:0;right:0;height:64px;padding:0 40px;background:rgba(255,255,255,.75);font-size:24px}"

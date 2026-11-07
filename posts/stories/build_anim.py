@@ -223,6 +223,20 @@ pop($('#vs'), t, 1.25);""",
   $('#k' + i).style.background = on ? '#265ADF' : 'transparent'; });
 pop($('#res'), t, 3.2);""",
         hits=[("pop", .95 + .45 * i) for i in range(5)] + [("thump", 3.2), ("pop", 4.4)]),
+    # 11b. "Saiu hoje" (Black Month): the November calendar turns black day by day.
+    "2026-11-08-blackmonth": dict(theme="blackmonth", total=6.5, arrow="Veja o reel no perfil", arrow_at=3.6, arrow_css="background:#0A0A0A;color:#FFD400",
+        lines=[("Black Month: o mês inteiro conta.", 120, {"Black", "Month:"}, 0, 6.5, .3)],
+        css="""#cal{left:130px;right:130px;top:940px;padding:34px 32px 38px;border-radius:40px;background:#fff;box-shadow:0 50px 100px -40px rgba(0,0,0,.45)}
+#cal h4{margin:0 0 20px;font-size:44px;font-weight:800;letter-spacing:.08em;color:#0A0A0A;text-align:center}
+#cal .g{display:grid;grid-template-columns:repeat(7,1fr);gap:10px}
+#cal .d{height:80px;border-radius:16px;display:grid;place-items:center;font-size:34px;font-weight:700;color:#0A0A0A;background:#f2f2f2}
+#cal .d.on{background:#0A0A0A;color:#FFD400}""",
+        html='<div id="cal"><h4>NOVEMBRO</h4><div class="g">' + "<span></span>" * 6
+             + "".join(f'<span class="d" id="d{d}">{d}</span>' for d in range(1, 31)) + "</div></div>",
+        js="""pop($('#cal'), t, .2);
+for (let d = 1; d <= 30; d++) { const a = d === 27 ? .8 : 1.2 + .06 * d;
+  $('#d' + d).className = 'd' + (t > a ? ' on' : ''); }""",
+        hits=[("pop", .2), ("thump", .8)] + [("click", 1.2 + .06 * d) for d in range(1, 31, 3)] + [("pop", 3.6)]),
     # 12. "Saiu hoje" (Web Summit): buzzwords float and fall, an empty three-line checklist pops up.
     "2026-11-09-saiu": dict(theme=None, total=6.5, arrow="Veja o reel no perfil", arrow_at=4.0, arrow_css="background:linear-gradient(90deg,#D752FE,#4877FE);color:#fff",
         lines=[("A Web Summit fala de IA.", 130, {"IA."}, 0, 2.6, .3), ("E o básico?", 200, {"básico?"}, 2.6, 6.5, 2.7)],
