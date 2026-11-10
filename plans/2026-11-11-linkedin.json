@@ -1,0 +1,15 @@
+[
+  {
+    "id": "2026-11-11-linkedin",
+    "date": "2026-11-11",
+    "time": "18:00",
+    "theme": "Agora também estamos no LinkedIn (imagem, azul)",
+    "type": "image",
+    "image_url": "https://hivecodedev.github.io/hivecode_social/posts/2026-11-11-linkedin/post.jpg",
+    "destination": "https://www.linkedin.com/company/hivecode-pt",
+    "caption": "A HiveCode está agora no LinkedIn. 💼\n\nLá partilhamos os nossos projetos, como trabalhamos nos sites e no HiveCode Business, e dicas práticas para quem gere uma empresa.\n\nSiga a página: linkedin.com/company/hivecode-pt\n\n#criacaodesites #softwareamedida #pequenasempresas #empreendedores #portugal",
+    "status": "approved",
+    "media_id": null,
+    "approved_at": "2026-11-10"
+  }
+]

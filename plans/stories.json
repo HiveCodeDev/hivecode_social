@@ -199,10 +199,12 @@
     "time": "20:00",
     "theme": "Agora também estamos no LinkedIn (story animada)",
     "type": "story",
-    "status": "approved",
-    "media_id": null,
-    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-10-linkedin/story.mp4",
-    "approved_at": "2026-11-10"
+    "status": "published",
+    "media_id": "17993804646113048",
+    "video_url": "https://cdn.jsdelivr.net/gh/HiveCodeDev/hivecode_social@cf7b75d/posts/stories/2026-11-10-linkedin/story.mp4",
+    "approved_at": "2026-11-10",
+    "permalink": "https://www.instagram.com/stories/hivec0de/4027544660883820364",
+    "published_at": "2026-11-10T20:01:12.027Z"
   },
   {
     "id": "story-2026-11-11-saiu",
