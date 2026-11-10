@@ -264,6 +264,32 @@ pop($('#ck'), t, 3.0);""",
 $('#ctr').style.transform = `scale(${t > 2.4 && t < 2.7 ? 1.08 : 1})`;
 pop($('#dias'), t, 2.5);""",
         hits=[("click", .1 + 2.4 / 13 * i) for i in range(13)] + [("thump", 2.4), ("pop", 2.5), ("pop", 3.8)]),
+    # 13b. LinkedIn launch: a company-page card pops up and its "Seguir" button gets pressed.
+    "2026-11-10-linkedin": dict(theme="blue", total=6.5, arrow="Procure HiveCode no LinkedIn", arrow_at=3.4, arrow_css="background:#FFD84D;color:#121125",
+        lines=[("Agora também estamos no LinkedIn.", 120, {"LinkedIn."}, 0, 6.5, .3)],
+        css="""#arrow svg{display:none}#arrow{padding-left:30px}
+#li{left:110px;right:110px;top:900px;border-radius:36px;background:#fff;overflow:hidden;opacity:0;box-shadow:0 60px 120px -40px rgba(0,0,0,.5)}
+#li .cv{height:170px;background:linear-gradient(120deg,#D752FE,#4877FE)}
+#li .lg{position:absolute;left:50px;top:95px;width:150px;height:150px;border-radius:24px;background:#fff;display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,.15)}
+#li .lg img{width:110px;height:110px}
+#li .bd{padding:100px 50px 50px;color:#191919}
+#li h3{font-size:58px;font-weight:700;margin:0}
+#li p{font-size:34px;color:#555;margin:10px 0 0}
+#li small{display:block;font-size:28px;color:#888;margin-top:8px}
+#fol{display:inline-flex;align-items:center;gap:14px;margin-top:36px;padding:22px 48px;border-radius:999px;background:#0A66C2;color:#fff;font-size:38px;font-weight:700}
+#hand{left:0;top:0;font-size:120px;opacity:0;z-index:5}""",
+        html=f'<div id="li"><div class="cv"></div><div class="lg"><img src="{(ROOT / "assets" / "logo_mark.svg").as_uri()}" alt=""></div>'
+             '<div class="bd"><h3>HiveCode</h3><p>Sites e software à medida</p><small>Desenvolvimento de software · Portugal</small><span id="fol">+ Seguir</span></div></div>'
+             '<span id="hand">👆</span>',
+        js="""pop($('#li'), t, .4);
+const h = $('#hand'), a = 1.6, k = ease((t - a) / .5), on = t > a + .6;
+h.style.opacity = cl((t - a) / .2) * (1 - cl((t - a - 1.2) / .3));
+h.style.transform = `translate(${260 + 80 * (1 - k)}px,${1430 + 200 * (1 - k) + (t > a + .5 && t < a + .7 ? 20 : 0)}px)`;
+$('#fol').textContent = on ? '✓ A seguir' : '+ Seguir';
+$('#fol').style.background = on ? '#fff' : '#0A66C2'; $('#fol').style.color = on ? '#0A66C2' : '#fff';
+$('#fol').style.boxShadow = on ? 'inset 0 0 0 4px #0A66C2' : 'none';
+$('#fol').style.transform = `scale(${t > a + .5 && t < a + .7 ? .94 : 1})`;""",
+        hits=[("pop", .4), ("click", 2.15), ("pop", 2.2), ("pop", 3.4)]),
     # 14. "Saiu hoje" (São Martinho): a search for a magusto, three results, the reader's slot empty.
     "2026-11-11-saiu": dict(theme="kraft", total=6.5, arrow="Veja o reel no perfil", arrow_at=3.8, arrow_css="background:#2B1B12;color:#F3EBDD",
         lines=[("O seu restaurante aparece?", 130, {"aparece?"}, 0, 6.5, .3)],

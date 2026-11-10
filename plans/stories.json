@@ -160,10 +160,12 @@
     "time": "15:30",
     "theme": "Saiu hoje: o mÃªs inteiro conta (story animada)",
     "type": "story",
-    "status": "approved",
-    "media_id": null,
+    "status": "published",
+    "media_id": "18139607398638087",
     "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-08-blackmonth/story.mp4",
-    "approved_at": "2026-11-07"
+    "approved_at": "2026-11-07",
+    "permalink": "https://www.instagram.com/stories/hivec0de/4025959297397668934",
+    "published_at": "2026-11-08T15:31:30.111Z"
   },
   {
     "id": "story-2026-11-09-saiu",
@@ -171,10 +173,12 @@
     "time": "15:30",
     "theme": "Saiu hoje: Web Summit, e o bÃ¡sico? (story animada)",
     "type": "story",
-    "status": "approved",
-    "media_id": null,
+    "status": "published",
+    "media_id": "18090921785276286",
     "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-09-saiu/story.mp4",
-    "approved_at": "2026-11-06"
+    "approved_at": "2026-11-06",
+    "permalink": "https://www.instagram.com/stories/hivec0de/4026683759513108320",
+    "published_at": "2026-11-09T15:30:42.833Z"
   },
   {
     "id": "story-2026-11-10-blackfriday",
@@ -182,10 +186,23 @@
     "time": "15:30",
     "theme": "Black Friday: faltam 17 dias (story animada)",
     "type": "story",
+    "status": "published",
+    "media_id": "17957808666258207",
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-10-blackfriday/story.mp4",
+    "approved_at": "2026-11-06",
+    "permalink": "https://www.instagram.com/stories/hivec0de/4027408464706773614",
+    "published_at": "2026-11-10T15:30:38.755Z"
+  },
+  {
+    "id": "story-2026-11-10-linkedin",
+    "date": "2026-11-10",
+    "time": "20:00",
+    "theme": "Agora também estamos no LinkedIn (story animada)",
+    "type": "story",
     "status": "approved",
     "media_id": null,
-    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-10-blackfriday/story.mp4",
-    "approved_at": "2026-11-06"
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-10-linkedin/story.mp4",
+    "approved_at": "2026-11-10"
   },
   {
     "id": "story-2026-11-11-saiu",
