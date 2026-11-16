@@ -290,6 +290,68 @@ $('#fol').style.background = on ? '#fff' : '#0A66C2'; $('#fol').style.color = on
 $('#fol').style.boxShadow = on ? 'inset 0 0 0 4px #0A66C2' : 'none';
 $('#fol').style.transform = `scale(${t > a + .5 && t < a + .7 ? .94 : 1})`;""",
         hits=[("pop", .4), ("click", 2.15), ("pop", 2.2), ("pop", 3.4)]),
+    # Week of 16 November.
+    "2026-11-16-saiu": dict(theme="forest", total=6.5, arrow="Veja o reel no perfil", arrow_at=3.6, arrow_css="background:#F4C542;color:#0F3D2E",
+        lines=[("Um website não é só um website.", 120, {"só"}, 0, 6.5, .3)],
+        css="""#tip{left:0;right:0;top:900px;text-align:center}
+#tip span{display:inline-block;padding:22px 52px;border-radius:999px;background:#F3EFE6;color:#0F3D2E;font-size:60px;font-weight:700}
+#wl{left:60px;right:60px;top:1010px;border-top:4px solid rgba(243,239,230,.6)}
+.pl{left:0;top:0;padding:14px 30px;border-radius:999px;background:#F4C542;color:#0F3D2E;font-size:36px;font-weight:700;opacity:0;white-space:nowrap}""",
+        html='<div id="tip"><span>Website</span></div><div id="wl"></div>' + "".join(
+            f'<span class="pl" id="p{i}">{w}</span>' for i, w in enumerate(["Domínio", "Alojamento", "SEO", "RGPD", "CTA", "SSL", "Manutenção", "+7"])),
+        js="""pop($('#tip'), t, .2);
+[[110,1080],[560,1080],[300,1180],[700,1180],[140,1280],[520,1280],[260,1380],[700,1380]].forEach(([x, y], i) => {
+  const a = .9 + .22 * i, el = $('#p' + i); el.style.opacity = cl((t - a) / .15);
+  el.style.transform = `translate(${x}px,${y + 40 * (1 - ease((t - a) / .3))}px)`; });""",
+        hits=[("pop", .2)] + [("pop", .9 + .22 * i) for i in range(8)] + [("pop", 3.6)]),
+    "2026-11-17-blackfriday": dict(theme="blackfriday", total=6.5, arrow="Prepare-se no perfil", arrow_at=3.8, arrow_css="background:#FFD400;color:#0A0A0A",
+        lines=[("Black Friday", 190, {"Friday"}, 0, 6.5, .3)],
+        css="""#fal{left:0;right:0;top:940px;text-align:center;font-size:64px;font-weight:700;color:#fff}
+#ctr{left:0;right:0;top:1020px;text-align:center;font-size:480px;font-weight:800;color:#FFD400;letter-spacing:-.06em;line-height:1;font-variant-numeric:tabular-nums}
+#dias{left:0;right:0;top:1520px;text-align:center;font-size:90px;font-weight:800;color:#fff;letter-spacing:.06em}""",
+        html='<div id="fal">Faltam</div><div id="ctr">30</div><div id="dias">DIAS</div>',
+        js="""$('#ctr').textContent = t < 2.4 ? String(30 - Math.floor(t / 2.4 * 20)) : '10';
+pop($('#dias'), t, 2.5);""",
+        hits=[("click", .1 + 2.4 / 20 * i) for i in range(0, 20, 2)] + [("thump", 2.4), ("pop", 2.5), ("pop", 3.8)]),
+    "2026-11-18-dica": dict(theme="receipt", total=6.5, arrow="Amanhã no perfil", arrow_at=3.6, arrow_css="background:#111;color:#fff",
+        lines=[("A fatura em PDF tem prazo?", 130, {"prazo?"}, 0, 6.5, .3)],
+        css="""#doc{left:240px;top:920px;width:600px;border:4px solid #111;border-radius:8px;background:#fff;padding:40px 44px;font-size:30px}
+#doc b{display:block;font-size:42px;margin-bottom:18px}#doc i{display:block;height:18px;background:#e4e2dc;border-radius:9px;margin:16px 0}
+#st{left:640px;top:900px;padding:14px 26px;border:6px solid #D7263D;border-radius:12px;color:#D7263D;background:#fff;font-size:44px;font-weight:700;opacity:0}""",
+        html='<div id="doc"><b>FATURA 2026/041</b>fatura.pdf<i></i><i style="width:70%"></i><i style="width:85%"></i></div><span id="st">31/12/2027?</span>',
+        js="""pop($('#doc'), t, .3);
+const s = $('#st'); s.style.opacity = cl((t - 1.4) / .1); s.style.transform = `rotate(12deg) scale(${1 + 1.2 * (1 - ease((t - 1.4) / .3))})`;""",
+        hits=[("pop", .3), ("thump", 1.5), ("pop", 3.6)]),
+    "2026-11-19-saiu": dict(theme="receipt", total=6.5, arrow="A resposta está no perfil", arrow_at=3.6, arrow_css="background:#111;color:#fff",
+        lines=[("A fatura em PDF vai deixar de contar?", 116, {"contar?"}, 0, 6.5, .3)],
+        css="""#doc{left:240px;top:960px;width:600px;border:4px solid #111;border-radius:8px;background:#fff;padding:40px 44px;font-size:30px}
+#doc b{display:block;font-size:42px;margin-bottom:18px}#doc i{display:block;height:18px;background:#e4e2dc;border-radius:9px;margin:16px 0}
+#st{left:660px;top:940px;padding:14px 26px;border:6px solid #D7263D;border-radius:12px;color:#D7263D;background:#fff;font-size:60px;font-weight:700;opacity:0}""",
+        html='<div id="doc"><b>FATURA 2026/041</b>fatura.pdf<i></i><i style="width:70%"></i><i style="width:85%"></i></div><span id="st">?</span>',
+        js="""pop($('#doc'), t, .3);
+const s = $('#st'); s.style.opacity = cl((t - 1.3) / .1); s.style.transform = `rotate(12deg) scale(${1 + 1.2 * (1 - ease((t - 1.3) / .3))})`;""",
+        hits=[("pop", .3), ("thump", 1.4), ("pop", 3.6)]),
+    "2026-11-20-blackfriday": dict(theme="blackfriday", total=6.5, arrow="Prepare-se no perfil", arrow_at=3.8, arrow_css="background:#FFD400;color:#0A0A0A",
+        lines=[("Black Friday", 190, {"Friday"}, 0, 6.5, .3)],
+        css="""#fal{left:0;right:0;top:940px;text-align:center;font-size:64px;font-weight:700;color:#fff}
+#ctr{left:0;right:0;top:1020px;text-align:center;font-size:480px;font-weight:800;color:#FFD400;letter-spacing:-.06em;line-height:1;font-variant-numeric:tabular-nums}
+#dias{left:0;right:0;top:1520px;text-align:center;font-size:90px;font-weight:800;color:#fff;letter-spacing:.06em}""",
+        html='<div id="fal">Faltam</div><div id="ctr">30</div><div id="dias">DIAS</div>',
+        js="""$('#ctr').textContent = t < 2.4 ? String(30 - Math.floor(t / 2.4 * 23)) : '7';
+pop($('#dias'), t, 2.5);""",
+        hits=[("click", .1 + 2.4 / 23 * i) for i in range(0, 23, 2)] + [("thump", 2.4), ("pop", 2.5), ("pop", 3.8)]),
+    "2026-11-21-saiu": dict(theme="blackfriday", total=6.5, arrow="Veja o reel no perfil", arrow_at=3.6, arrow_css="background:#FFD400;color:#0A0A0A",
+        lines=[("O seu site inspira confiança?", 130, {"confiança?"}, 0, 6.5, .3)],
+        css="""#win{left:110px;right:110px;top:960px;border-radius:28px;background:#fff;color:#0A0A0A;overflow:hidden}
+#win .bar{height:80px;background:#f1f1f1;display:flex;align-items:center;padding:0 28px;font-size:30px;color:#555}
+.rw{display:flex;align-items:center;gap:22px;height:120px;margin:0 34px;font-size:40px;font-weight:700;border-bottom:3px solid #eee}
+.rw b{margin-left:auto;width:64px;height:64px;border-radius:14px;border:5px solid #ccc;display:grid;place-items:center;font-size:42px}""",
+        html='<div id="win"><div class="bar">🔒 https://a-sua-loja.pt</div>' + "".join(
+            f'<div class="rw">{t}<b id="k{i}">✓</b></div>' for i, t in enumerate(["Ligação segura", "Contactos à vista", "Devoluções claras"])) + '</div>',
+        js="""pop($('#win'), t, .3);
+[0, 1, 2].forEach(i => { const on = t > 1 + .45 * i, k = $('#k' + i);
+  k.style.background = on ? '#FFD400' : 'transparent'; k.style.borderColor = on ? '#FFD400' : '#ccc'; });""",
+        hits=[("pop", .3)] + [("click", 1 + .45 * i) for i in range(3)] + [("pop", 3.6)]),
     # 14. "Saiu hoje" (São Martinho): a search for a magusto, three results, the reader's slot empty.
     "2026-11-11-saiu": dict(theme="kraft", total=6.5, arrow="Veja o reel no perfil", arrow_at=3.8, arrow_css="background:#2B1B12;color:#F3EBDD",
         lines=[("O seu restaurante aparece?", 130, {"aparece?"}, 0, 6.5, .3)],

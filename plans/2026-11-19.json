@@ -1,0 +1,22 @@
+[
+  {
+    "id": "2026-11-19-fatura-pdf",
+    "date": "2026-11-19",
+    "time": "12:30",
+    "theme": "A fatura em PDF vai deixar de contar? (carrossel, recibo)",
+    "type": "carousel",
+    "image_urls": [
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-11-19-fatura-pdf/slides/01/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-11-19-fatura-pdf/slides/02/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-11-19-fatura-pdf/slides/03/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-11-19-fatura-pdf/slides/04/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-11-19-fatura-pdf/slides/05/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-11-19-fatura-pdf/slides/06/post.jpg"
+    ],
+    "destination": "https://hivecode.pt/business?utm_source=instagram&utm_medium=social&utm_campaign=fatura-pdf",
+    "caption": "Hoje, uma fatura em PDF enviada por email vale como fatura eletrónica. A lei marcava o fim dessa regra para 1 de janeiro de 2027 e a proposta de Orçamento do Estado para 2027 prolonga-a até ao fim de 2027. Ainda assim, vale a pena preparar a faturação da sua empresa com tempo. 🧾\n\nO nosso programa de faturação: hivecode.pt/business\n\n#softwareamedida #empreendedorismo #pequenasempresas #gestaoempresarial #portugal",
+    "status": "approved",
+    "media_id": null,
+    "approved_at": "2026-11-16"
+  }
+]

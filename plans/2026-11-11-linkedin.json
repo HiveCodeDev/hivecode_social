@@ -1,15 +1,17 @@
 [
   {
     "id": "2026-11-11-linkedin",
-    "date": "2026-11-11",
-    "time": "18:00",
+    "date": "2026-11-10",
+    "time": "20:15",
     "theme": "Agora também estamos no LinkedIn (imagem, azul)",
     "type": "image",
-    "image_url": "https://hivecodedev.github.io/hivecode_social/posts/2026-11-11-linkedin/post.jpg",
+    "image_url": "https://cdn.jsdelivr.net/gh/HiveCodeDev/hivecode_social@5c18c68/posts/2026-11-11-linkedin/post.jpg",
     "destination": "https://www.linkedin.com/company/hivecode-pt",
     "caption": "A HiveCode está agora no LinkedIn. 💼\n\nLá partilhamos os nossos projetos, como trabalhamos nos sites e no HiveCode Business, e dicas práticas para quem gere uma empresa.\n\nSiga a página: linkedin.com/company/hivecode-pt\n\n#criacaodesites #softwareamedida #pequenasempresas #empreendedores #portugal",
-    "status": "approved",
-    "media_id": null,
-    "approved_at": "2026-11-10"
+    "status": "published",
+    "media_id": "17917498899494724",
+    "approved_at": "2026-11-10",
+    "permalink": "https://www.instagram.com/p/DfkvYhCDcRj/",
+    "published_at": "2026-11-10T20:16:09.894Z"
   }
 ]

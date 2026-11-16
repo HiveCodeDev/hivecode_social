@@ -143,18 +143,6 @@
     "published_at": "2026-11-07T15:44:15.615Z"
   },
   {
-    "id": "story-2026-11-08-saiu",
-    "date": "2026-11-08",
-    "time": "15:30",
-    "theme": "Saiu hoje: teste de 30 segundos (story animada)",
-    "type": "story",
-    "status": "postponed",
-    "media_id": null,
-    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-08-saiu/story.mp4",
-    "approved_at": "2026-10-30",
-    "note": "Adiada com o carrossel Teste de 30 segundos"
-  },
-  {
     "id": "story-2026-11-08-blackmonth",
     "date": "2026-11-08",
     "time": "15:30",
@@ -212,10 +200,12 @@
     "time": "15:30",
     "theme": "Saiu hoje: o seu restaurante aparece? (story animada)",
     "type": "story",
-    "status": "approved",
-    "media_id": null,
+    "status": "published",
+    "media_id": "18461334109122561",
     "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-11-saiu/story.mp4",
-    "approved_at": "2026-11-06"
+    "approved_at": "2026-11-06",
+    "permalink": "https://www.instagram.com/stories/hivec0de/4028133230929819773",
+    "published_at": "2026-11-11T15:30:37.494Z"
   },
   {
     "id": "story-2026-11-12-dica",
@@ -223,10 +213,12 @@
     "time": "15:30",
     "theme": "Dica: o seu site abre em 3 segundos? (story animada)",
     "type": "story",
-    "status": "approved",
-    "media_id": null,
+    "status": "published",
+    "media_id": "18120867145784765",
     "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-12-dica/story.mp4",
-    "approved_at": "2026-11-06"
+    "approved_at": "2026-11-06",
+    "permalink": "https://www.instagram.com/stories/hivec0de/4028858009104159768",
+    "published_at": "2026-11-12T15:30:39.820Z"
   },
   {
     "id": "story-2026-11-13-saiu",
@@ -234,10 +226,12 @@
     "time": "15:30",
     "theme": "Saiu hoje: a lista da Black Friday (story animada)",
     "type": "story",
-    "status": "approved",
-    "media_id": null,
+    "status": "published",
+    "media_id": "18169008382422354",
     "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-13-saiu/story.mp4",
-    "approved_at": "2026-11-06"
+    "approved_at": "2026-11-06",
+    "permalink": "https://www.instagram.com/stories/hivec0de/4029582770575010716",
+    "published_at": "2026-11-13T15:30:38.508Z"
   },
   {
     "id": "story-2026-11-14-oferta",
@@ -245,10 +239,12 @@
     "time": "15:30",
     "theme": "Oferta: veja o seu site antes de o pagar (story animada)",
     "type": "story",
-    "status": "approved",
-    "media_id": null,
+    "status": "published",
+    "media_id": "18114784136262252",
     "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-14-oferta/story.mp4",
-    "approved_at": "2026-11-06"
+    "approved_at": "2026-11-06",
+    "permalink": "https://www.instagram.com/stories/hivec0de/4030307527089999418",
+    "published_at": "2026-11-14T15:30:35.571Z"
   },
   {
     "id": "story-2026-11-15-saiu",
@@ -256,9 +252,88 @@
     "time": "15:30",
     "theme": "Saiu hoje: consegue ler isto? (story animada)",
     "type": "story",
+    "status": "published",
+    "media_id": "17895476361614598",
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-15-saiu/story.mp4",
+    "approved_at": "2026-11-06",
+    "permalink": "https://www.instagram.com/stories/hivec0de/4031032520011010587",
+    "published_at": "2026-11-15T15:31:03.279Z"
+  },
+  {
+    "id": "story-2026-11-16-saiu",
+    "date": "2026-11-16",
+    "time": "15:30",
+    "theme": "Saiu hoje: um website não é só um website (story animada)",
+    "type": "story",
     "status": "approved",
     "media_id": null,
-    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-15-saiu/story.mp4",
-    "approved_at": "2026-11-06"
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-16-saiu/story.mp4",
+    "approved_at": "2026-11-16"
+  },
+  {
+    "id": "story-2026-11-17-blackfriday",
+    "date": "2026-11-17",
+    "time": "15:30",
+    "theme": "Black Friday: faltam 10 dias (story animada)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-17-blackfriday/story.mp4",
+    "approved_at": "2026-11-16"
+  },
+  {
+    "id": "story-2026-11-18-dica",
+    "date": "2026-11-18",
+    "time": "15:30",
+    "theme": "A fatura em PDF tem prazo? (story animada)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-18-dica/story.mp4",
+    "approved_at": "2026-11-16"
+  },
+  {
+    "id": "story-2026-11-19-saiu",
+    "date": "2026-11-19",
+    "time": "15:30",
+    "theme": "Saiu hoje: a fatura em PDF (story animada)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-19-saiu/story.mp4",
+    "approved_at": "2026-11-16"
+  },
+  {
+    "id": "story-2026-11-20-blackfriday",
+    "date": "2026-11-20",
+    "time": "15:30",
+    "theme": "Black Friday: faltam 7 dias (story animada)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-20-blackfriday/story.mp4",
+    "approved_at": "2026-11-16"
+  },
+  {
+    "id": "story-2026-11-21-saiu",
+    "date": "2026-11-21",
+    "time": "15:30",
+    "theme": "Saiu hoje: o seu site inspira confiança? (story animada)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-21-saiu/story.mp4",
+    "approved_at": "2026-11-16"
+  },
+  {
+    "id": "story-2026-11-08-saiu",
+    "date": "2026-11-22",
+    "time": "15:30",
+    "theme": "Saiu hoje: teste de 30 segundos (story animada)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-08-saiu/story.mp4",
+    "approved_at": "2026-11-16"
   }
 ]

@@ -22,6 +22,7 @@ SPOKEN = [
     ("Web Summit", "Uéb Sâmit"),
     ("Black Friday", "Bléc Fráidei"),
     ("Black Month", "Bléc Mânf"),
+    ("SEO", "ésse é ó"),
 ]
 MERGE = [
     (["Haive", "Code", "ponto", "pê", "tê", "barra", "bízness"], "hivecode.pt/business"),
@@ -33,6 +34,7 @@ MERGE = [
     (["Bléc"], "Black"),
     (["Fráidei"], "Friday"),
     (["Mânf"], "Month"),
+    (["ésse", "é", "ó"], "SEO"),
 ]
 
 
