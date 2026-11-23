@@ -411,6 +411,106 @@ const s = $('#st'); s.style.opacity = cl((t - 1.3) / .08); s.style.transform = `
         html='<div id="hj">HOJE</div><div id="hr">até às 23h59</div>',
         js="""pop($('#hj'), t, .3); pop($('#hr'), t, 1.2);""",
         hits=[("thump", .3), ("pop", 1.2), ("pop", 3.8)]),
+    # Week of 30 Nov - 6 Dec: December dates, sketch to site, gift vouchers, Christmas countdown.
+    "2026-11-30-amanha": dict(theme="natal", total=6.5, arrow="Siga o perfil", arrow_at=3.8, arrow_css="background:#C41E3A;color:#fff",
+        lines=[("Dezembro começa amanhã.", 140, {"Dezembro"}, 0, 6.5, .3)],
+        css="""#pg{left:290px;top:930px;width:500px;height:560px;border-radius:36px;background:#fff;overflow:hidden;text-align:center;box-shadow:0 50px 100px -40px rgba(15,59,44,.5);perspective:1200px}
+#pg .m{height:120px;display:grid;place-items:center;font-size:48px;font-weight:800;letter-spacing:.1em;color:#fff}
+#pg .d{font-size:300px;font-weight:800;line-height:1.3;color:#0F3B2C}
+#a,#b{position:absolute;inset:0;backface-visibility:hidden}
+#a .m{background:#6f8a7d}#b .m{background:#C41E3A}""",
+        html='<div id="pg"><div id="b"><div class="m">DEZEMBRO</div><div class="d">1</div></div><div id="a"><div class="m">NOVEMBRO</div><div class="d">30</div></div></div>',
+        js="""pop($('#pg'), t, .3);
+const f = ease((t - 1.6) / .6); $('#a').style.transformOrigin = '50% 0'; $('#a').style.transform = `rotateX(${100 * f}deg)`; $('#a').style.opacity = f < .95 ? 1 : 0;
+$('#b').style.opacity = t > 1.6 ? 1 : 0;""",
+        hits=[("pop", .3), ("whoosh", 1.6), ("thump", 2.1), ("pop", 3.8)]),
+    # Tuesday: an advent-calendar door "1" swings open; behind it, four date tags glow (8, 24, 26, 31); snow falls.
+    "2026-12-01-saiu": dict(theme="natal", total=7.0, arrow="Veja o reel no perfil", arrow_at=4.4, arrow_css="background:#C41E3A;color:#fff",
+        lines=[("Abriu dezembro.", 170, {"dezembro."}, 0, 2.7, .3), ("4 datas que contam.", 140, {"4", "datas"}, 2.7, 7.0, 2.8)],
+        css="""#fr{left:190px;top:880px;width:700px;height:760px;border-radius:40px;background:#0F3B2C;padding:26px;box-sizing:border-box;box-shadow:0 60px 120px -40px rgba(15,59,44,.6);perspective:1600px}
+#in{position:absolute;inset:26px;border-radius:24px;background:#F5EEE2;display:grid;grid-template-columns:1fr 1fr;gap:26px;padding:40px;box-sizing:border-box}
+.tg{border-radius:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;opacity:0}
+.tg b{font-size:130px;font-weight:800;line-height:1}.tg small{margin-top:8px;font-size:30px;font-weight:700;letter-spacing:.06em}
+#dr{position:absolute;inset:26px;border-radius:24px;background:#C41E3A;transform-origin:0 50%;display:grid;place-items:center;backface-visibility:hidden;
+ background-image:radial-gradient(circle at 50% 50%,rgba(255,255,255,.12) 0 220px,transparent 221px);border:10px solid #F2B233;box-sizing:border-box}
+#dr b{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;font-size:420px;color:#F2B233;line-height:1}
+#dr i{position:absolute;right:40px;top:50%;width:34px;height:34px;margin-top:-17px;border-radius:50%;background:#F2B233}
+.fl{width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 0 8px rgba(15,59,44,.25)}""",
+        html='<div id="fr"><div id="in">' + "".join(f'<div class="tg" id="g{i}" style="background:{c}"><b>{d}</b><small>{s}</small></div>' for i, (d, s, c) in enumerate(
+            [("8", "FERIADO", "#C41E3A"), ("24", "HORÁRIO", "#0F3B2C"), ("26", "TROCAS", "#0F3B2C"), ("31", "HORÁRIO", "#C41E3A")]))
+            + '</div><div id="dr"><b>1</b><i></i></div></div>' + "".join(f'<span class="fl" id="fl{i}"></span>' for i in range(18)),
+        js="""pop($('#fr'), t, .2);
+const k = t > 1.2 && t < 1.8 ? Math.sin((t - 1.2) * 45) * 2 : 0, o = ease((t - 1.8) / .9);
+$('#dr').style.transform = `rotateY(${k - 115 * o}deg)`;
+[0, 1, 2, 3].forEach(i => pop($('#g' + i), t, 2.4 + .3 * i));
+for (let i = 0; i < 18; i++) { const s = $('#fl' + i), x = (i * 211) % 1040 + 20, sp = 90 + (i * 53) % 80;
+  s.style.transform = `translate(${x + 30 * Math.sin(t * 1.3 + i)}px,${((t * sp + i * 110) % 2000) - 40}px) scale(${.6 + (i % 3) * .3})`; }""",
+        hits=[("pop", .2), ("click", 1.3), ("click", 1.6), ("whoosh", 1.8)] + [("pop", 2.4 + .3 * i) for i in range(4)] + [("pop", 4.4)]),
+    "2026-12-02-amanha": dict(theme="natalnoite", total=6.5, arrow="Siga o perfil", arrow_at=3.8, arrow_css="background:#F2C14E;color:#0E1A33",
+        lines=[("Amanhã: do esboço ao site.", 130, {"esboço"}, 0, 6.5, .3)],
+        css="""#pp{left:170px;top:960px;width:740px;height:520px;border-radius:26px;background:#FBF8F1;background-image:linear-gradient(#e7e1d3 2px,transparent 2px);background-size:100% 46px;box-shadow:0 60px 120px -40px rgba(242,193,78,.3)}
+#pp svg{position:absolute;inset:0}#pp path{fill:none;stroke:#3b3b46;stroke-width:5;stroke-linecap:round}
+#pen{left:0;top:0;font-size:110px;z-index:3}""",
+        html='<div id="pp"><svg viewBox="0 0 740 520">' + "".join(f'<path id="q{i}" d="{d}" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>' for i, d in enumerate([
+            "M34,40 Q370,30 706,44", "M30,90 L708,92 L704,300 L32,296 Z", "M40,100 L696,290 M696,100 L40,290", "M30,340 Q200,336 380,344", "M30,400 L230,402 L228,470 L32,468 Z",
+            "M440,340 L706,342 L704,480 L442,478 Z"])) + '</svg></div><span id="pen">✏️</span>',
+        js="""for (let i = 0; i < 6; i++) $('#q' + i).style.strokeDashoffset = 1 - ease((t - .5 - .42 * i) / .4);
+pop($('#pp'), t, .2);
+const i = Math.min(5, Math.max(0, Math.floor((t - .5) / .42))), p = $('#q' + i), L = p.getTotalLength(), q = p.getPointAtLength(L * ease((t - .5 - .42 * i) / .4));
+$('#pen').style.opacity = t > .5 && t < 3.2 ? 1 : 0; $('#pen').style.transform = `translate(${170 + q.x - 10}px,${960 + q.y - 100}px)`;""",
+        hits=[("click", .5 + .42 * i) for i in range(6)] + [("pop", 3.8)]),
+    "2026-12-03-saiu": dict(theme="natalnoite", total=6.5, arrow="Veja o reel no perfil", arrow_at=3.8, arrow_css="background:#F2C14E;color:#0E1A33",
+        lines=[("Do esboço ao site.", 150, {"site."}, 0, 6.5, .3)],
+        css="""#ba{left:170px;top:960px;width:740px;height:520px;border-radius:26px;overflow:hidden;box-shadow:0 60px 120px -40px rgba(242,193,78,.3)}
+#sk2{position:absolute;inset:0;background:#FBF8F1;background-image:linear-gradient(#e7e1d3 2px,transparent 2px);background-size:100% 46px}
+#sk2 svg{position:absolute;inset:0}#sk2 path{fill:none;stroke:#3b3b46;stroke-width:5;stroke-linecap:round}
+#st2{position:absolute;inset:0;background:#fff;clip-path:inset(0 0 0 100%)}
+#st2 .h{position:absolute;left:30px;right:30px;top:90px;height:210px;border-radius:18px;background:linear-gradient(160deg,#f6c98a,#d98b4a 55%,#8a4b2a)}
+#st2 .n{position:absolute;left:34px;top:30px;font-size:30px;font-weight:800;color:#3d2a1e}
+#st2 .t{position:absolute;left:30px;top:336px;font-size:34px;font-weight:800;color:#3d2a1e}
+#st2 .b{position:absolute;left:30px;top:400px;width:200px;height:70px;border-radius:14px;background:#3d2a1e;color:#fff;display:grid;place-items:center;font-size:26px;font-weight:700}
+#st2 .c{position:absolute;left:440px;top:340px;width:266px;height:140px;border-radius:16px;background:linear-gradient(150deg,#f3d9a4,#d9a05a)}
+#kn{left:0;top:960px;width:8px;height:520px;background:#F2C14E;box-shadow:0 0 30px rgba(242,193,78,.8)}""",
+        html='<div id="ba"><div id="sk2"><svg viewBox="0 0 740 520"><path d="M34,40 Q370,30 706,44"/><path d="M30,90 L708,92 L704,300 L32,296 Z"/><path d="M40,100 L696,290 M696,100 L40,290"/>'
+             '<path d="M30,340 Q200,336 380,344"/><path d="M30,400 L230,402 L228,470 L32,468 Z"/><path d="M440,340 L706,342 L704,480 L442,478 Z"/></svg></div>'
+             '<div id="st2"><span class="n">Padaria do Largo</span><span class="h"></span><span class="t">Feito aqui, desde 1987</span><span class="b">Encomendar</span><span class="c"></span></div></div><span id="kn"></span>',
+        js="""pop($('#ba'), t, .2);
+const w = ease((t - 1.0) / 1.4) - .4 * ease((t - 2.8) / .6) + .4 * ease((t - 3.6) / .6);
+$('#st2').style.clipPath = `inset(0 ${100 * (1 - w)}% 0 0)`;
+$('#kn').style.transform = `translateX(${170 + 740 * w}px)`; $('#kn').style.opacity = w > .01 && w < .99 ? 1 : 0;""",
+        hits=[("pop", .2), ("whoosh", 1.0), ("whoosh", 2.8), ("pop", 3.8)]),
+    "2026-12-04-pergunta": dict(theme="neve", total=6.5, arrow="Siga o perfil", arrow_at=3.8, arrow_css="background:#10233F;color:#fff",
+        lines=[("O que oferecer a quem tem tudo?", 124, {"tudo?"}, 0, 6.5, .3)],
+        css="""#bx{left:290px;top:1000px;width:500px;height:440px;border-radius:40px;background:#C41E3A;display:grid;place-items:center;font-size:260px;font-weight:800;color:#fff;line-height:1}
+#bx:before{content:"";position:absolute;left:220px;top:0;width:60px;height:100%;background:#FFD84D}
+#bx span{position:relative}
+#lid{left:260px;top:920px;width:560px;height:120px;border-radius:30px;background:#a3172f}
+#lid:before{content:"";position:absolute;left:250px;top:0;width:60px;height:100%;background:#FFD84D}""",
+        html='<div id="bx"><span>?</span></div><div id="lid"></div>',
+        js="""const k = t > 1.2 && t < 3.2 ? Math.sin((t - 1.2) * 40) * 5 : 0;
+pop($('#bx'), t, .3, `rotate(${k}deg)`); pop($('#lid'), t, .3, `rotate(${k}deg)`);""",
+        hits=[("pop", .3), ("click", 1.3), ("click", 1.7), ("click", 2.1), ("click", 2.5), ("pop", 3.8)]),
+    "2026-12-05-saiu": dict(theme="neve", total=6.5, arrow="Veja o reel no perfil", arrow_at=3.8, arrow_css="background:#10233F;color:#fff",
+        lines=[("Vales-oferta no seu site.", 140, {"Vales-oferta"}, 0, 6.5, .3)],
+        css="""#vc{left:190px;top:1000px;width:700px;height:420px;border-radius:40px;background:#C41E3A;color:#fff;padding:54px 60px;box-sizing:border-box;box-shadow:0 50px 100px -30px rgba(16,35,63,.45);overflow:hidden}
+#vc small{display:block;font-size:32px;font-weight:700;letter-spacing:.14em;opacity:.8}
+#vc strong{display:block;margin-top:24px;font-size:84px;font-weight:800;line-height:1}
+#vc b{position:absolute;left:60px;bottom:50px;font-size:70px;font-weight:800;color:#FFD84D}
+#rb{position:absolute;right:120px;top:0;width:70px;height:100%;background:#FFD84D}
+#sh{position:absolute;top:0;width:160px;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent)}""",
+        html='<div id="vc"><span id="rb"></span><small>VALE-OFERTA</small><strong>Jantar<br>para dois</strong><b>50 €</b><span id="sh"></span></div>',
+        js="""pop($('#vc'), t, .3, `rotate(${-4 + 2 * Math.sin(t * 1.6)}deg)`);
+$('#sh').style.transform = `translateX(${-200 + 1100 * cl((t - 1.4) / .8)}px) skewX(-20deg)`;""",
+        hits=[("pop", .3), ("whoosh", 1.4), ("pop", 3.8)]),
+    "2026-12-06-natal": dict(theme="natal", total=6.5, arrow="Siga o perfil", arrow_at=3.8, arrow_css="background:#C41E3A;color:#fff",
+        lines=[("Natal", 190, {"Natal"}, 0, 6.5, .3)],
+        css="""#fal{left:0;right:0;top:940px;text-align:center;font-size:64px;font-weight:700;color:#0F3B2C}
+#ctr{left:0;right:0;top:1020px;text-align:center;font-size:480px;font-weight:800;color:#C41E3A;letter-spacing:-.06em;line-height:1;font-variant-numeric:tabular-nums}
+#dias{left:0;right:0;top:1520px;text-align:center;font-size:90px;font-weight:800;color:#0F3B2C;letter-spacing:.06em}""",
+        html='<div id="fal">Faltam</div><div id="ctr">30</div><div id="dias">DIAS</div>',
+        js="""$('#ctr').textContent = t < 2.4 ? String(30 - Math.floor(t / 2.4 * 11)) : '19';
+pop($('#dias'), t, 2.5);""",
+        hits=[("click", .1 + 2.4 / 11 * i) for i in range(11)] + [("thump", 2.4), ("pop", 2.5), ("pop", 3.8)]),
     # 14. "Saiu hoje" (São Martinho): a search for a magusto, three results, the reader's slot empty.
     "2026-11-11-saiu": dict(theme="kraft", total=6.5, arrow="Veja o reel no perfil", arrow_at=3.8, arrow_css="background:#2B1B12;color:#F3EBDD",
         lines=[("O seu restaurante aparece?", 130, {"aparece?"}, 0, 6.5, .3)],

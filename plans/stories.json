@@ -414,5 +414,71 @@
     "media_id": null,
     "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-29-ultimo/story.mp4",
     "approved_at": "2026-11-23"
+  },
+  {
+    "id": "story-2026-11-30-amanha",
+    "date": "2026-11-30",
+    "time": "15:30",
+    "theme": "Dezembro começa amanhã (story animada)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-30-amanha/story.mp4",
+    "approved_at": "2026-11-23"
+  },
+  {
+    "id": "story-2026-12-01-saiu",
+    "date": "2026-12-01",
+    "time": "15:30",
+    "theme": "Abriu dezembro: 4 datas que contam (story animada)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-12-01-saiu/story.mp4",
+    "approved_at": "2026-11-23"
+  },
+  {
+    "id": "story-2026-12-03-saiu",
+    "date": "2026-12-03",
+    "time": "15:30",
+    "theme": "Saiu hoje: do esboço ao site (story animada)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-12-03-saiu/story.mp4",
+    "approved_at": "2026-11-23"
+  },
+  {
+    "id": "story-2026-12-04-pergunta",
+    "date": "2026-12-04",
+    "time": "15:30",
+    "theme": "O que oferecer a quem tem tudo? (story animada)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-12-04-pergunta/story.mp4",
+    "approved_at": "2026-11-23"
+  },
+  {
+    "id": "story-2026-12-05-saiu",
+    "date": "2026-12-05",
+    "time": "15:30",
+    "theme": "Saiu hoje: vales-oferta no seu site (story animada)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-12-05-saiu/story.mp4",
+    "approved_at": "2026-11-23"
+  },
+  {
+    "id": "story-2026-12-06-natal",
+    "date": "2026-12-06",
+    "time": "15:30",
+    "theme": "Faltam 19 dias para o Natal (story animada)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-12-06-natal/story.mp4",
+    "approved_at": "2026-11-23"
   }
 ]

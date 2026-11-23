@@ -14,6 +14,7 @@ reelkit.page(..., theme=) drop the hex grid and glows when a theme is given.
   kraft   brown paper-bag, dark-brown ink, wine emphasis (autumn, São Martinho)
   blackfriday  black with signal yellow, white type (Black Friday)
   blackmonth   the light twin: signal-yellow ground, black type, emphasis as black highlight
+  natal   warm cream with falling-snow dots, pine-green ink, Christmas-red serif emphasis (December)
 """
 
 THEMES = {
@@ -34,7 +35,53 @@ THEMES = {
                         logo="filter:brightness(0) invert(1)"),
     "blackmonth": dict(bg="#FFD400", ink="#0A0A0A", soft="#2a2a2a", muted="#5c4f00", accent="#0A0A0A",
                        logo="filter:brightness(0)"),
+    "natal": dict(bg="#F5EEE2", ink="#0F3B2C", soft="#2f5646", muted="#6f8a7d", accent="#C41E3A", logo=""),
+    "natalnoite": dict(bg="#0E1A33", ink="#F6F1E7", soft="#c9d3e6", muted="#8f9bb8", accent="#F2C14E",
+                       logo="filter:brightness(0) invert(1)"),
+    "neve": dict(bg="#E8F0F6", ink="#10233F", soft="#33476a", muted="#6c7f9c", accent="#C41E3A", logo=""),
 }
+
+# Christmas scenery drawn behind everything: a garland of bulbs along the top, snowflakes, a row of
+# pines on a snowy ground at the bottom (content stays above y=1700).
+XMAS = {
+    "natal": dict(flake="rgba(15,59,44,.11)", wire="#0F3B2C", bulbs=["#C41E3A", "#F2B233", "#0F7B4F", "#2C6FD1"],
+                  tree="#0F3B2C", cap="#ffffff", ground="#ffffff"),
+    "natalnoite": dict(flake="rgba(255,255,255,.2)", wire="#3a4a70", bulbs=["#F2C14E", "#ff5a6e", "#7ee0a0", "#F2C14E"],
+                       tree="#1d5c46", cap="#E9EEF6", ground="#E9EEF6"),
+    "neve": dict(flake="rgba(16,35,63,.13)", wire="#10233F", bulbs=["#C41E3A", "#F2B233", "#1E5A45", "#C41E3A"],
+                 tree="#1E5A45", cap="#ffffff", ground="#ffffff"),
+}
+
+
+def _svg(body, w, h):
+    from urllib.parse import quote
+    return f"url(\"data:image/svg+xml,{quote(f'<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 {w} {h}\" width=\"{w}\" height=\"{h}\">{body}</svg>')}\")"
+
+
+def _xmas_css(x):
+    import math
+    flake = lambda cx, cy, r: "".join(  # noqa: E731
+        f'<line x1="{cx}" y1="{cy}" x2="{cx + r * math.cos(a):.1f}" y2="{cy + r * math.sin(a):.1f}"/>' for a in [k * math.pi / 3 for k in range(6)])
+    flakes = _svg(f'<g stroke="{x["flake"]}" stroke-width="4" stroke-linecap="round">'
+                  + flake(50, 60, 18) + flake(170, 150, 12) + flake(110, 240, 22) + flake(250, 50, 9) + flake(230, 260, 14) + "</g>", 300, 300)
+    bulbs = ""
+    for n, bx in enumerate(range(45, 1080, 90)):
+        u = (bx % 270) / 270
+        by = 20 + 140 * u * (1 - u)
+        bulbs += (f'<rect x="{bx - 6}" y="{by - 2}" width="12" height="12" rx="2" fill="{x["wire"]}"/>'
+                  f'<ellipse cx="{bx}" cy="{by + 24}" rx="11" ry="17" fill="{x["bulbs"][n % len(x["bulbs"])]}"/>')
+    garland = _svg(f'<path d="M0,20 Q135,90 270,20 T540,20 T810,20 T1080,20" fill="none" stroke="{x["wire"]}" stroke-width="4"/>{bulbs}', 1080, 110)
+    trees = ""
+    for tx, th in [(40, 150), (150, 200), (250, 130), (840, 140), (950, 210), (1050, 150)]:
+        base, w = 200, th * .62
+        for k in range(3):  # three tiers
+            top, bot, half = base - th + k * th * .26, base - th + k * th * .26 + th * .48, w / 2 * (.6 + .2 * k)
+            trees += f'<polygon points="{tx},{top:.0f} {tx + half:.0f},{bot:.0f} {tx - half:.0f},{bot:.0f}" fill="{x["tree"]}"/>'
+        trees += f'<polygon points="{tx},{base - th} {tx + w * .13:.0f},{base - th + th * .1:.0f} {tx - w * .13:.0f},{base - th + th * .1:.0f}" fill="{x["cap"]}"/>'
+    ground = f'<path d="M0,195 Q270,170 540,192 T1080,188 V240 H0Z" fill="{x["ground"]}"/>'
+    scene = _svg(trees + ground, 1080, 240)
+    return (f"body{{background-image:{garland},{scene},{flakes};background-repeat:no-repeat,no-repeat,repeat;"
+            "background-size:1080px 110px,1080px 240px,300px 300px;background-position:0 0,0 1680px,0 0}\n")
 
 SERIF = "@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500;700&display=block');"
 
@@ -63,6 +110,10 @@ body{{background:{t['bg']};color:{t['ink']}}}
         out += "h1 em,.txt .w.em{color:#FFD400}\n"
     if name == "blackmonth":
         out += "h1 em,.txt .w.em{color:#FFD400;background:#0A0A0A;box-shadow:0 0 0 .1em #0A0A0A;border-radius:.06em}\n"
+    if name == "natal":
+        out += ("h1 em,.txt .w.em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;letter-spacing:0}\n")
+    if name in XMAS:
+        out += _xmas_css(XMAS[name])
     if name == "screen":
         out += ("body{background:linear-gradient(180deg,#F2F3F6,#DADDE5)}"
                 ".top{top:0;left:0;right:0;height:64px;padding:0 40px;background:rgba(255,255,255,.75);font-size:24px}"
