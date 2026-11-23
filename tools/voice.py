@@ -49,14 +49,20 @@ def align(written, words):
     joined until they spell the written token.
     """
     out, j = [], 0
+    rest = None  # (text, start, end) left over when one spoken piece covers several tokens ("29 de novembro")
     for token in written:
         target, got, start, end = norm(token), "", None, None
+        if rest:
+            got, start, end = rest
+            rest = None
         while j < len(words) and (not got or len(got) < len(target)):
             piece = words[j]
             got += norm(piece[0])
             start = piece[1] if start is None else start
             end = piece[2]
             j += 1
+        if got != target and got.startswith(target):
+            rest, got = (got[len(target):], start, end), target
         if got != target:
             raise ValueError(f"voice and text out of step at {token!r} (heard {got!r})")
         out.append((token, start, end))

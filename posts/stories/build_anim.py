@@ -352,6 +352,65 @@ pop($('#dias'), t, 2.5);""",
 [0, 1, 2].forEach(i => { const on = t > 1 + .45 * i, k = $('#k' + i);
   k.style.background = on ? '#FFD400' : 'transparent'; k.style.borderColor = on ? '#FFD400' : '#ccc'; });""",
         hits=[("pop", .3)] + [("click", 1 + .45 * i) for i in range(3)] + [("pop", 3.6)]),
+    # Week of 24-29 Nov: Black Friday countdown, the 30-day price rule, the HiveCode -20% offer.
+    "2026-11-24-blackfriday": dict(theme="blackfriday", total=6.5, arrow="Prepare-se no perfil", arrow_at=3.8, arrow_css="background:#FFD400;color:#0A0A0A",
+        lines=[("Black Friday", 190, {"Friday"}, 0, 6.5, .3)],
+        css="""#fal{left:0;right:0;top:940px;text-align:center;font-size:64px;font-weight:700;color:#fff}
+#ctr{left:0;right:0;top:1020px;text-align:center;font-size:480px;font-weight:800;color:#FFD400;letter-spacing:-.06em;line-height:1;font-variant-numeric:tabular-nums}
+#dias{left:0;right:0;top:1520px;text-align:center;font-size:90px;font-weight:800;color:#fff;letter-spacing:.06em}""",
+        html='<div id="fal">Faltam</div><div id="ctr">30</div><div id="dias">DIAS</div>',
+        js="""$('#ctr').textContent = t < 2.4 ? String(30 - Math.floor(t / 2.4 * 27)) : '3';
+pop($('#dias'), t, 2.5);""",
+        hits=[("click", .1 + 2.4 / 27 * i) for i in range(0, 27, 2)] + [("thump", 2.4), ("pop", 2.5), ("pop", 3.8)]),
+    "2026-11-25-saiu": dict(theme="canvas", total=6.5, arrow="Veja as regras no perfil", arrow_at=3.6, arrow_css="background:#9B3CF0;color:#fff",
+        lines=[("O preço riscado tem regras.", 130, {"regras."}, 0, 6.5, .3)],
+        css="""#tg{left:190px;top:960px;width:700px;padding:60px 60px 56px 110px;border-radius:28px 60px 60px 28px;background:#fff;border:6px solid #121125;box-shadow:0 40px 80px -30px rgba(18,17,37,.45);white-space:nowrap}
+#tg:before{content:"";position:absolute;left:40px;top:50%;width:34px;height:34px;margin-top:-17px;border-radius:50%;border:6px solid #121125;background:#F4F2FA}
+#old{display:block;font-size:70px;color:#8a879c;text-decoration:line-through;text-decoration-thickness:7px}
+#new{display:block;margin-top:10px;font-size:150px;font-weight:800;line-height:1;color:#121125;letter-spacing:-.03em}
+#q{left:760px;top:900px;width:130px;height:130px;border-radius:50%;background:#D7263D;color:#fff;display:grid;place-items:center;font-size:90px;font-weight:800;opacity:0}""",
+        html='<div id="tg"><span id="old">50,00 €</span><span id="new">36,00 €</span></div><span id="q">?</span>',
+        js="""pop($('#tg'), t, .3);
+const s = $('#q'); s.style.opacity = cl((t - 1.4) / .1); s.style.transform = `scale(${1 + 1.2 * (1 - ease((t - 1.4) / .3))})`;""",
+        hits=[("pop", .3), ("thump", 1.5), ("pop", 3.6)]),
+    "2026-11-26-amanha": dict(theme="blackfriday", total=6.5, arrow="Siga o perfil", arrow_at=3.8, arrow_css="background:#FFD400;color:#0A0A0A",
+        lines=[("Amanhã: Black Friday na HiveCode.", 124, {"Black", "Friday"}, 0, 6.5, .3)],
+        css="""#bx{left:290px;top:960px;width:500px;height:500px;border-radius:40px;background:#FFD400;display:grid;place-items:center;font-size:300px;font-weight:800;color:#0A0A0A;line-height:1}
+#lid{left:260px;top:900px;width:560px;height:110px;border-radius:30px;background:#fff}""",
+        html='<div id="bx">?</div><div id="lid"></div>',
+        js="""const k = t > 1.6 && t < 2.6 ? Math.sin((t - 1.6) * 40) * 6 * (2.6 - t) : 0;
+pop($('#bx'), t, .3, `rotate(${k}deg)`);
+$('#lid').style.transform = `translateY(${-60 * ease((t - 2.6) / .3)}px) rotate(${-14 * ease((t - 2.6) / .3)}deg) scale(${back((t - .3) / .5)})`;""",
+        hits=[("pop", .3), ("click", 1.7), ("click", 2.0), ("click", 2.3), ("whoosh", 2.6), ("pop", 3.8)]),
+    "2026-11-27-saiu": dict(theme="blackfriday", total=6.5, arrow="Veja a oferta no perfil", arrow_at=3.6, arrow_css="background:#FFD400;color:#0A0A0A",
+        lines=[("Black Friday: −20% na criação de sites.", 116, {"−20%"}, 0, 6.5, .3)],
+        css="""#win{left:140px;right:140px;top:1000px;height:480px;border-radius:30px;background:#fff;overflow:hidden}
+#win .bar{height:70px;background:#f1f1f1}
+#win .hero{position:absolute;left:30px;right:30px;top:100px;height:200px;border-radius:14px;background:linear-gradient(150deg,#fff3a6,#FFD400)}
+#win .btn{position:absolute;left:30px;width:240px;top:330px;height:60px;border-radius:14px;background:#0A0A0A}
+#st{left:470px;top:930px;padding:22px 38px;border:12px solid #FFD400;border-radius:28px;background:#0A0A0A;color:#FFD400;font-size:150px;font-weight:800;letter-spacing:-.04em;line-height:1;opacity:0}""",
+        html='<div id="win"><div class="bar"></div><span class="hero"></span><span class="btn"></span></div><div id="st">−20%</div>',
+        js="""pop($('#win'), t, .3);
+const s = $('#st'); s.style.opacity = cl((t - 1.3) / .08); s.style.transform = `rotate(-10deg) scale(${1 + 1.6 * (1 - ease((t - 1.3) / .3))})`;""",
+        hits=[("pop", .3), ("thump", 1.35), ("pop", 3.6)]),
+    "2026-11-28-oferta": dict(theme="blackmonth", total=6.5, arrow="Peça no perfil", arrow_at=3.8, arrow_css="background:#0A0A0A;color:#FFD400",
+        lines=[("−20% em sites: último fim de semana.", 120, {"último"}, 0, 6.5, .3)],
+        css="""#cal{left:240px;top:960px;width:600px;border-radius:30px;background:#0A0A0A;color:#FFD400;overflow:hidden;text-align:center}
+#cal .m{padding:22px 0;font-size:44px;font-weight:800;letter-spacing:.1em;background:#fff;color:#0A0A0A}
+#cal .d{display:flex;justify-content:center;gap:30px;padding:40px 0 50px}
+#cal .d span{width:200px;padding:20px 0;border-radius:24px;border:5px solid #FFD400;font-size:120px;font-weight:800;line-height:1}
+#cal .d small{display:block;font-size:34px;letter-spacing:.08em;margin-bottom:10px}""",
+        html='<div id="cal"><div class="m">NOVEMBRO</div><div class="d"><span id="d0"><small>SÁB</small>28</span><span id="d1"><small>DOM</small>29</span></div></div>',
+        js="""pop($('#cal'), t, .3);
+[0, 1].forEach(i => { const on = t > 1.2 + .5 * i, d = $('#d' + i); d.style.background = on ? '#FFD400' : 'transparent'; d.style.color = on ? '#0A0A0A' : '#FFD400'; });""",
+        hits=[("pop", .3), ("click", 1.2), ("click", 1.7), ("pop", 3.8)]),
+    "2026-11-29-ultimo": dict(theme="blackfriday", total=6.5, arrow="Peça hoje no perfil", arrow_at=3.8, arrow_css="background:#FFD400;color:#0A0A0A",
+        lines=[("Último dia: −20% na criação de sites.", 116, {"Último", "dia:"}, 0, 6.5, .3)],
+        css="""#hj{left:0;right:0;top:960px;text-align:center;font-size:330px;font-weight:800;color:#FFD400;letter-spacing:-.05em;line-height:1}
+#hr{left:0;right:0;top:1320px;text-align:center;font-size:80px;font-weight:800;color:#fff;font-variant-numeric:tabular-nums}""",
+        html='<div id="hj">HOJE</div><div id="hr">até às 23h59</div>',
+        js="""pop($('#hj'), t, .3); pop($('#hr'), t, 1.2);""",
+        hits=[("thump", .3), ("pop", 1.2), ("pop", 3.8)]),
     # 14. "Saiu hoje" (São Martinho): a search for a magusto, three results, the reader's slot empty.
     "2026-11-11-saiu": dict(theme="kraft", total=6.5, arrow="Veja o reel no perfil", arrow_at=3.8, arrow_css="background:#2B1B12;color:#F3EBDD",
         lines=[("O seu restaurante aparece?", 130, {"aparece?"}, 0, 6.5, .3)],
@@ -428,7 +487,7 @@ def build(name, s):
     page.parent.mkdir(exist_ok=True)
     page.write_text(reelkit.page(scenes, {}, art, css, js, theme=s["theme"]), encoding="utf-8")
     silent = work / "silence.mp3"
-    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=mono", "-t", str(total), str(silent)], check=True)
+    subprocess.run(["ffmpeg", "-nostdin", "-y", "-loglevel", "error", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=mono", "-t", str(total), str(silent)], check=True)
     bgm = music(total + .5, work / "music.wav") if s.get("music") else None
     reelkit.render(page, work, total, silent, s["hits"] + [("whoosh", s["total"])], HERE / name / "story.mp4", music=bgm, music_vol=.3)
     print(name, "ok")

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "2026-11-25-preco-riscado",
+    "date": "2026-11-25",
+    "time": "12:30",
+    "theme": "Black Friday: o preço riscado tem regras (carrossel, canvas)",
+    "type": "carousel",
+    "image_urls": [
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-11-25-preco-riscado/slides/01/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-11-25-preco-riscado/slides/02/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-11-25-preco-riscado/slides/03/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-11-25-preco-riscado/slides/04/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-11-25-preco-riscado/slides/05/post.jpg",
+      "https://hivecodedev.github.io/hivecode_social/posts/2026-11-25-preco-riscado/slides/06/post.jpg"
+    ],
+    "destination": "https://hivecode.pt/?utm_source=instagram&utm_medium=social&utm_campaign=preco-riscado",
+    "caption": "Na Black Friday, o preço riscado tem regras: tem de ser o mais baixo praticado nos 30 dias anteriores ao desconto, e o anúncio deve indicar quando começa e quanto tempo dura. Anuncie descontos com confiança, na loja e no site. 🏷️\n\n#criacaodesites #marketingdigital #comerciolocal #pequenasempresas #portugal",
+    "status": "approved",
+    "media_id": null,
+    "approved_at": "2026-11-23"
+  }
+]

@@ -5,9 +5,11 @@ import { writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 
-const [input, output, w = "1080", h = "1920"] = process.argv.slice(2);
+// optional 5th arg: scale factor (e.g. 2 renders a 5760x1080 layout at 11520x2160)
+const [input, output, w = "1080", h = "1920", s = "1"] = process.argv.slice(2);
 const width = Number(w);
 const height = Number(h);
+const scale = Number(s);
 const edge = "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe";
 const port = 9960 + Math.floor(Math.random() * 30);
 const proc = spawn(edge, [
@@ -46,12 +48,12 @@ const send = (method, params = {}) =>
     ws.send(JSON.stringify({ id: n, method, params }));
   });
 await send("Page.enable");
-await send("Emulation.setDeviceMetricsOverride", { width, height, deviceScaleFactor: 1, mobile: false });
+await send("Emulation.setDeviceMetricsOverride", { width, height, deviceScaleFactor: scale, mobile: false });
 await send("Page.navigate", { url: pathToFileURL(resolve(input)).href });
 await sleep(1500);
 await send("Runtime.evaluate", { expression: "document.fonts.ready.then(() => true)", awaitPromise: true });
 await sleep(300);
-const shot = await send("Page.captureScreenshot", { format: "jpeg", quality: 92, clip: { x: 0, y: 0, width, height, scale: 1 } });
+const shot = await send("Page.captureScreenshot", { format: "jpeg", quality: scale > 1 ? 95 : 92, clip: { x: 0, y: 0, width, height, scale: 1 } });
 writeFileSync(resolve(output), Buffer.from(shot.result.data, "base64"));
 ws.close();
 proc.kill();

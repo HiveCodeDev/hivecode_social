@@ -148,7 +148,7 @@ def broll(clips, work):
         inputs += ["-ss", str(start), "-t", str(secs), "-i", str(mp4)]
         chains.append(f"[{n}:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps={FPS},setsar=1[c{n}]")
     graph = ";".join(chains) + ";" + "".join(f"[c{n}]" for n in range(len(clips))) + f"concat=n={len(clips)}:v=1:a=0[v]"
-    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", *inputs, "-filter_complex", graph, "-map", "[v]", "-q:v", "3",
+    subprocess.run(["ffmpeg", "-nostdin", "-y", "-loglevel", "error", *inputs, "-filter_complex", graph, "-map", "[v]", "-q:v", "3",
                     str(out / "%05d.jpg")], check=True)
     return out
 
@@ -158,7 +158,7 @@ def render(page_path, work, total, voice_mp3, hits, out_mp4, music=None, music_v
     work = Path(work)
     subprocess.run(["node", str(ROOT / "tools" / "reel.mjs"), str(page_path), str(work / "frames"), f"{total:.3f}", str(FPS)], check=True)
     for name, (src, af) in SFX.items():
-        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "lavfi", "-i", src, "-af", af, str(work / f"{name}.wav")], check=True)
+        subprocess.run(["ffmpeg", "-nostdin", "-y", "-loglevel", "error", "-f", "lavfi", "-i", src, "-af", af, str(work / f"{name}.wav")], check=True)
     inputs, chains = ["-i", str(voice_mp3)], ["[1:a]adelay=0:all=1[v0]"]
     for n, (name, when) in enumerate(hits, 2):
         inputs += ["-i", str(work / f"{name}.wav")]
@@ -171,10 +171,10 @@ def render(page_path, work, total, voice_mp3, hits, out_mp4, music=None, music_v
         tracks += 1
     mix = ";".join(chains) + ";" + "".join(f"[v{n}]" for n in range(tracks)) + f"amix=inputs={tracks}:normalize=0[a]"
     subprocess.run([
-        "ffmpeg", "-y", "-loglevel", "error", "-framerate", str(FPS), "-i", str(work / "frames" / "%05d.jpg"), *inputs,
+        "ffmpeg", "-nostdin", "-y", "-loglevel", "error", "-framerate", str(FPS), "-i", str(work / "frames" / "%05d.jpg"), *inputs,
         "-filter_complex", mix, "-map", "0:v", "-map", "[a]",
         "-c:v", "libx264", "-preset", "slow", "-crf", "18", "-pix_fmt", "yuv420p", "-r", str(FPS),
-        "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-t", f"{total:.3f}", "-movflags", "+faststart",
+        "-c:a", "aac", "-ac", "2", "-b:a", "192k", "-ar", "48000",  # stereo: ffmpeg 9.1 aac hangs at 192k mono "-t", f"{total:.3f}", "-movflags", "+faststart",
         str(out_mp4),
     ], check=True)
 
@@ -185,4 +185,4 @@ def cover_page(html, out_jpg):
 
 
 def cover(mp4, seconds, out_jpg):
-    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", str(seconds), "-i", str(mp4), "-frames:v", "1", "-q:v", "2", str(out_jpg)], check=True)
+    subprocess.run(["ffmpeg", "-nostdin", "-y", "-loglevel", "error", "-ss", str(seconds), "-i", str(mp4), "-frames:v", "1", "-q:v", "2", str(out_jpg)], check=True)
