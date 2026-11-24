@@ -511,6 +511,44 @@ $('#sh').style.transform = `translateX(${-200 + 1100 * cl((t - 1.4) / .8)}px) sk
         js="""$('#ctr').textContent = t < 2.4 ? String(30 - Math.floor(t / 2.4 * 11)) : '19';
 pop($('#dias'), t, 2.5);""",
         hits=[("click", .1 + 2.4 / 11 * i) for i in range(11)] + [("thump", 2.4), ("pop", 2.5), ("pop", 3.8)]),
+    # Week of 7-13 December: "saiu hoje" stories for the three reels.
+    "2026-12-08-saiu": dict(theme="natalnoite", total=6.5, arrow="Veja o reel no perfil", arrow_at=3.8, arrow_css="background:#F2C14E;color:#0E1A33",
+        lines=[("5 coisas antes do Natal.", 140, {"Natal."}, 0, 6.5, .3)],
+        css="""#cl{left:190px;top:940px;width:700px;padding:20px 44px;border-radius:36px;background:#F6F1E7;box-shadow:0 60px 120px -40px rgba(0,0,0,.6)}
+.ci{display:flex;justify-content:space-between;align-items:center;height:96px;border-bottom:3px dashed #d9d2c2;font-size:44px;font-weight:700;color:#0E1A33}
+.ci:last-child{border-bottom:0}.ci i{width:60px;height:60px;border-radius:16px;border:6px solid #0E1A33;box-sizing:border-box;position:relative}
+.ci b{position:absolute;inset:-6px;border-radius:16px;background:#F2C14E;display:grid;place-items:center;font-size:40px;font-weight:900;opacity:0}""",
+        html='<div id="cl">' + "".join(f'<div class="ci">{n}<i><b id="k{i}">✓</b></i></div>' for i, n in enumerate(
+            ["Horário de Natal", "Prazo de entrega", "Vales-oferta", "Destaque de Natal", "Contacto rápido"])) + '</div>',
+        js="""pop($('#cl'), t, .2);
+[0, 1, 2, 3, 4].forEach(i => { const k = $('#k' + i); k.style.opacity = cl((t - .8 - .45 * i) / .1); k.style.transform = `scale(${back((t - .8 - .45 * i) / .4)})`; });""",
+        hits=[("pop", .2)] + [("click", .8 + .45 * i) for i in range(5)] + [("pop", 3.8)]),
+    "2026-12-10-saiu": dict(theme="natal", total=6.5, arrow="Veja o reel no perfil", arrow_at=3.8, arrow_css="background:#0F3B2C;color:#fff",
+        lines=[("Dezembro, num só lugar.", 140, {"só", "lugar."}, 0, 6.5, .3)],
+        css="""#cn{left:240px;top:960px;width:600px;padding:40px 0 46px;border-radius:40px;background:#0F3B2C;color:#fff;text-align:center;box-shadow:0 50px 100px -40px rgba(15,59,44,.5)}
+#cn small{display:block;font-size:30px;font-weight:700;letter-spacing:.16em;opacity:.75}
+#cn b{display:block;font-size:200px;line-height:1;margin-top:10px;font-variant-numeric:tabular-nums}
+#ok{left:300px;top:1400px;padding:22px 40px;border-radius:20px;border:8px solid #0F7B4F;background:#fff;color:#0F7B4F;font-size:54px;font-weight:900;white-space:nowrap;opacity:0}""",
+        html='<div id="cn"><small>ENCOMENDAS HOJE</small><b id="nm">12</b></div><span id="ok">Tudo faturado ✓</span>',
+        js="""pop($('#cn'), t, .2); $('#nm').textContent = Math.round(12 + 35 * ease((t - .3) / 1.8));
+const s = cl((t - 2.3) / .25); $('#ok').style.opacity = s; $('#ok').style.transform = `rotate(-6deg) scale(${2 - s})`;""",
+        hits=[("pop", .2)] + [("click", .3 + .15 * i) for i in range(12)] + [("thump", 2.3), ("pop", 3.8)]),
+    "2026-12-12-saiu": dict(theme="natalverde", total=6.5, arrow="Veja o reel no perfil", arrow_at=3.8, arrow_css="background:#E8B84A;color:#0F3A2C",
+        lines=[("Antes e depois.", 160, {"depois."}, 0, 6.5, .3)],
+        css="""#ab{left:190px;top:940px;width:700px;height:560px;border-radius:36px;overflow:hidden;box-shadow:0 60px 120px -40px rgba(0,0,0,.6)}
+#ab>div{position:absolute;inset:0}
+#sd{background:#fff}#sd .h{padding:26px 32px;background:#0F3A2C;color:#fff;font-size:34px;font-weight:800}
+#sd .p{display:flex;gap:26px;align-items:center;margin:34px 32px;padding:24px;border-radius:24px;background:#f4f1e8;color:#0F3A2C;font-size:40px;font-weight:800}
+#sd .p i{font-style:normal;font-size:100px}#sd .p em{display:block;font-style:normal;color:#C41E3A}
+#pa{background:repeating-linear-gradient(#FBF6EA 0 58px,#e5dcc6 58px 60px);font-family:'Instrument Serif',serif;font-style:italic;color:#3b3226;font-size:52px;line-height:60px;padding:110px 46px 0;box-sizing:border-box}
+#kn{position:absolute;top:0;bottom:0;width:8px;margin-left:-4px;background:#E8B84A;z-index:3}""",
+        html='<div id="ab"><div id="sd"><div class="h">Flores da Ribeira</div><div class="p"><i>🌲</i><span>Coroa de Natal<em>35 €</em></span></div>'
+             '<div class="p"><i>💐</i><span>Arranjo de mesa<em>25 €</em></span></div></div>'
+             '<div id="pa">Sra. Rosa: coroa, sexta?<br>Arranjo mesa, 25 € ??<br><s>ligar ao Sr. Paulo</s></div><span id="kn"></span></div>',
+        js="""pop($('#ab'), t, .2);
+const w = 100 * (1 - ease((t - 1.0) / 1.4));
+$('#pa').style.clipPath = `inset(0 ${100 - w}% 0 0)`; $('#kn').style.left = `${w}%`; $('#kn').style.opacity = w > 1 && w < 99 ? 1 : 0;""",
+        hits=[("pop", .2), ("whoosh", 1.0), ("pop", 3.8)]),
     # 14. "Saiu hoje" (São Martinho): a search for a magusto, three results, the reader's slot empty.
     "2026-11-11-saiu": dict(theme="kraft", total=6.5, arrow="Veja o reel no perfil", arrow_at=3.8, arrow_css="background:#2B1B12;color:#F3EBDD",
         lines=[("O seu restaurante aparece?", 130, {"aparece?"}, 0, 6.5, .3)],

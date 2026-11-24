@@ -15,6 +15,8 @@ reelkit.page(..., theme=) drop the hex grid and glows when a theme is given.
   blackfriday  black with signal yellow, white type (Black Friday)
   blackmonth   the light twin: signal-yellow ground, black type, emphasis as black highlight
   natal   warm cream with falling-snow dots, pine-green ink, Christmas-red serif emphasis (December)
+  natalnoite / neve  night-blue and icy-white Christmas twins (garland, snow, pines)
+  natalverde  deep pine green, cream type, gold serif emphasis, same Christmas scenery
 """
 
 THEMES = {
@@ -39,6 +41,8 @@ THEMES = {
     "natalnoite": dict(bg="#0E1A33", ink="#F6F1E7", soft="#c9d3e6", muted="#8f9bb8", accent="#F2C14E",
                        logo="filter:brightness(0) invert(1)"),
     "neve": dict(bg="#E8F0F6", ink="#10233F", soft="#33476a", muted="#6c7f9c", accent="#C41E3A", logo=""),
+    "natalverde": dict(bg="#0F3A2C", ink="#F5EEDD", soft="#cfe0d4", muted="#8fb3a0", accent="#E8B84A",
+                       logo="filter:brightness(0) invert(1)"),
 }
 
 # Christmas scenery drawn behind everything: a garland of bulbs along the top, snowflakes, a row of
@@ -50,6 +54,8 @@ XMAS = {
                        tree="#1d5c46", cap="#E9EEF6", ground="#E9EEF6"),
     "neve": dict(flake="rgba(16,35,63,.13)", wire="#10233F", bulbs=["#C41E3A", "#F2B233", "#1E5A45", "#C41E3A"],
                  tree="#1E5A45", cap="#ffffff", ground="#ffffff"),
+    "natalverde": dict(flake="rgba(255,255,255,.16)", wire="#2f6b55", bulbs=["#E8B84A", "#ff5a6e", "#ffffff", "#E8B84A"],
+                       tree="#2c7a5c", cap="#ffffff", ground="#EEF3EE"),
 }
 
 
@@ -110,7 +116,7 @@ body{{background:{t['bg']};color:{t['ink']}}}
         out += "h1 em,.txt .w.em{color:#FFD400}\n"
     if name == "blackmonth":
         out += "h1 em,.txt .w.em{color:#FFD400;background:#0A0A0A;box-shadow:0 0 0 .1em #0A0A0A;border-radius:.06em}\n"
-    if name == "natal":
+    if name in ("natal", "natalverde"):
         out += ("h1 em,.txt .w.em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;letter-spacing:0}\n")
     if name in XMAS:
         out += _xmas_css(XMAS[name])

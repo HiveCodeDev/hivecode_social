@@ -1,0 +1,165 @@
+<!doctype html><html lang="pt"><head><meta charset="utf-8">
+<style>@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500;700&display=block');
+
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&display=block');
+:root{--night:#121125;--deep:#16132f;--ink:#f3f1fb;--soft:#c9c3e6;--muted:#9a93c0;
+--pink:#EF5AFE;--violet:#D752FE;--blue:#4877FE;}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--night);color:var(--ink);font-family:'Geologica',sans-serif;position:relative}
+.hex{position:absolute;inset:0;opacity:.5}
+.glow{position:absolute;border-radius:50%;filter:blur(120px);opacity:.45}
+.frame{position:absolute;inset:0;padding:96px 88px;display:flex;flex-direction:column}
+.eyebrow{display:inline-flex;align-items:center;gap:14px;font-size:24px;font-weight:500;letter-spacing:.14em;
+text-transform:uppercase;color:var(--soft)}
+.eyebrow i{width:14px;height:14px;transform:rotate(30deg);background:linear-gradient(135deg,var(--pink),var(--blue));
+clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+h1{font-weight:600;font-size:84px;line-height:1.04;letter-spacing:-.025em;margin-top:40px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--violet)}
+p.lead{font-size:34px;line-height:1.4;color:var(--soft);font-weight:300;margin-top:32px;max-width:860px}
+.content{flex:1;display:flex;flex-direction:column;justify-content:center;padding-bottom:40px}
+.content>.eyebrow{align-self:flex-start}
+.foot{display:flex;align-items:center;justify-content:space-between;font-size:26px;color:var(--muted)}
+.brand{display:flex;align-items:center;gap:16px;font-weight:600;font-size:30px;color:var(--ink)}
+.brand img{width:52px;height:52px}
+.shot{border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.14);
+box-shadow:0 40px 90px -30px rgba(72,119,254,.55);background:#000}
+.shot .bar{height:44px;background:#1d1a3a;display:flex;align-items:center;gap:10px;padding:0 18px;font-size:19px;color:var(--muted)}
+.shot .bar b{width:12px;height:12px;border-radius:50%;background:#3a3566}
+.shot .bar span{margin-left:14px}
+.shot img{display:block;width:100%}
+
+html,body{width:1080px;height:1920px}
+.top{position:absolute;left:88px;right:88px;top:150px;display:flex;justify-content:space-between;align-items:center;font-size:28px;color:var(--muted);z-index:5}
+.txt{position:absolute;left:88px;width:904px;top:300px;font-weight:600;line-height:1.08;letter-spacing:-.025em;z-index:4}
+.txt .w{display:inline-block;opacity:0;margin-right:.24em}
+.txt .w.em{color:var(--violet)}
+#art{position:absolute;inset:0;transform-origin:540px 1140px}
+#art>*{position:absolute}
+
+:root{--night:#F5EEE2;--deep:#F5EEE2;--ink:#0F3B2C;--soft:#2f5646;--muted:#6f8a7d;
+--violet:#C41E3A;--pink:#C41E3A;--blue:#C41E3A}
+body{background:#F5EEE2;color:#0F3B2C}
+.brand{color:#0F3B2C}.brand img{}
+.glow,.hex{display:none}
+h1 em,.txt .w.em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;letter-spacing:0}
+body{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201080%20110%22%20width%3D%221080%22%20height%3D%22110%22%3E%3Cpath%20d%3D%22M0%2C20%20Q135%2C90%20270%2C20%20T540%2C20%20T810%2C20%20T1080%2C20%22%20fill%3D%22none%22%20stroke%3D%22%230F3B2C%22%20stroke-width%3D%224%22/%3E%3Crect%20x%3D%2239%22%20y%3D%2237.44444444444444%22%20width%3D%2212%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%230F3B2C%22/%3E%3Cellipse%20cx%3D%2245%22%20cy%3D%2263.44444444444444%22%20rx%3D%2211%22%20ry%3D%2217%22%20fill%3D%22%23C41E3A%22/%3E%3Crect%20x%3D%22129%22%20y%3D%2253.0%22%20width%3D%2212%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%230F3B2C%22/%3E%3Cellipse%20cx%3D%22135%22%20cy%3D%2279.0%22%20rx%3D%2211%22%20ry%3D%2217%22%20fill%3D%22%23F2B233%22/%3E%3Crect%20x%3D%22219%22%20y%3D%2237.44444444444444%22%20width%3D%2212%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%230F3B2C%22/%3E%3Cellipse%20cx%3D%22225%22%20cy%3D%2263.44444444444444%22%20rx%3D%2211%22%20ry%3D%2217%22%20fill%3D%22%230F7B4F%22/%3E%3Crect%20x%3D%22309%22%20y%3D%2237.44444444444444%22%20width%3D%2212%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%230F3B2C%22/%3E%3Cellipse%20cx%3D%22315%22%20cy%3D%2263.44444444444444%22%20rx%3D%2211%22%20ry%3D%2217%22%20fill%3D%22%232C6FD1%22/%3E%3Crect%20x%3D%22399%22%20y%3D%2253.0%22%20width%3D%2212%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%230F3B2C%22/%3E%3Cellipse%20cx%3D%22405%22%20cy%3D%2279.0%22%20rx%3D%2211%22%20ry%3D%2217%22%20fill%3D%22%23C41E3A%22/%3E%3Crect%20x%3D%22489%22%20y%3D%2237.44444444444444%22%20width%3D%2212%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%230F3B2C%22/%3E%3Cellipse%20cx%3D%22495%22%20cy%3D%2263.44444444444444%22%20rx%3D%2211%22%20ry%3D%2217%22%20fill%3D%22%23F2B233%22/%3E%3Crect%20x%3D%22579%22%20y%3D%2237.44444444444444%22%20width%3D%2212%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%230F3B2C%22/%3E%3Cellipse%20cx%3D%22585%22%20cy%3D%2263.44444444444444%22%20rx%3D%2211%22%20ry%3D%2217%22%20fill%3D%22%230F7B4F%22/%3E%3Crect%20x%3D%22669%22%20y%3D%2253.0%22%20width%3D%2212%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%230F3B2C%22/%3E%3Cellipse%20cx%3D%22675%22%20cy%3D%2279.0%22%20rx%3D%2211%22%20ry%3D%2217%22%20fill%3D%22%232C6FD1%22/%3E%3Crect%20x%3D%22759%22%20y%3D%2237.44444444444444%22%20width%3D%2212%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%230F3B2C%22/%3E%3Cellipse%20cx%3D%22765%22%20cy%3D%2263.44444444444444%22%20rx%3D%2211%22%20ry%3D%2217%22%20fill%3D%22%23C41E3A%22/%3E%3Crect%20x%3D%22849%22%20y%3D%2237.44444444444444%22%20width%3D%2212%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%230F3B2C%22/%3E%3Cellipse%20cx%3D%22855%22%20cy%3D%2263.44444444444444%22%20rx%3D%2211%22%20ry%3D%2217%22%20fill%3D%22%23F2B233%22/%3E%3Crect%20x%3D%22939%22%20y%3D%2253.0%22%20width%3D%2212%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%230F3B2C%22/%3E%3Cellipse%20cx%3D%22945%22%20cy%3D%2279.0%22%20rx%3D%2211%22%20ry%3D%2217%22%20fill%3D%22%230F7B4F%22/%3E%3Crect%20x%3D%221029%22%20y%3D%2237.44444444444444%22%20width%3D%2212%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%230F3B2C%22/%3E%3Cellipse%20cx%3D%221035%22%20cy%3D%2263.44444444444444%22%20rx%3D%2211%22%20ry%3D%2217%22%20fill%3D%22%232C6FD1%22/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201080%20240%22%20width%3D%221080%22%20height%3D%22240%22%3E%3Cpolygon%20points%3D%2240%2C50%2068%2C122%2012%2C122%22%20fill%3D%22%230F3B2C%22/%3E%3Cpolygon%20points%3D%2240%2C89%2077%2C161%203%2C161%22%20fill%3D%22%230F3B2C%22/%3E%3Cpolygon%20points%3D%2240%2C128%2086%2C200%20-6%2C200%22%20fill%3D%22%230F3B2C%22/%3E%3Cpolygon%20points%3D%2240%2C50%2052%2C65%2028%2C65%22%20fill%3D%22%23ffffff%22/%3E%3Cpolygon%20points%3D%22150%2C0%20187%2C96%20113%2C96%22%20fill%3D%22%230F3B2C%22/%3E%3Cpolygon%20points%3D%22150%2C52%20200%2C148%20100%2C148%22%20fill%3D%22%230F3B2C%22/%3E%3Cpolygon%20points%3D%22150%2C104%20212%2C200%2088%2C200%22%20fill%3D%22%230F3B2C%22/%3E%3Cpolygon%20points%3D%22150%2C0%20166%2C20%20134%2C20%22%20fill%3D%22%23ffffff%22/%3E%3Cpolygon%20points%3D%22250%2C70%20274%2C132%20226%2C132%22%20fill%3D%22%230F3B2C%22/%3E%3Cpolygon%20points%3D%22250%2C104%20282%2C166%20218%2C166%22%20fill%3D%22%230F3B2C%22/%3E%3Cpolygon%20points%3D%22250%2C138%20290%2C200%20210%2C200%22%20fill%3D%22%230F3B2C%22/%3E%3Cpolygon%20points%3D%22250%2C70%20260%2C83%20240%2C83%22%20fill%3D%22%23ffffff%22/%3E%3Cpolygon%20points%3D%22840%2C60%20866%2C127%20814%2C127%22%20fill%3D%22%230F3B2C%22/%3E%3Cpolygon%20points%3D%22840%2C96%20875%2C164%20805%2C164%22%20fill%3D%22%230F3B2C%22/%3E%3Cpolygon%20points%3D%22840%2C133%20883%2C200%20797%2C200%22%20fill%3D%22%230F3B2C%22/%3E%3Cpolygon%20points%3D%22840%2C60%20851%2C74%20829%2C74%22%20fill%3D%22%23ffffff%22/%3E%3Cpolygon%20points%3D%22950%2C-10%20989%2C91%20911%2C91%22%20fill%3D%22%230F3B2C%22/%3E%3Cpolygon%20points%3D%22950%2C45%201002%2C145%20898%2C145%22%20fill%3D%22%230F3B2C%22/%3E%3Cpolygon%20points%3D%22950%2C99%201015%2C200%20885%2C200%22%20fill%3D%22%230F3B2C%22/%3E%3Cpolygon%20points%3D%22950%2C-10%20967%2C11%20933%2C11%22%20fill%3D%22%23ffffff%22/%3E%3Cpolygon%20points%3D%221050%2C50%201078%2C122%201022%2C122%22%20fill%3D%22%230F3B2C%22/%3E%3Cpolygon%20points%3D%221050%2C89%201087%2C161%201013%2C161%22%20fill%3D%22%230F3B2C%22/%3E%3Cpolygon%20points%3D%221050%2C128%201096%2C200%201004%2C200%22%20fill%3D%22%230F3B2C%22/%3E%3Cpolygon%20points%3D%221050%2C50%201062%2C65%201038%2C65%22%20fill%3D%22%23ffffff%22/%3E%3Cpath%20d%3D%22M0%2C195%20Q270%2C170%20540%2C192%20T1080%2C188%20V240%20H0Z%22%20fill%3D%22%23ffffff%22/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20300%20300%22%20width%3D%22300%22%20height%3D%22300%22%3E%3Cg%20stroke%3D%22rgba%2815%2C59%2C44%2C.11%29%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%3E%3Cline%20x1%3D%2250%22%20y1%3D%2260%22%20x2%3D%2268.0%22%20y2%3D%2260.0%22/%3E%3Cline%20x1%3D%2250%22%20y1%3D%2260%22%20x2%3D%2259.0%22%20y2%3D%2275.6%22/%3E%3Cline%20x1%3D%2250%22%20y1%3D%2260%22%20x2%3D%2241.0%22%20y2%3D%2275.6%22/%3E%3Cline%20x1%3D%2250%22%20y1%3D%2260%22%20x2%3D%2232.0%22%20y2%3D%2260.0%22/%3E%3Cline%20x1%3D%2250%22%20y1%3D%2260%22%20x2%3D%2241.0%22%20y2%3D%2244.4%22/%3E%3Cline%20x1%3D%2250%22%20y1%3D%2260%22%20x2%3D%2259.0%22%20y2%3D%2244.4%22/%3E%3Cline%20x1%3D%22170%22%20y1%3D%22150%22%20x2%3D%22182.0%22%20y2%3D%22150.0%22/%3E%3Cline%20x1%3D%22170%22%20y1%3D%22150%22%20x2%3D%22176.0%22%20y2%3D%22160.4%22/%3E%3Cline%20x1%3D%22170%22%20y1%3D%22150%22%20x2%3D%22164.0%22%20y2%3D%22160.4%22/%3E%3Cline%20x1%3D%22170%22%20y1%3D%22150%22%20x2%3D%22158.0%22%20y2%3D%22150.0%22/%3E%3Cline%20x1%3D%22170%22%20y1%3D%22150%22%20x2%3D%22164.0%22%20y2%3D%22139.6%22/%3E%3Cline%20x1%3D%22170%22%20y1%3D%22150%22%20x2%3D%22176.0%22%20y2%3D%22139.6%22/%3E%3Cline%20x1%3D%22110%22%20y1%3D%22240%22%20x2%3D%22132.0%22%20y2%3D%22240.0%22/%3E%3Cline%20x1%3D%22110%22%20y1%3D%22240%22%20x2%3D%22121.0%22%20y2%3D%22259.1%22/%3E%3Cline%20x1%3D%22110%22%20y1%3D%22240%22%20x2%3D%2299.0%22%20y2%3D%22259.1%22/%3E%3Cline%20x1%3D%22110%22%20y1%3D%22240%22%20x2%3D%2288.0%22%20y2%3D%22240.0%22/%3E%3Cline%20x1%3D%22110%22%20y1%3D%22240%22%20x2%3D%2299.0%22%20y2%3D%22220.9%22/%3E%3Cline%20x1%3D%22110%22%20y1%3D%22240%22%20x2%3D%22121.0%22%20y2%3D%22220.9%22/%3E%3Cline%20x1%3D%22250%22%20y1%3D%2250%22%20x2%3D%22259.0%22%20y2%3D%2250.0%22/%3E%3Cline%20x1%3D%22250%22%20y1%3D%2250%22%20x2%3D%22254.5%22%20y2%3D%2257.8%22/%3E%3Cline%20x1%3D%22250%22%20y1%3D%2250%22%20x2%3D%22245.5%22%20y2%3D%2257.8%22/%3E%3Cline%20x1%3D%22250%22%20y1%3D%2250%22%20x2%3D%22241.0%22%20y2%3D%2250.0%22/%3E%3Cline%20x1%3D%22250%22%20y1%3D%2250%22%20x2%3D%22245.5%22%20y2%3D%2242.2%22/%3E%3Cline%20x1%3D%22250%22%20y1%3D%2250%22%20x2%3D%22254.5%22%20y2%3D%2242.2%22/%3E%3Cline%20x1%3D%22230%22%20y1%3D%22260%22%20x2%3D%22244.0%22%20y2%3D%22260.0%22/%3E%3Cline%20x1%3D%22230%22%20y1%3D%22260%22%20x2%3D%22237.0%22%20y2%3D%22272.1%22/%3E%3Cline%20x1%3D%22230%22%20y1%3D%22260%22%20x2%3D%22223.0%22%20y2%3D%22272.1%22/%3E%3Cline%20x1%3D%22230%22%20y1%3D%22260%22%20x2%3D%22216.0%22%20y2%3D%22260.0%22/%3E%3Cline%20x1%3D%22230%22%20y1%3D%22260%22%20x2%3D%22223.0%22%20y2%3D%22247.9%22/%3E%3Cline%20x1%3D%22230%22%20y1%3D%22260%22%20x2%3D%22237.0%22%20y2%3D%22247.9%22/%3E%3C/g%3E%3C/svg%3E");background-repeat:no-repeat,no-repeat,repeat;background-size:1080px 110px,1080px 240px,300px 300px;background-position:0 0,0 1680px,0 0}
+
+#cnt{left:240px;top:830px;width:600px;padding:34px 0 40px;border-radius:36px;background:#0F3B2C;color:#fff;text-align:center;opacity:0}
+#cnt small{display:block;font-size:28px;font-weight:700;letter-spacing:.16em;opacity:.75}
+#cnt b{display:block;font-size:170px;line-height:1;margin-top:10px}
+.nt{left:160px;top:1180px;width:760px;padding:26px 34px;border-radius:26px;background:#fff;font-size:34px;font-weight:600;color:#0F3B2C;opacity:0;
+ box-shadow:0 30px 60px -25px rgba(15,59,44,.45);display:flex;justify-content:space-between}
+.nt i{font-style:normal;color:#C41E3A;font-weight:800}
+.wd{width:520px;border-radius:28px;background:#fff;overflow:hidden;opacity:0;box-shadow:0 40px 80px -30px rgba(15,59,44,.5)}
+.wd .h{padding:20px 28px;font-size:28px;font-weight:800;color:#fff}
+.wd .b{padding:24px 28px 30px;font-size:32px;line-height:1.5;color:#0F3B2C}
+#w0{left:90px;top:830px}#w0 .h{background:#2C6FD1}
+#w1{left:470px;top:1060px}#w1 .h{background:#8a6a3c}
+#w1 .b{background:repeating-linear-gradient(#fffdf6 0 46px,#e6dcc4 46px 48px);font-family:'Instrument Serif',serif;font-style:italic;font-size:40px}
+#w2{left:150px;top:1300px}#w2 .h{background:#6c4bb5}
+#db{left:88px;right:88px;top:830px;border-radius:36px;background:#fff;overflow:hidden;opacity:0;box-shadow:0 60px 120px -40px rgba(15,59,44,.5)}
+#db .h{display:flex;align-items:center;gap:18px;padding:26px 34px;background:#0F3B2C;color:#fff;font-size:32px;font-weight:700}
+#db .h img{width:46px;height:46px;filter:brightness(0) invert(1)}
+#db .tl{display:flex;gap:20px;padding:30px 30px 10px}
+#db .tl div{flex:1;padding:24px 0;border-radius:24px;background:#f3efe6;text-align:center;font-size:28px;font-weight:700;color:#5d7569;transition:none}
+#db .tl b{display:block;font-size:84px;line-height:1.05;color:#0F3B2C}
+#db .ls{padding:10px 30px 30px}
+#db .ls p{display:flex;justify-content:space-between;margin:16px 0 0;padding:20px 24px;border-radius:18px;background:#faf8f3;font-size:30px;color:#0F3B2C}
+#db .ls p span{padding:4px 18px;border-radius:999px;font-size:24px;font-weight:800;color:#fff}
+#jan{left:340px;top:870px;width:400px;border-radius:30px;background:#fff;overflow:hidden;text-align:center;opacity:0;box-shadow:0 50px 100px -40px rgba(15,59,44,.5)}
+#jan .m{padding:22px 0;background:#C41E3A;color:#fff;font-size:40px;font-weight:800;letter-spacing:.1em}
+#jan .d{padding:30px 0 40px;font-size:200px;font-weight:800;line-height:1;color:#0F3B2C}
+#stamp{left:250px;top:1330px;padding:24px 40px;border-radius:20px;border:8px solid #0F7B4F;color:#0F7B4F;font-size:56px;font-weight:900;opacity:0;white-space:nowrap;background:#fff}
+#logo{left:440px;top:900px;width:200px;height:200px;opacity:0}
+#cta{left:88px;right:88px;top:1190px;display:flex;justify-content:center;opacity:0}
+#cta span{padding:32px 56px;border-radius:999px;background:#0F3B2C;color:#fff;font-size:50px;font-weight:700}
+</style></head><body>
+<span class="glow" style="width:720px;height:720px;left:-220px;top:-160px;background:#4877FE"></span>
+<span class="glow" style="width:680px;height:680px;right:-260px;bottom:260px;background:#D752FE"></span>
+<div class="top"><span class="brand"><img src="file:///C:/Users/Gon%C3%A7alo/Documents/hivecode_social/assets/logo_mark.svg" alt="">HiveCode</span><span>hivecode.pt</span></div>
+<div class="txt" style="font-size:96px"><span class="w em" data-s="0.100">Dezembro:</span><span class="w" data-s="0.762">mais</span><span class="w" data-s="1.050">encomendas,</span><span class="w" data-s="1.837">mais</span><span class="w" data-s="2.100">faturas</span><span class="w" data-s="2.575">e</span><span class="w" data-s="2.650">menos</span><span class="w" data-s="2.925">tempo.</span></div><div class="txt" style="font-size:88px"><span class="w" data-s="4.162">Encomendas</span><span class="w" data-s="4.713">no</span><span class="w em" data-s="4.825">email,</span><span class="w" data-s="5.425">stock</span><span class="w" data-s="5.737">num</span><span class="w em" data-s="5.888">caderno,</span><span class="w" data-s="6.513">faturas</span><span class="w" data-s="7.025">noutro</span><span class="w em" data-s="7.300">programa.</span></div><div class="txt" style="font-size:96px"><span class="w" data-s="8.675">Com</span><span class="w" data-s="8.825">o</span><span class="w" data-s="8.900">HiveCode</span><span class="w" data-s="9.412">Business,</span><span class="w" data-s="10.100">fica</span><span class="w" data-s="10.425">tudo</span><span class="w" data-s="10.600">num</span><span class="w em" data-s="10.738">só</span><span class="w em" data-s="10.925">lugar.</span></div><div class="txt" style="font-size:92px"><span class="w" data-s="12.225">Vê</span><span class="w" data-s="12.425">o</span><span class="w" data-s="12.500">que</span><span class="w em" data-s="12.575">entrou,</span><span class="w" data-s="13.125">o</span><span class="w" data-s="13.200">que</span><span class="w em" data-s="13.275">falta</span><span class="w" data-s="13.625">e</span><span class="w" data-s="13.725">o</span><span class="w" data-s="13.787">que</span><span class="w" data-s="13.838">já</span><span class="w" data-s="13.975">foi</span><span class="w em" data-s="14.113">faturado.</span></div><div class="txt" style="font-size:96px"><span class="w" data-s="15.525">E</span><span class="w" data-s="15.637">em</span><span class="w" data-s="15.738">janeiro,</span><span class="w" data-s="16.325">o</span><span class="w" data-s="16.425">fecho</span><span class="w" data-s="16.725">do</span><span class="w" data-s="16.837">ano</span><span class="w" data-s="17.012">já</span><span class="w" data-s="17.137">está</span><span class="w em" data-s="17.312">feito.</span></div><div class="txt" style="font-size:110px"><span class="w" data-s="18.613">Fale</span><span class="w" data-s="18.938">connosco</span><span class="w" data-s="19.413">em</span><span class="w em" data-s="19.550">hivecode.pt.</span></div><div id="art"><div id="cnt"><small>ENCOMENDAS HOJE</small><b id="num">12</b></div><div class="nt" id="n0"><span>✉ Nova encomenda #1047</span><i>agora</i></div><div class="nt" id="n1"><span>✉ Nova encomenda #1046</span><i>1 min</i></div><div class="nt" id="n2"><span>✉ Nova encomenda #1045</span><i>2 min</i></div><div class="wd" id="w0"><div class="h">Email · 23 por ler</div><div class="b">Encomenda Sra. Rosa<br>RE: RE: encomenda?</div></div><div class="wd" id="w1"><div class="h">Stock · caderno</div><div class="b">Papel de embrulho: 3?<br>Velas: <s>12</s> 4</div></div><div class="wd" id="w2"><div class="h">Faturas · outro programa</div><div class="b">Fatura 2026/318<br>Por emitir: 9</div></div><div id="db"><div class="h"><img src="file:///C:/Users/Gon%C3%A7alo/Documents/hivecode_social/assets/logo_mark.svg" alt="">HiveCode Business · dezembro</div><div class="tl"><div id="t0"><b>48</b>Entrou</div><div id="t1"><b>7</b>Falta</div><div id="t2"><b>41</b>Faturado</div></div><div class="ls"><p>#1047 · Cabaz de Natal<span style="background:#F2B233">Em preparação</span></p><p>#1046 · Vale-oferta 50 €<span style="background:#0F7B4F">Faturada</span></p><p>#1045 · Bolo-rei grande<span style="background:#0F7B4F">Faturada</span></p></div></div><div id="jan"><div class="m">JANEIRO</div><div class="d">2</div></div><span id="stamp">Fecho do ano ✓</span><img id="logo" src="file:///C:/Users/Gon%C3%A7alo/Documents/hivecode_social/assets/logo_mark.svg" alt=""><div id="cta"><span>hivecode.pt</span></div></div>
+<script>
+const T = {"ev": {"s1": 4.012, "mail": 4.825, "cad": 5.8875, "prog": 7.3, "s2": 8.525, "en": 12.575, "fa": 13.275, "ft": 14.1125, "s4": 15.375, "feito": 17.3125, "s5": 18.463, "site": 19.55}, "scenes": [{"start": 0, "end": 4.012}, {"start": 4.012, "end": 8.525}, {"start": 8.525, "end": 12.075}, {"start": 12.075, "end": 15.375}, {"start": 15.375, "end": 18.463}, {"start": 18.463, "end": 23.048}]}, E = T.ev;
+const cl = x => Math.min(Math.max(x, 0), 1);
+const ease = x => 1 - Math.pow(1 - cl(x), 3);
+const back = x => { x = cl(x); const c = 1.9; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const blocks = $$('.txt'), glows = $$('.glow');
+// Shows an element from `a` (pops in) until `b` (slides out left); returns visibility 0..1.
+function stage(el, t, a, b, dist = 60) {
+  const k = back((t - a) / .5), o = ease((t - b) / .3);
+  el.style.opacity = cl((t - a) / .12) * (1 - o);
+  el.style.transform = `translate(${-160 * o}px,${dist * (1 - k)}px) scale(${.92 + .08 * k})`;
+  return cl((t - a) / .12) * (1 - o);
+}
+function pop(el, t, a, base = '') {
+  const k = back((t - a) / .45);
+  el.style.opacity = cl((t - a) / .1);
+  el.style.transform = `${base} scale(${k})`;
+}
+
+function art(t, E) {
+  // 1. counter races, notifications pile up
+  stage($('#cnt'), t, .1, E.s1 - .05);
+  $('#num').textContent = Math.round(12 + 35 * ease(t / (E.s1 - .3)));
+  [.5, 1.0, 1.5].forEach((a, i) => {
+    const el = $('#n' + (2 - i)), k = back((t - a) / .4), o = ease((t - E.s1) / .3);
+    el.style.opacity = cl((t - a) / .1) * (1 - o);
+    el.style.transform = `translate(${-200 * o}px,${(2 - i) * 130 - 40 * (1 - k)}px) rotate(${(i - 1) * 2}deg)`;
+  });
+  // 2. three scattered tools, shaking, then sucked into the dashboard
+  const into = ease((t - E.s2) / .5);
+  [[E.mail, -5], [E.cad, 4], [E.prog, -3]].forEach(([a, r], i) => {
+    const el = $('#w' + i), k = back((t - a) / .45), sh = t > a + .4 && t < E.s2 ? Math.sin(t * 30 + i) * 1.5 : 0;
+    el.style.opacity = cl((t - a) / .1) * (1 - into);
+    el.style.transform = `translate(${(270 - [350, 730, 410][i]) * into}px,${(1100 - [900, 1130, 1370][i]) * into}px) rotate(${r * k + sh}deg) scale(${(.8 + .2 * k) * (1 - .6 * into)})`;
+  });
+  // 3. dashboard, tiles light up
+  stage($('#db'), t, E.s2 + .35, E.s4 - .05);
+  [E.en, E.fa, E.ft].forEach((a, i) => {
+    const el = $('#t' + i), on = t > a;
+    el.style.background = on ? ['#0F7B4F', '#C41E3A', '#0F3B2C'][i] : '#f3efe6';
+    el.style.color = on ? '#fff' : '#5d7569';
+    el.querySelector('b').style.color = on ? '#fff' : '#0F3B2C';
+    el.style.transform = `scale(${1 + .08 * Math.sin(Math.PI * cl((t - a) / .4))})`;
+  });
+  // 4. January, stamp
+  stage($('#jan'), t, E.s4, E.s5 - .1);
+  const sk = cl((t - E.feito) / .25);
+  $('#stamp').style.opacity = sk * (1 - ease((t - E.s5 + .1) / .3));
+  $('#stamp').style.transform = `rotate(-8deg) scale(${2 - sk})`;
+  const lg = back((t - E.s5 - .1) / .5);
+  $('#logo').style.opacity = cl((t - E.s5 - .1) / .1);
+  $('#logo').style.transform = `rotate(${-120 * (1 - lg)}deg) scale(${lg})`;
+  const ct = back((t - E.site) / .45);
+  $('#cta').style.opacity = cl((t - E.site) / .1);
+  $('#cta').style.transform = `scale(${ct})`;
+}
+
+window.seek = t => {
+  glows[0].style.transform = `translate(${40 * Math.sin(t * .5)}px,${30 * Math.cos(t * .4)}px)`;
+  glows[1].style.transform = `translate(${-50 * Math.sin(t * .35)}px,${40 * Math.cos(t * .45)}px)`;
+  T.scenes.forEach((s, i) => {
+    const b = blocks[i], last = i === T.scenes.length - 1, out = last ? 0 : ease((t - s.end) / .25);
+    b.style.display = t >= s.start && (t < s.end + .25 || last) ? 'block' : 'none';
+    b.style.opacity = 1 - out;
+    b.style.transform = `translateY(${-70 * out}px)`;
+    b.querySelectorAll('.w').forEach(w => {
+      const k = back((t - +w.dataset.s + .08) / .32);
+      w.style.opacity = cl((t - +w.dataset.s + .08) / .1);
+      w.style.transform = `translateY(${34 * (1 - k)}px) scale(${.88 + .12 * k})`;
+    });
+  });
+  $('#art').style.transform = `scale(${1.02 + .02 * Math.sin(t * .6)})`;
+  art(t, E);
+  // Real-video background: one pre-extracted frame per video frame; wait until it is drawn.
+  if (T.bg) {
+    const img = $('#bg'), src = `${T.bg.dir}/${String(Math.min(T.bg.n, Math.round(t * 30) + 1)).padStart(5, '0')}.jpg`;
+    if (img.getAttribute('src') !== src) { img.src = src; return img.decode().catch(() => {}); }
+  }
+};
+seek(0);
+</script>
+</body></html>

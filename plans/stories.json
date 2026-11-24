@@ -355,10 +355,12 @@
     "time": "15:30",
     "theme": "Black Friday: faltam 3 dias (story animada)",
     "type": "story",
-    "status": "approved",
-    "media_id": null,
+    "status": "published",
+    "media_id": "17992104866881933",
     "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-24-blackfriday/story.mp4",
-    "approved_at": "2026-11-23"
+    "approved_at": "2026-11-23",
+    "permalink": "https://www.instagram.com/stories/hivec0de/4037556485839339640",
+    "published_at": "2026-11-24T15:31:32.989Z"
   },
   {
     "id": "story-2026-11-25-saiu",
@@ -559,6 +561,17 @@
     "approved_at": "2026-11-24"
   },
   {
+    "id": "story-2026-12-08-saiu",
+    "date": "2026-12-08",
+    "time": "15:30",
+    "theme": "Saiu hoje: 5 coisas antes do Natal (story animada)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-12-08-saiu/story.mp4",
+    "approved_at": "2026-11-24"
+  },
+  {
     "id": "story-advento-08",
     "date": "2026-12-08",
     "time": "17:30",
@@ -581,6 +594,17 @@
     "approved_at": "2026-11-24"
   },
   {
+    "id": "story-2026-12-10-saiu",
+    "date": "2026-12-10",
+    "time": "15:30",
+    "theme": "Saiu hoje: Dezembro, num só lugar (story animada)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-12-10-saiu/story.mp4",
+    "approved_at": "2026-11-24"
+  },
+  {
     "id": "story-advento-10",
     "date": "2026-12-10",
     "time": "17:30",
@@ -600,6 +624,17 @@
     "status": "approved",
     "media_id": null,
     "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/advento-11/story.mp4",
+    "approved_at": "2026-11-24"
+  },
+  {
+    "id": "story-2026-12-12-saiu",
+    "date": "2026-12-12",
+    "time": "15:30",
+    "theme": "Saiu hoje: Antes e depois (florista) (story animada)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-12-12-saiu/story.mp4",
     "approved_at": "2026-11-24"
   },
   {
