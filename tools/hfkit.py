@@ -49,7 +49,8 @@ def mix(work, total, voice, hits, out_audio, music=None, music_vol=.2):
 
 def _theme_css(name):
     t = themes.THEMES[name]
-    css = themes.css(name).replace("body{", "#root{").replace("body,", "#root,")
+    # Instrument Serif is not bundled with HyperFrames; Playfair Display is
+    css = themes.css(name).replace("body{", "#root{").replace("body,", "#root,").replace("'Instrument Serif'", "'Playfair Display'")
     css += f"#root{{color:{t['ink']}}}\n"
     serif = "font-family:'Playfair Display',serif;font-style:italic;font-weight:700;letter-spacing:-.01em"
     if name in SERIF_THEMES:
