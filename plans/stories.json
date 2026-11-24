@@ -438,6 +438,28 @@
     "approved_at": "2026-11-23"
   },
   {
+    "id": "story-advento-01",
+    "date": "2026-12-01",
+    "time": "17:30",
+    "theme": "Calendário do advento: porta 1 (story animada, árvore HiveCode)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/advento-01/story.mp4",
+    "approved_at": "2026-11-24"
+  },
+  {
+    "id": "story-advento-02",
+    "date": "2026-12-02",
+    "time": "17:30",
+    "theme": "Calendário do advento: porta 2 (story animada, árvore HiveCode)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/advento-02/story.mp4",
+    "approved_at": "2026-11-24"
+  },
+  {
     "id": "story-2026-12-03-saiu",
     "date": "2026-12-03",
     "time": "15:30",
@@ -447,6 +469,17 @@
     "media_id": null,
     "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-12-03-saiu/story.mp4",
     "approved_at": "2026-11-23"
+  },
+  {
+    "id": "story-advento-03",
+    "date": "2026-12-03",
+    "time": "17:30",
+    "theme": "Calendário do advento: porta 3 (story animada, árvore HiveCode)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/advento-03/story.mp4",
+    "approved_at": "2026-11-24"
   },
   {
     "id": "story-2026-12-04-pergunta",
@@ -460,6 +493,17 @@
     "approved_at": "2026-11-23"
   },
   {
+    "id": "story-advento-04",
+    "date": "2026-12-04",
+    "time": "17:30",
+    "theme": "Calendário do advento: porta 4 (story animada, árvore HiveCode)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/advento-04/story.mp4",
+    "approved_at": "2026-11-24"
+  },
+  {
     "id": "story-2026-12-05-saiu",
     "date": "2026-12-05",
     "time": "15:30",
@@ -471,6 +515,17 @@
     "approved_at": "2026-11-23"
   },
   {
+    "id": "story-advento-05",
+    "date": "2026-12-05",
+    "time": "17:30",
+    "theme": "Calendário do advento: porta 5 (story animada, árvore HiveCode)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/advento-05/story.mp4",
+    "approved_at": "2026-11-24"
+  },
+  {
     "id": "story-2026-12-06-natal",
     "date": "2026-12-06",
     "time": "15:30",
@@ -480,5 +535,214 @@
     "media_id": null,
     "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-12-06-natal/story.mp4",
     "approved_at": "2026-11-23"
+  },
+  {
+    "id": "story-advento-06",
+    "date": "2026-12-06",
+    "time": "17:30",
+    "theme": "Calendário do advento: porta 6 (story animada, árvore HiveCode)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/advento-06/story.mp4",
+    "approved_at": "2026-11-24"
+  },
+  {
+    "id": "story-advento-07",
+    "date": "2026-12-07",
+    "time": "17:30",
+    "theme": "Calendário do advento: porta 7 (story animada, árvore HiveCode)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/advento-07/story.mp4",
+    "approved_at": "2026-11-24"
+  },
+  {
+    "id": "story-advento-08",
+    "date": "2026-12-08",
+    "time": "17:30",
+    "theme": "Calendário do advento: porta 8 (story animada, árvore HiveCode)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/advento-08/story.mp4",
+    "approved_at": "2026-11-24"
+  },
+  {
+    "id": "story-advento-09",
+    "date": "2026-12-09",
+    "time": "17:30",
+    "theme": "Calendário do advento: porta 9 (story animada, árvore HiveCode)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/advento-09/story.mp4",
+    "approved_at": "2026-11-24"
+  },
+  {
+    "id": "story-advento-10",
+    "date": "2026-12-10",
+    "time": "17:30",
+    "theme": "Calendário do advento: porta 10 (story animada, árvore HiveCode)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/advento-10/story.mp4",
+    "approved_at": "2026-11-24"
+  },
+  {
+    "id": "story-advento-11",
+    "date": "2026-12-11",
+    "time": "17:30",
+    "theme": "Calendário do advento: porta 11 (story animada, árvore HiveCode)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/advento-11/story.mp4",
+    "approved_at": "2026-11-24"
+  },
+  {
+    "id": "story-advento-12",
+    "date": "2026-12-12",
+    "time": "17:30",
+    "theme": "Calendário do advento: porta 12 (story animada, árvore HiveCode)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/advento-12/story.mp4",
+    "approved_at": "2026-11-24"
+  },
+  {
+    "id": "story-advento-13",
+    "date": "2026-12-13",
+    "time": "17:30",
+    "theme": "Calendário do advento: porta 13 (story animada, árvore HiveCode)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/advento-13/story.mp4",
+    "approved_at": "2026-11-24"
+  },
+  {
+    "id": "story-advento-14",
+    "date": "2026-12-14",
+    "time": "17:30",
+    "theme": "Calendário do advento: porta 14 (story animada, árvore HiveCode)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/advento-14/story.mp4",
+    "approved_at": "2026-11-24"
+  },
+  {
+    "id": "story-advento-15",
+    "date": "2026-12-15",
+    "time": "17:30",
+    "theme": "Calendário do advento: porta 15 (story animada, árvore HiveCode)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/advento-15/story.mp4",
+    "approved_at": "2026-11-24"
+  },
+  {
+    "id": "story-advento-16",
+    "date": "2026-12-16",
+    "time": "17:30",
+    "theme": "Calendário do advento: porta 16 (story animada, árvore HiveCode)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/advento-16/story.mp4",
+    "approved_at": "2026-11-24"
+  },
+  {
+    "id": "story-advento-17",
+    "date": "2026-12-17",
+    "time": "17:30",
+    "theme": "Calendário do advento: porta 17 (story animada, árvore HiveCode)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/advento-17/story.mp4",
+    "approved_at": "2026-11-24"
+  },
+  {
+    "id": "story-advento-18",
+    "date": "2026-12-18",
+    "time": "17:30",
+    "theme": "Calendário do advento: porta 18 (story animada, árvore HiveCode)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/advento-18/story.mp4",
+    "approved_at": "2026-11-24"
+  },
+  {
+    "id": "story-advento-19",
+    "date": "2026-12-19",
+    "time": "17:30",
+    "theme": "Calendário do advento: porta 19 (story animada, árvore HiveCode)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/advento-19/story.mp4",
+    "approved_at": "2026-11-24"
+  },
+  {
+    "id": "story-advento-20",
+    "date": "2026-12-20",
+    "time": "17:30",
+    "theme": "Calendário do advento: porta 20 (story animada, árvore HiveCode)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/advento-20/story.mp4",
+    "approved_at": "2026-11-24"
+  },
+  {
+    "id": "story-advento-21",
+    "date": "2026-12-21",
+    "time": "17:30",
+    "theme": "Calendário do advento: porta 21 (story animada, árvore HiveCode)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/advento-21/story.mp4",
+    "approved_at": "2026-11-24"
+  },
+  {
+    "id": "story-advento-22",
+    "date": "2026-12-22",
+    "time": "17:30",
+    "theme": "Calendário do advento: porta 22 (story animada, árvore HiveCode)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/advento-22/story.mp4",
+    "approved_at": "2026-11-24"
+  },
+  {
+    "id": "story-advento-23",
+    "date": "2026-12-23",
+    "time": "17:30",
+    "theme": "Calendário do advento: porta 23 (story animada, árvore HiveCode)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/advento-23/story.mp4",
+    "approved_at": "2026-11-24"
+  },
+  {
+    "id": "story-advento-24",
+    "date": "2026-12-24",
+    "time": "17:30",
+    "theme": "Calendário do advento: porta 24 (story animada, árvore HiveCode)",
+    "type": "story",
+    "status": "approved",
+    "media_id": null,
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/advento-24/story.mp4",
+    "approved_at": "2026-11-24"
   }
 ]
