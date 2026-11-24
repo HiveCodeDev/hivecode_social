@@ -23,3 +23,10 @@ CLAUDE.md
 
 # Windows Task Scheduler publish logs
 logs/
+
+# Local code graph
+graphify-out/
+hf-test/
+
+# HyperFrames working projects (outputs are reel-hf.mp4 / story-hf.mp4)
+posts/**/hf/
