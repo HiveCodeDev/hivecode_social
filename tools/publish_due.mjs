@@ -21,6 +21,14 @@ function lisbonInstant(date, time) {
   return new Date(guess.getTime() - (shown.getTime() - guess.getTime()));
 }
 
+if (dryRun) {  // check the token against the account (never printed)
+  const v = process.env.INSTAGRAM_API_VERSION || "v26.0";
+  const r = await (await fetch(`https://graph.facebook.com/${v}/${process.env.INSTAGRAM_ACCOUNT_ID}?fields=username`,
+    { headers: { Authorization: `Bearer ${process.env.INSTAGRAM_ACCESS_TOKEN}` } })).json();
+  console.log(r.username ? `token ok: @${r.username}` : `token FAILED: ${r.error?.message ?? "no answer"}`);
+  if (!r.username) process.exit(1);
+}
+
 const now = Date.now(), due = [];
 for (const file of readdirSync("plans").filter((f) => f.endsWith(".json")).sort()) {
   const plan = JSON.parse(readFileSync(`plans/${file}`, "utf8"));
