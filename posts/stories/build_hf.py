@@ -247,6 +247,59 @@ tl.fromTo("#burst", { scale: .2, opacity: 0, rotate: 0 }, { scale: 1, opacity: 1
 tl.fromTo("#burst", { rotate: 60 }, { rotate: 160, duration: 4, ease: "none", immediateRender: false }, 3.4);
 tl.fromTo("#dias", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: .4, ease: "back.out(2.4)" }, 2.5);""",
         hits=[("click", .1 + 2.3 / 11 * i) for i in range(11)] + [("thump", 2.4), ("pop", 2.5), ("pop", 3.8)]),
+
+    # 8/12 "saiu hoje": the five-item checklist, each box ticked with a pop.
+    "2026-12-08-saiu": dict(
+        theme="natalnoite", title=[("5 coisas antes do Natal.", 140, {"Natal."}, 0, BODY)],
+        arrow=("Veja o reel no perfil", 3.8, "background:#F2C14E;color:#0E1A33"),
+        css="""#cl{position:absolute;left:190px;top:940px;width:700px;padding:20px 44px;border-radius:36px;background:#F6F1E7;box-shadow:0 60px 120px -40px rgba(0,0,0,.6)}
+.ci{display:flex;justify-content:space-between;align-items:center;height:96px;border-bottom:3px dashed #d9d2c2;font-size:44px;font-weight:700;color:#0E1A33}
+.ci:last-child{border-bottom:0}.ci i{width:60px;height:60px;border-radius:16px;border:6px solid #0E1A33;position:relative}
+.ci b{position:absolute;inset:-6px;border-radius:16px;background:#F2C14E;display:grid;place-items:center;font-size:40px;font-weight:900}""",
+        html='<div id="cl">' + "".join(f'<div class="ci">{n}<i><b id="k{i}">✓</b></i></div>' for i, n in enumerate(
+            ["Horário de Natal", "Prazo de entrega", "Vales-oferta", "Destaque de Natal", "Contacto rápido"])) + '</div>',
+        js="""tl.fromTo("#cl", { y: 400, opacity: 0, rotate: 3 }, { y: 0, opacity: 1, rotate: 0, duration: .6, ease: "back.out(1.6)" }, .2);
+tl.fromTo(".ci b", { scale: 0, rotate: -30 }, { scale: 1, rotate: 0, duration: .35, stagger: .45, ease: "back.out(3)" }, .8);
+tl.fromTo(".ci", { x: 0 }, { x: 10, duration: .08, stagger: .45, yoyo: true, repeat: 1 }, .8);""",
+        hits=[("whoosh", .2)] + [("click", .8 + .45 * i) for i in range(5)] + [("pop", 3.8)]),
+
+    # 10/12 "saiu hoje": the orders counter races to 47 and a "Tudo faturado ✓" stamp lands.
+    "2026-12-10-saiu": dict(
+        theme="natal", title=[("Dezembro, num só lugar.", 140, {"só", "lugar."}, 0, BODY)],
+        arrow=("Veja o reel no perfil", 3.8, "background:#0F3B2C;color:#fff"),
+        css="""#cn{position:absolute;left:240px;top:960px;width:600px;padding:40px 0 46px;border-radius:40px;background:#0F3B2C;color:#fff;text-align:center;box-shadow:0 50px 100px -40px rgba(15,59,44,.5)}
+#cn small{display:block;font-size:30px;font-weight:700;letter-spacing:.16em;opacity:.75}
+#cn b{display:block;font-size:200px;line-height:1;margin-top:10px;font-variant-numeric:tabular-nums}
+#ok{position:absolute;left:300px;top:1400px;padding:22px 40px;border-radius:20px;border:8px solid #0F7B4F;background:#fff;color:#0F7B4F;font-size:54px;font-weight:900;white-space:nowrap}""",
+        html='<div id="cn"><small>ENCOMENDAS HOJE</small><b id="nm">12</b></div><span id="ok">Tudo faturado ✓</span>',
+        js="""tl.fromTo("#cn", { scale: .5, opacity: 0 }, { scale: 1, opacity: 1, duration: .5, ease: "back.out(2)" }, .2);
+const N = { v: 12 };
+tl.fromTo(N, { v: 12 }, { v: 47, duration: 1.8, ease: "power2.in", onUpdate: () => { document.querySelector("#nm").textContent = Math.round(N.v); } }, .3);
+tl.fromTo("#ok", { scale: 2.2, rotate: -20, opacity: 0 }, { scale: 1, rotate: -6, opacity: 1, duration: .25, ease: "power4.in" }, 2.1);
+tl.fromTo("#cn", { y: 0 }, { y: 10, duration: .06, yoyo: true, repeat: 3, immediateRender: false }, 2.35);""",
+        hits=[("pop", .2)] + [("click", .3 + .15 * i) for i in range(12)] + [("thump", 2.35), ("pop", 3.8)]),
+
+    # 12/12 "saiu hoje": antes (paper notes) wipes into depois (the florist site).
+    "2026-12-12-saiu": dict(
+        theme="natalverde", title=[("Antes e depois.", 160, {"depois."}, 0, BODY)],
+        arrow=("Veja o reel no perfil", 3.8, "background:#E8B84A;color:#0F3A2C"),
+        css="""#ab{position:absolute;left:190px;top:940px;width:700px;height:560px;border-radius:36px;overflow:hidden;box-shadow:0 60px 120px -40px rgba(0,0,0,.6)}
+#ab>div{position:absolute;inset:0}
+#sd{background:#fff}#sd .h{padding:26px 32px;background:#0F3A2C;color:#fff;font-size:34px;font-weight:800}
+#sd .p{display:flex;gap:26px;align-items:center;margin:34px 32px;padding:24px;border-radius:24px;background:#f4f1e8;color:#0F3A2C;font-size:40px;font-weight:800}
+#sd .p i{font-style:normal;font-size:100px}#sd .p em{display:block;font-style:normal;color:#C41E3A}
+#pa{background:repeating-linear-gradient(#FBF6EA 0 58px,#e5dcc6 58px 60px);font-family:'Playfair Display',serif;font-style:italic;color:#3b3226;font-size:50px;line-height:60px;padding:110px 46px 0}
+#kn{position:absolute;top:940px;left:190px;width:8px;height:560px;margin-left:-4px;background:#E8B84A;z-index:3;box-shadow:0 0 30px rgba(232,184,74,.8)}""",
+        html='<div id="ab"><div id="sd"><div class="h">Flores da Ribeira</div><div class="p"><i>🌲</i><span>Coroa de Natal<em>35 €</em></span></div>'
+             '<div class="p"><i>💐</i><span>Arranjo de mesa<em>25 €</em></span></div></div>'
+             '<div id="pa">Sra. Rosa: coroa, sexta?<br>Arranjo mesa, 25 € ??<br><s>ligar ao Sr. Paulo</s></div></div><span id="kn"></span>',
+        js="""tl.fromTo("#ab", { scale: .6, opacity: 0 }, { scale: 1, opacity: 1, duration: .5, ease: "back.out(1.8)" }, .2);
+const W = { w: 100 };
+const paint = () => { document.querySelector("#pa").style.clipPath = `inset(0 ${100 - W.w}% 0 0)`;
+  const k = document.querySelector("#kn"); k.style.transform = `translateX(${7 * W.w}px)`; k.style.opacity = W.w > 1 && W.w < 99 ? 1 : 0; };
+tl.fromTo(W, { w: 100 }, { w: 0, duration: 1.4, ease: "power2.inOut", onUpdate: paint }, 1.0);
+tl.fromTo("#sd .p", { scale: .85 }, { scale: 1, duration: .35, stagger: .12, ease: "back.out(2.4)" }, 2.3);""",
+        hits=[("pop", .2), ("whoosh", 1.0), ("pop", 2.3), ("pop", 2.42), ("pop", 3.8)]),
 }
 
 

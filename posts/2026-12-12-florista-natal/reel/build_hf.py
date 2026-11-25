@@ -5,6 +5,7 @@ Frame 0: the card with a gold wipe swinging between ANTES (paper order notes, ri
 site). Antes holds while it is told, the wipe opens on Depois; a pickup-time sheet is picked and paid; late-night
 orders drop in under a moon; logo slam and the site.
 """
+import re
 import sys
 from pathlib import Path
 
@@ -17,7 +18,8 @@ from build import CSS as OLD_CSS, ORDERS, PRODUCTS, SCENES, WORK  # noqa: E402
 
 PINE, GOLD, RED = "#0F3A2C", "#E8B84A", "#C41E3A"
 KEEP = ("#card>div", "#site", "#paper", "#ring", ".tag", "#tA", "#tD", "#slot", "#pay", ".or")
-CSS = "\n".join(l for l in OLD_CSS.splitlines() if l.startswith(KEEP)).replace("opacity:0;", "").replace("opacity:0}", "}") + f"""
+# whole rules, not lines: some old rules span two lines
+CSS = "\n".join(r.strip() for r in re.findall(r"[^{}]+\{[^{}]*\}", OLD_CSS) if r.strip().startswith(KEEP)).replace("opacity:0;", "").replace("opacity:0}", "}") + f"""
 #card{{position:absolute;left:160px;top:400px;width:760px;height:640px;border-radius:40px;overflow:hidden;box-shadow:0 60px 120px -40px rgba(0,0,0,.6)}}
 #site .gr{{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:20px 28px}}
 #site .pr{{border-radius:20px;background:#f4f1e8;padding:14px 18px 16px;color:{PINE}}}
