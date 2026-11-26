@@ -381,10 +381,12 @@
     "time": "15:30",
     "theme": "Amanhã: Black Friday na HiveCode (story animada)",
     "type": "story",
-    "status": "approved",
-    "media_id": null,
+    "status": "published",
+    "media_id": "18194778865409641",
     "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-26-amanha/story.mp4",
-    "approved_at": "2026-11-23"
+    "approved_at": "2026-11-23",
+    "permalink": "https://www.instagram.com/stories/hivec0de/4039210319984578032",
+    "published_at": "2026-11-26T22:17:26.120Z"
   },
   {
     "id": "story-2026-11-27-saiu",
