@@ -1,16 +1,16 @@
 [
   {
-    "id": "2026-11-27-bf-desconto",
+    "id": "2026-11-27-mega-campanha",
     "date": "2026-11-27",
-    "time": "12:30",
-    "theme": "Black Friday na HiveCode: 20% de desconto em sites (reel, preto e amarelo)",
+    "time": "13:30",
+    "theme": "Mega campanha Black Friday + Natal (reel, natalnoite); substitui o reel dos 20%, cancelado",
     "type": "reel",
-    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/2026-11-27-bf-desconto/reel/reel.mp4",
-    "cover_url": "https://hivecodedev.github.io/hivecode_social/posts/2026-11-27-bf-desconto/reel/cover.jpg",
-    "destination": "https://hivecode.pt/?utm_source=instagram&utm_medium=social&utm_campaign=bf-desconto",
-    "caption": "Black Friday na HiveCode: 20% de desconto na criação de sites, para orçamentos pedidos até domingo, 29 de novembro. O mockup e o orçamento continuam gratuitos e sem compromisso. 🖤\n\nPeça o seu em hivecode.pt\nDesconto válido só na criação do site.\n\n#criacaodesites #blackfriday #pequenasempresas #comerciolocal #portugal",
+    "video_url": "https://hivecodedev.github.io/hivecode_social/posts/2026-11-27-mega-campanha/reel/reel.mp4",
+    "cover_url": "https://hivecodedev.github.io/hivecode_social/posts/2026-11-27-mega-campanha/reel/cover.jpg",
+    "destination": "https://hivecode.pt/?utm_source=instagram&utm_medium=social&utm_campaign=mega-campanha",
+    "caption": "Mega campanha HiveCode: Black Friday e Natal juntos, com condições especiais em sites e programas à medida. 🎄\n\nAcompanhe a página nas próximas semanas e envie-nos mensagem para saber como aproveitar. O mockup e o orçamento continuam gratuitos e sem compromisso.\n🔗 hivecode.pt\n\n#criacaodesites #empreendedorismo #pequenasempresas #comerciolocal #portugal",
     "status": "approved",
     "media_id": null,
-    "approved_at": "2026-11-23"
+    "approved_at": "2026-11-27"
   }
 ]

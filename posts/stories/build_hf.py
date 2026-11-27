@@ -64,25 +64,22 @@ tl.fromTo("#qm", { scale: 1 }, { scale: 1.25, duration: .25, yoyo: true, repeat:
 
     # 27/11 "saiu hoje": a site window builds; a -20% stamp slams with a flash and a shake.
     "2026-11-27-saiu": dict(
-        theme="blackfriday", title=[("Black Friday: −20% na criação de sites.", 116, {"−20%"}, 0, BODY)],
-        arrow=("Veja a oferta no perfil", 3.6, f"background:{Y};color:{K}"),
-        css=f"""#shk{{position:absolute;inset:0}}
-#win{{position:absolute;left:140px;right:140px;top:1000px;height:480px;border-radius:30px;background:#fff;overflow:hidden}}
-#win .bar{{height:70px;background:#f1f1f1}}
-#win .wb{{position:absolute;border-radius:14px;background:#ececec;transform-origin:0 50%}}
-#hero{{background:linear-gradient(150deg,#fff3a6,{Y}) !important}}
-#st{{position:absolute;left:470px;top:930px;padding:22px 38px;border:12px solid {Y};border-radius:28px;background:{K};color:{Y};
- font-family:'Archivo Black',sans-serif;font-size:140px;letter-spacing:-.03em;line-height:1}}
-#fl{{position:absolute;inset:0;background:#fff;z-index:45}}""",
-        html='<div id="shk"><div id="win"><div class="bar"></div><span class="wb" id="hero" style="left:30px;right:30px;top:100px;height:200px"></span>'
-             '<span class="wb" style="left:30px;width:380px;top:330px;height:34px"></span><span class="wb" style="left:30px;width:240px;top:390px;height:60px;background:#0A0A0A"></span></div>'
-             '<div id="st">−20%</div></div><span id="fl" class="clip" data-start="1.3" data-duration=".15" data-track-index="9"></span>',
-        js="""tl.fromTo("#win", { y: 300, opacity: 0, rotate: 4 }, { y: 0, opacity: 1, rotate: 0, duration: .6, ease: "back.out(1.6)" }, .2);
-tl.fromTo("#win .wb", { scaleX: 0 }, { scaleX: 1, duration: .3, stagger: .1, ease: "power3.out" }, .55);
-tl.fromTo("#st", { scale: 3.2, rotate: -30, opacity: 0 }, { scale: 1, rotate: -10, opacity: 1, duration: .25, ease: "power4.in" }, 1.05);
-tl.fromTo("#fl", { opacity: .85 }, { opacity: 0, duration: .15 }, 1.3);
-tl.fromTo("#shk", { x: 0, y: 0 }, { x: 14, y: -10, duration: .05, yoyo: true, repeat: 5, ease: "none" }, 1.32);""",
-        hits=[("whoosh", .2), ("click", .55), ("click", .65), ("click", .75), ("thump", 1.3), ("pop", 3.6)]),
+        theme="natalnoite", title=[("Saiu hoje: mega campanha Black Friday + Natal.", 112, {"mega", "campanha"}, 0, BODY)],
+        arrow=("Acompanhe o perfil", 3.6, "background:#F2C14E;color:#0E1A33"),
+        css="""#shk{position:absolute;inset:0}
+.tg{position:absolute;top:1000px;padding:34px 44px;border-radius:26px;font-family:'Archivo Black',sans-serif;font-size:66px;line-height:1;box-shadow:0 40px 90px -30px rgba(0,0,0,.7)}
+#tb{left:110px;background:#0A0A0A;color:#F2C14E;border:8px solid #F2C14E}
+#tn{right:110px;background:#C41E3A;color:#fff;border:8px solid #fff}
+#pl{position:absolute;left:0;right:0;top:1040px;text-align:center;font-size:140px;font-weight:900;color:#F2C14E}
+#mc{position:absolute;left:220px;top:1300px;width:640px;padding:24px 0;border:10px solid #F2C14E;border-radius:24px;background:#0E1A33;color:#F2C14E;
+ text-align:center;font-family:'Archivo Black',sans-serif;font-size:66px}""",
+        html='<div id="shk"><div class="tg" id="tb">BLACK<br>FRIDAY</div><div class="tg" id="tn">NATAL<br>🎄</div><div id="pl">+</div><div id="mc">MEGA CAMPANHA</div></div>',
+        js="""tl.fromTo("#tb", { x: -700, rotate: -12 }, { x: 0, rotate: -4, duration: .45, ease: "expo.out" }, .2);
+tl.fromTo("#tn", { x: 700, rotate: 12 }, { x: 0, rotate: 4, duration: .45, ease: "expo.out" }, .45);
+tl.fromTo("#pl", { scale: 0 }, { scale: 1, duration: .35, ease: "back.out(3)" }, .8);
+tl.fromTo("#mc", { scale: 2.6, rotate: -14, opacity: 0 }, { scale: 1, rotate: -5, opacity: 1, duration: .3, ease: "power4.in" }, 1.2);
+tl.fromTo("#shk", { x: 0, y: 0 }, { x: 14, y: -10, duration: .05, yoyo: true, repeat: 5, ease: "none" }, 1.5);""",
+        hits=[("whoosh", .2), ("whoosh", .45), ("pop", .8), ("thump", 1.5), ("pop", 3.6)]),
 
     # 28/11: last weekend of the offer. Calendar with Sat 28 / Sun 29 lighting up, then an "ÚLTIMO" stamp.
     "2026-11-28-oferta": dict(
