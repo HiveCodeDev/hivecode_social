@@ -394,10 +394,12 @@
     "time": "13:30",
     "theme": "Saiu hoje: mega campanha Black Friday + Natal (story animada)",
     "type": "story",
-    "status": "approved",
-    "media_id": null,
+    "status": "published",
+    "media_id": "18078745964772684",
     "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-27-saiu/story.mp4",
-    "approved_at": "2026-11-27"
+    "approved_at": "2026-11-27",
+    "permalink": "https://www.instagram.com/stories/hivec0de/4039675249840197030",
+    "published_at": "2026-11-27T13:41:08.836Z"
   },
   {
     "id": "story-2026-11-28-oferta",
