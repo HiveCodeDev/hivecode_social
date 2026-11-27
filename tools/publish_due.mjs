@@ -1,7 +1,7 @@
 // Publishes every approved post whose time has come, across all plans/*.json.
 // usage: node tools/publish_due.mjs [--dry-run]
 //
-// Runs from GitHub Actions every 15 minutes (.github/workflows/publish.yml), so the PC can be off.
+// Runs from GitHub Actions every 5 minutes in a self-restarting loop (.github/workflows/publish.yml), so the PC can be off.
 // A post is due from 5 minutes before its Lisbon date/time until MAX_LATE hours after; older
 // approved posts without media_id are reported but never published (safety against surprises).
 // Each post goes through tools/publish.mjs, which skips anything that already has a media_id.

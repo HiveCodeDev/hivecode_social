@@ -81,44 +81,48 @@ tl.fromTo("#mc", { scale: 2.6, rotate: -14, opacity: 0 }, { scale: 1, rotate: -5
 tl.fromTo("#shk", { x: 0, y: 0 }, { x: 14, y: -10, duration: .05, yoyo: true, repeat: 5, ease: "none" }, 1.5);""",
         hits=[("whoosh", .2), ("whoosh", .45), ("pop", .8), ("thump", 1.5), ("pop", 3.6)]),
 
-    # 28/11: last weekend of the offer. Calendar with Sat 28 / Sun 29 lighting up, then an "ÚLTIMO" stamp.
+    # 28/11 (the 20% offer was cancelled): campaign, send us a message. A chat thread fills in, the reply
+    # bubble pops, then a gold "ENVIE-NOS MENSAGEM" button lands.
     "2026-11-28-oferta": dict(
-        theme="blackmonth", title=[("−20% em sites: último fim de semana.", 120, {"último"}, 0, BODY)],
-        arrow=("Peça no perfil", 3.8, f"background:{K};color:{Y}"),
-        css=f"""#cal{{position:absolute;left:240px;top:960px;width:600px;border-radius:30px;background:{K};color:{Y};overflow:hidden;text-align:center}}
-#cal .m{{padding:22px 0;font-size:44px;font-weight:800;letter-spacing:.1em;background:#fff;color:{K}}}
-#cal .d{{display:flex;justify-content:center;gap:30px;padding:40px 0 50px}}
-#cal .d span{{width:200px;padding:20px 0;border-radius:24px;border:5px solid {Y};font-size:120px;font-weight:800;line-height:1}}
-#cal .d small{{display:block;font-size:34px;letter-spacing:.08em;margin-bottom:10px}}
-#ul{{position:absolute;left:330px;top:1400px;padding:16px 40px;border:10px solid {K};border-radius:20px;color:{K};background:{Y};
- font-family:'Archivo Black',sans-serif;font-size:96px;letter-spacing:.02em}}""",
-        html='<div id="cal"><div class="m">NOVEMBRO</div><div class="d"><span id="d0"><small>SÁB</small>28</span><span id="d1"><small>DOM</small>29</span></div></div><div id="ul">ÚLTIMO</div>',
-        js=f"""tl.fromTo("#cal", {{ rotateX: -90, opacity: 0, transformPerspective: 1200 }}, {{ rotateX: 0, opacity: 1, duration: .7, ease: "back.out(1.4)" }}, .2);
-[0, 1].forEach(i => {{
-  tl.fromTo("#d" + i, {{ backgroundColor: "rgba(255,212,0,0)", color: "{Y}" }}, {{ backgroundColor: "{Y}", color: "{K}", duration: .15 }}, 1.1 + .45 * i);
-  tl.fromTo("#d" + i, {{ scale: 1 }}, {{ scale: 1.15, duration: .15, yoyo: true, repeat: 1 }}, 1.1 + .45 * i);
-}});
-tl.fromTo("#ul", {{ scale: 3, rotate: -24, opacity: 0 }}, {{ scale: 1, rotate: -8, opacity: 1, duration: .25, ease: "power4.in" }}, 2.1);
-tl.fromTo("#cal", {{ x: 0 }}, {{ x: 10, duration: .05, yoyo: true, repeat: 3, ease: "none", immediateRender: false }}, 2.35);""",
-        hits=[("whoosh", .2), ("click", 1.1), ("click", 1.55), ("thump", 2.35), ("pop", 3.8)]),
+        theme="natal", title=[("Mega campanha: fale connosco.", 120, {"fale", "connosco."}, 0, BODY)],
+        arrow=("Envie mensagem pelo perfil", 3.8, "background:#C41E3A;color:#fff"),
+        css="""#ph{position:absolute;left:190px;top:900px;width:700px;height:600px;border-radius:50px;background:#fff;box-shadow:0 50px 120px -40px rgba(60,30,20,.45);overflow:hidden}
+#ph .hd{display:flex;align-items:center;gap:22px;padding:26px 34px;background:#0F3A2C;color:#fff;font-size:40px;font-weight:800}
+#ph .hd img{width:70px;height:70px;border-radius:50%;background:#fff;padding:12px;box-sizing:border-box}
+.bb{position:absolute;padding:24px 34px;border-radius:36px;font-size:44px;font-weight:700;line-height:1.15}
+#b1{left:34px;top:160px;background:#eef0f3;color:#1d1d1d;border-bottom-left-radius:8px}
+#b2{right:34px;top:280px;background:#C41E3A;color:#fff;border-bottom-right-radius:8px}
+#dots{position:absolute;left:34px;top:480px;padding:22px 30px;border-radius:30px;background:#eef0f3;display:flex;gap:12px}
+#dots i{width:18px;height:18px;border-radius:50%;background:#8a8f99}""",
+        html='<div id="ph"><div class="hd"><img src="assets/logo_mark.svg" alt="">HiveCode</div>'
+             '<div class="bb" id="b1">Olá! Quero saber mais 👋</div><div class="bb" id="b2">Claro! Conte-nos o seu projeto.</div>'
+             '<div id="dots"><i></i><i></i><i></i></div></div>',
+        js="""tl.fromTo("#ph", { y: 400, opacity: 0, rotate: 5 }, { y: 0, opacity: 1, rotate: 0, duration: .6, ease: "back.out(1.5)" }, .2);
+tl.fromTo("#b1", { scale: 0, transformOrigin: "0 100%" }, { scale: 1, duration: .4, ease: "back.out(2.4)" }, .9);
+tl.fromTo("#b2", { scale: 0, transformOrigin: "100% 100%" }, { scale: 1, duration: .4, ease: "back.out(2.4)" }, 1.8);
+tl.fromTo("#dots", { opacity: 0 }, { opacity: 1, duration: .2 }, 2.6);
+tl.fromTo("#dots i", { y: 0 }, { y: -12, duration: .25, stagger: .1, yoyo: true, repeat: 7, ease: "sine.inOut" }, 2.6);""",
+        hits=[("whoosh", .2), ("pop", .9), ("pop", 1.8), ("click", 2.6), ("pop", 3.8)]),
 
-    # 29/11: last day. HOJE drops letter by letter, the clock flips 23:58 -> 23:59 and pulses.
+    # 29/11 (the 20% offer was cancelled): the campaign keeps going. A Follow button flips to "A seguir",
+    # a bell rings for notifications, gold "BLACK FRIDAY + NATAL" ribbon.
     "2026-11-29-ultimo": dict(
-        theme="blackfriday", title=[("Último dia: −20% na criação de sites.", 116, {"Último", "dia:"}, 0, BODY)],
-        arrow=("Peça hoje no perfil", 3.8, f"background:{Y};color:{K}"),
-        css=f"""#hj{{position:absolute;left:0;right:0;top:930px;display:flex;justify-content:center;font-family:'Archivo Black',sans-serif;font-size:300px;
- color:{Y};letter-spacing:-.03em;line-height:1}}
-#hj span{{display:inline-block}}
-#ck{{position:absolute;left:310px;top:1300px;width:460px;padding:24px 0;border-radius:28px;border:5px solid {Y};text-align:center;color:#fff;
- font-size:110px;font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:.02em}}
-#ck small{{display:block;font-size:34px;font-weight:700;color:{Y};letter-spacing:.12em}}""",
-        html='<div id="hj">' + "".join(f"<span>{c}</span>" for c in "HOJE") + '</div><div id="ck"><small>ATÉ ÀS</small><b id="tm">23:58</b></div>',
-        js="""tl.fromTo("#hj span", { y: -700, rotate: (i) => [-14, 8, -6, 12][i] }, { y: 0, rotate: 0, duration: .55, stagger: .12, ease: "bounce.out" }, .15);
-tl.fromTo("#ck", { scale: .5, opacity: 0 }, { scale: 1, opacity: 1, duration: .45, ease: "back.out(2.2)" }, 1.1);
-const M = { v: 0 };
-tl.fromTo(M, { v: 0 }, { v: 1, duration: .01, onUpdate: () => { document.querySelector("#tm").textContent = M.v > .5 ? "23:59" : "23:58"; } }, 2.0);
-tl.fromTo("#ck", { scale: 1 }, { scale: 1.08, duration: .3, yoyo: true, repeat: 7, ease: "sine.inOut", immediateRender: false }, 2.0);""",
-        hits=[("thump", .5), ("thump", .62), ("thump", .74), ("thump", .86), ("pop", 1.1), ("click", 2.0), ("pop", 3.8)]),
+        theme="natalverde", title=[("A mega campanha continua.", 124, {"continua."}, 0, BODY)],
+        arrow=("Siga o perfil", 3.8, "background:#E8B84A;color:#0F3A2C"),
+        css="""#fb{position:absolute;left:240px;top:930px;width:600px;height:150px;border-radius:40px;overflow:hidden;font-size:62px;font-weight:800}
+#fb span{position:absolute;inset:0;display:grid;place-items:center}
+#f1{background:#265ADF;color:#fff}#f2{background:#F5EEDD;color:#0F3A2C}
+#bell{position:absolute;left:470px;top:1120px;font-size:140px;transform-origin:50% 10%}
+#rib{position:absolute;left:150px;right:150px;top:1340px;padding:26px 0;border-radius:20px;background:#E8B84A;color:#0F3A2C;text-align:center;
+ font-family:'Archivo Black',sans-serif;font-size:52px}""",
+        html='<div id="fb"><span id="f1">Seguir</span><span id="f2">A seguir ✓</span></div><span id="bell">🔔</span><div id="rib">BLACK FRIDAY + NATAL</div>',
+        js="""tl.fromTo("#fb", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: .45, ease: "back.out(2)" }, .2);
+tl.fromTo("#fb", { scale: 1 }, { scale: .9, duration: .1, yoyo: true, repeat: 1, ease: "power2.out", immediateRender: false }, 1.0);
+tl.fromTo("#f2", { y: 150 }, { y: 0, duration: .3, ease: "power3.out" }, 1.1);
+tl.fromTo("#bell", { scale: 0 }, { scale: 1, duration: .4, ease: "back.out(2.5)" }, 1.6);
+tl.fromTo("#bell", { rotate: -18 }, { rotate: 18, duration: .08, yoyo: true, repeat: 9, ease: "sine.inOut", immediateRender: false }, 2.0);
+tl.fromTo("#rib", { scaleX: 0 }, { scaleX: 1, duration: .5, ease: "expo.out" }, 2.6);""",
+        hits=[("pop", .2), ("click", 1.0), ("pop", 1.6), ("click", 2.0), ("click", 2.3), ("whoosh", 2.6), ("pop", 3.8)]),
 
     # 30/11: November page flips over to December 1, snow falling.
     "2026-11-30-amanha": dict(
