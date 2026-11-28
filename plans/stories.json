@@ -407,10 +407,12 @@
     "time": "15:30",
     "theme": "Mega campanha: fale connosco (story animada; substitui a dos 20%, cancelada)",
     "type": "story",
-    "status": "approved",
-    "media_id": null,
+    "status": "published",
+    "media_id": "18387844876235649",
     "video_url": "https://hivecodedev.github.io/hivecode_social/posts/stories/2026-11-28-oferta/story.mp4",
-    "approved_at": "2026-11-23"
+    "approved_at": "2026-11-23",
+    "permalink": "https://www.instagram.com/stories/hivec0de/4040454835693435878",
+    "published_at": "2026-11-28T15:30:03.872Z"
   },
   {
     "id": "story-2026-11-29-ultimo",
